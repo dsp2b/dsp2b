@@ -21,3 +21,11 @@
 # Go workspace file
 go.work
 
+
+/icondesc
+
+/ItemProtoSet.dat
+/RecipeProtoSet.dat
+
+.vscode
+.idea
