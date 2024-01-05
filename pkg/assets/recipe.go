@@ -2,6 +2,7 @@ package assets
 
 import (
 	"encoding/binary"
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"os"
 )
 
@@ -22,14 +23,14 @@ func (r *RecipeProtoSet) Load(datFile string) error {
 	} {
 		return err
 	}
-	ReadInt64(f)
-	r.ProtoSet.Type = ReadString(f)
-	r.TableName = ReadString(f)
-	r.Signature = ReadString(f)
-	l := ReadInt32(f)
+	utils.ReadInt64(f)
+	r.ProtoSet.Type = utils.ReadString(f)
+	r.TableName = utils.ReadString(f)
+	r.Signature = utils.ReadString(f)
+	l := utils.ReadInt32(f)
 	r.DataArray = make([]RecipeProto, l)
 	for i := 0; int32(i) < l; i++ {
-		_ = ReadStruct(f, &r.DataArray[i])
+		_ = utils.ReadStruct(f, &r.DataArray[i])
 	}
 	return nil
 }

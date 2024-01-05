@@ -1,4 +1,4 @@
-package assets
+package utils
 
 import (
 	"encoding/binary"
@@ -10,9 +10,17 @@ func ReadStruct(r io.Reader, data any) error {
 	ref := reflect.ValueOf(data).Elem()
 	for i := 0; i < ref.NumField(); i++ {
 		field := ref.Field(i)
+		tag := ref.Type().Field(i).Tag.Get("binary")
+		if tag == "-" {
+			continue
+		}
 		switch field.Kind() {
 		case reflect.String:
 			field.SetString(ReadString(r))
+		case reflect.Int8:
+			field.SetInt(int64(ReadInt8(r)))
+		case reflect.Int16:
+			field.SetInt(int64(ReadInt16(r)))
 		case reflect.Int32:
 			field.SetInt(int64(ReadInt32(r)))
 		case reflect.Int64:
@@ -36,6 +44,24 @@ func ReadStruct(r io.Reader, data any) error {
 
 func ReadInt32(r io.Reader) int32 {
 	var i int32
+	_ = binary.Read(r, binary.LittleEndian, &i)
+	return i
+}
+
+func ReadUint8(r io.Reader) uint8 {
+	var i uint8
+	_ = binary.Read(r, binary.LittleEndian, &i)
+	return i
+}
+
+func ReadInt8(r io.Reader) int8 {
+	var i int8
+	_ = binary.Read(r, binary.LittleEndian, &i)
+	return i
+}
+
+func ReadInt16(r io.Reader) int16 {
+	var i int16
 	_ = binary.Read(r, binary.LittleEndian, &i)
 	return i
 }
