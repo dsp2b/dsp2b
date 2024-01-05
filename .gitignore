@@ -24,8 +24,8 @@ go.work
 
 /icondesc
 
-/ItemProtoSet.dat
-/RecipeProtoSet.dat
+ItemProtoSet.dat
+RecipeProtoSet.dat
 
 .vscode
 .idea
