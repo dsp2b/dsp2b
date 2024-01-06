@@ -133,7 +133,7 @@ type Header struct {
 	Icon5       int
 	Time        time.Time
 	GameVersion string
-	Name        string // shortDesc
+	ShortDesc   string // shortDesc
 	Desc        string // desc
 }
 
@@ -178,7 +178,7 @@ func (h *Header) Decode(arr []string, data []string) error {
 	t = (t / 10000 / 1000) - 62135596800
 	h.Time = time.Unix(t, 0)
 	h.GameVersion = arr[8]
-	h.Name, err = url.QueryUnescape(arr[9])
+	h.ShortDesc, err = url.QueryUnescape(arr[9])
 	if err != nil {
 		return err
 	}

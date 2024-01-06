@@ -14,7 +14,7 @@ type AssetsXML struct {
 }
 
 type Asset struct {
-	Name      string `xml:"Name"`
+	Name      string `xml:"ShortDesc"`
 	Container string `xml:"Container"`
 }
 
