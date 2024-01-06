@@ -32,7 +32,10 @@ func TestRecipeProtoSet_Load(t *testing.T) {
 	_ = os.MkdirAll("data/icons/item_recipe", 0755)
 	for _, v := range item.DataArray {
 		// 从data/dsp/Texture2D中提取图片
-		filename := path.Base(v.IconPath)
+		if v.Proto.IconPath == "" {
+			continue
+		}
+		filename := path.Base(v.Proto.IconPath)
 		oldName := "data/dsp/Texture2D/" + filename + ".png"
 		// copy文件
 		err := os.Link(oldName,
@@ -43,13 +46,20 @@ func TestRecipeProtoSet_Load(t *testing.T) {
 			}
 		}
 	}
-	// 分析assets.xml, 提取图片
-	//b, _ = os.ReadFile("data/dsp/assets.xml")
-	//assets := &AssetsXML{}
-	//err := xml.Unmarshal(b, &assets)
-	//if err != nil {
-	//	t.Fatalf("unmarshal err: %v", err)
-	//}
-	//
-	//t.Logf("%v", assets)
+	for _, v := range recipe.DataArray {
+		// 从data/dsp/Texture2D中提取图片
+		if v.Proto.IconPath == "" {
+			continue
+		}
+		filename := path.Base(v.Proto.IconPath)
+		oldName := "data/dsp/Texture2D/" + filename + ".png"
+		// copy文件
+		err := os.Link(oldName,
+			"data/icons/item_recipe/"+filename+".png")
+		if err != nil {
+			if !os.IsExist(err) {
+				t.Fatalf("link err: %v", err)
+			}
+		}
+	}
 }

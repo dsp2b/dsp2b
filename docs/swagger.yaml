@@ -1,0 +1,103 @@
+basePath: /api/v1
+definitions:
+  BadRequest:
+    properties:
+      code:
+        description: 错误码
+        format: int32
+        type: integer
+      msg:
+        description: 错误信息
+        type: string
+    type: object
+  blueprint.Blueprint:
+    type: object
+  blueprint.Building:
+    properties:
+      count:
+        type: integer
+      icon_path:
+        type: string
+      item_id:
+        type: integer
+      name:
+        type: string
+    type: object
+  blueprint.GetRecipePanelResponse:
+    type: object
+  blueprint.ParseRequest:
+    properties:
+      blueprint:
+        type: string
+    type: object
+  blueprint.ParseResponse:
+    properties:
+      blueprint:
+        $ref: '#/definitions/blueprint.Blueprint'
+      buildings:
+        items:
+          $ref: '#/definitions/blueprint.Building'
+        type: array
+    type: object
+  blueprint.RecipePanel:
+    type: object
+info:
+  title: api文档
+  version: "1.0"
+paths:
+  /blueprint/parse:
+    post:
+      consumes:
+      - application/json
+      description: 蓝图解析
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/blueprint.ParseRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/blueprint.ParseResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 蓝图解析
+      tags:
+      - blueprint
+  /blueprint/recipe_panel:
+    get:
+      consumes:
+      - application/json
+      description: 获取配方面板
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/blueprint.GetRecipePanelResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 获取配方面板
+      tags:
+      - blueprint
+swagger: "2.0"

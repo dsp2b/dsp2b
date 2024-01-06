@@ -28,7 +28,7 @@ func (i *ItemProtoSet) Load(datFile string) error {
 	i.TableName = utils.ReadString(f)
 	i.Signature = utils.ReadString(f)
 	i01 := utils.ReadInt32(f)
-	i.DataArray = make([]ItemProto, i01)
+	i.DataArray = make([]Proto[ItemProto], i01)
 	for n := 0; int32(n) < i01; n++ {
 		_ = utils.ReadStruct(f, &i.DataArray[n])
 	}
@@ -36,7 +36,6 @@ func (i *ItemProtoSet) Load(datFile string) error {
 }
 
 type ItemProto struct {
-	Proto
 	Type            EItemType
 	SubID           int32
 	MiningFrom      string

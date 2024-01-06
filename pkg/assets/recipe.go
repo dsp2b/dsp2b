@@ -28,7 +28,7 @@ func (r *RecipeProtoSet) Load(datFile string) error {
 	r.TableName = utils.ReadString(f)
 	r.Signature = utils.ReadString(f)
 	l := utils.ReadInt32(f)
-	r.DataArray = make([]RecipeProto, l)
+	r.DataArray = make([]Proto[RecipeProto], l)
 	for i := 0; int32(i) < l; i++ {
 		_ = utils.ReadStruct(f, &r.DataArray[i])
 	}
@@ -36,7 +36,6 @@ func (r *RecipeProtoSet) Load(datFile string) error {
 }
 
 type RecipeProto struct {
-	Proto
 	Type          ERecipeType
 	Handcraft     bool
 	Explicit      bool

@@ -19,6 +19,7 @@ func main() {
 	}
 	err = cago.New(ctx, cfg).
 		Registry(component.Core()).
+		Registry(component.Cache()).
 		RegistryCancel(mux.HTTP(api.Router)).
 		Start()
 	if err != nil {

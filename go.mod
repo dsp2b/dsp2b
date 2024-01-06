@@ -3,8 +3,9 @@ module github.com/dsp2b/dsp2b-go
 go 1.21
 
 require (
-	github.com/codfrm/cago v1.0.2-0.20240105074130-0569d20cab38
+	github.com/codfrm/cago v1.0.2-0.20240106162239-df2ec85a37dc
 	github.com/swaggo/swag v1.16.2
+	go.uber.org/zap v1.26.0
 )
 
 require (
@@ -54,6 +55,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe // indirect
 	github.com/nsqio/go-nsq v1.1.0 // indirect
+	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pelletier/go-toml/v2 v2.1.0 // indirect
 	github.com/prometheus/client_golang v1.17.0 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
@@ -85,7 +87,6 @@ require (
 	go.opentelemetry.io/otel/trace v1.19.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.0.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
-	go.uber.org/zap v1.26.0 // indirect
 	golang.org/x/arch v0.5.0 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
