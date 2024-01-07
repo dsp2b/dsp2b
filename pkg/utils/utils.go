@@ -35,7 +35,9 @@ func ReadStruct(r io.Reader, data any) error {
 		case reflect.Bool:
 			field.SetBool(ReadBool(r))
 		case reflect.Struct:
-			ReadStruct(r, field.Addr().Interface())
+			if err := ReadStruct(r, field.Addr().Interface()); err != nil {
+				return err
+			}
 		}
 	}
 

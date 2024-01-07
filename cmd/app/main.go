@@ -2,9 +2,10 @@ package main
 
 import (
 	"context"
+	"log"
+
 	"github.com/codfrm/cago/pkg/component"
 	"github.com/dsp2b/dsp2b-go/internal/api"
-	"log"
 
 	"github.com/codfrm/cago"
 	"github.com/codfrm/cago/configs"

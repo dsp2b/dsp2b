@@ -7,7 +7,7 @@ import (
 
 // ParseRequest 蓝图解析
 type ParseRequest struct {
-	mux.Meta  `path:"/blueprint/parse" method:"POST""`
+	mux.Meta  `path:"/blueprint/parse" method:"POST"`
 	Blueprint string `form:"blueprint" binding:"required"`
 }
 

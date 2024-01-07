@@ -5,11 +5,12 @@ import (
 	"compress/gzip"
 	"encoding/base64"
 	"errors"
-	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 )
 
 type Blueprint struct {
