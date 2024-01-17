@@ -24,6 +24,10 @@ type BlueprintSvc interface {
 	Parse(ctx context.Context, req *api.ParseRequest) (*api.ParseResponse, error)
 	// GetRecipePanel 获取配方面板
 	GetRecipePanel(ctx context.Context, req *api.GetRecipePanelRequest) (*api.GetRecipePanelResponse, error)
+	// Detail 获取蓝图详情
+	Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error)
+	// List 蓝图列表
+	List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error)
 }
 
 type blueprintSvc struct {
@@ -69,6 +73,7 @@ func InitBlueprint() error {
 		x, y := num/100, num%100-1
 		item := api.RecipePanelItem{
 			ID:       v.ID,
+			ItemID:   v.Proto.Results[0],
 			Name:     v.Name,
 			IconPath: v.Proto.IconPath,
 		}
@@ -242,4 +247,14 @@ func (b *blueprintSvc) GetRecipePanel(ctx context.Context, req *api.GetRecipePan
 	return &api.GetRecipePanelResponse{
 		RecipePanel: b.RecipePanel,
 	}, nil
+}
+
+// Detail 获取蓝图详情
+func (b *blueprintSvc) Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error) {
+	return nil, nil
+}
+
+// List 蓝图列表
+func (b *blueprintSvc) List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error) {
+	return nil, nil
 }

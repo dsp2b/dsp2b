@@ -11,6 +11,15 @@ definitions:
         type: string
     type: object
   blueprint.Blueprint:
+    properties:
+      blueprint:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
     type: object
   blueprint.Building:
     properties:
@@ -23,7 +32,26 @@ definitions:
       name:
         type: string
     type: object
+  blueprint.DetailResponse:
+    type: object
   blueprint.GetRecipePanelResponse:
+    type: object
+  blueprint.Item:
+    properties:
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  blueprint.ListResponse:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/blueprint.Item'
+          type: object
+        type: array
+      total:
+        type: integer
     type: object
   blueprint.ParseRequest:
     properties:
@@ -38,13 +66,172 @@ definitions:
         items:
           $ref: '#/definitions/blueprint.Building'
         type: array
+      products:
+        items:
+          $ref: '#/definitions/blueprint.Product'
+        type: array
+    type: object
+  blueprint.Product:
+    properties:
+      count:
+        type: number
+      icon_path:
+        type: string
+      item_id:
+        type: integer
+      name:
+        type: string
     type: object
   blueprint.RecipePanel:
+    properties:
+      building_panel:
+        items:
+          items:
+            $ref: '#/definitions/blueprint.RecipePanelItem'
+          type: array
+        type: array
+      thing_panel:
+        items:
+          items:
+            $ref: '#/definitions/blueprint.RecipePanelItem'
+          type: array
+        type: array
     type: object
+  blueprint.RecipePanelItem:
+    properties:
+      icon_path:
+        type: string
+      id:
+        type: integer
+      item_id:
+        type: integer
+      name:
+        type: string
+    type: object
+  collection.Collection:
+    properties:
+      description:
+        type: string
+      id:
+        $ref: '#/definitions/primitive.ObjectID'
+      title:
+        type: string
+    type: object
+  collection.DetailResponse:
+    properties:
+      description:
+        type: string
+      id:
+        $ref: '#/definitions/primitive.ObjectID'
+      title:
+        type: string
+    type: object
+  collection.DownloadResponse:
+    type: object
+  collection.GetCollectionBlueprintItem:
+    properties:
+      blueprint:
+        type: string
+      createtime:
+        type: integer
+      description:
+        type: string
+      title:
+        type: string
+      updatetime:
+        type: integer
+    type: object
+  collection.GetCollectionBlueprintResponse:
+    properties:
+      blueprint:
+        items:
+          $ref: '#/definitions/collection.GetCollectionBlueprintItem'
+        type: array
+    type: object
+  collection.SubCollectionResponse:
+    properties:
+      collection:
+        items:
+          $ref: '#/definitions/collection.Collection'
+        type: array
+    type: object
+  httputils.PageRequest:
+    properties:
+      page:
+        description: Deprecated 请使用方法GetPage
+        type: integer
+      size:
+        description: Deprecated 请使用方法GetSize
+        type: integer
+    type: object
+  httputils.PageResponse:
+    properties:
+      list:
+        items:
+          type: any
+        type: array
+      total:
+        type: integer
+    type: object
+  primitive.ObjectID:
+    type: string
 info:
   title: api文档
   version: "1.0"
 paths:
+  /blueprint:
+    get:
+      consumes:
+      - application/json
+      description: 蓝图列表
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/blueprint.ListResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 蓝图列表
+      tags:
+      - blueprint
+  /blueprint/{id}:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/blueprint.DetailResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      tags:
+      - blueprint
   /blueprint/parse:
     post:
       consumes:
@@ -100,4 +287,118 @@ paths:
       summary: 获取配方面板
       tags:
       - blueprint
+  /collection/:id:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: ID
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/collection.DetailResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      tags:
+      - collection
+  /collection/:id/blueprint:
+    get:
+      consumes:
+      - application/json
+      description: 查询蓝图
+      parameters:
+      - in: query
+        name: ID
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/collection.GetCollectionBlueprintResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 查询蓝图
+      tags:
+      - collection
+  /collection/:id/download:
+    get:
+      consumes:
+      - application/json
+      description: 下载蓝图zip包
+      parameters:
+      - in: query
+        name: ID
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/collection.DownloadResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 下载蓝图zip包
+      tags:
+      - collection
+  /collection/:id/sub:
+    get:
+      consumes:
+      - application/json
+      description: 查询子蓝图集
+      parameters:
+      - in: query
+        name: ID
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/collection.SubCollectionResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 查询子蓝图集
+      tags:
+      - collection
 swagger: "2.0"

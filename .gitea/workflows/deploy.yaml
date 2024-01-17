@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      - release/*
-      - test/*
+#       - release/*
+#       - test/*
 
 env:
   APP_NAME: ${{ github.event.repository.name }}

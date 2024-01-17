@@ -23,3 +23,13 @@ func (b *Blueprint) Parse(ctx context.Context, req *api.ParseRequest) (*api.Pars
 func (b *Blueprint) GetRecipePanel(ctx context.Context, req *api.GetRecipePanelRequest) (*api.GetRecipePanelResponse, error) {
 	return blueprint_svc.Blueprint().GetRecipePanel(ctx, req)
 }
+
+// Detail 获取蓝图详情
+func (b *Blueprint) Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error) {
+	return blueprint_svc.Blueprint().Detail(ctx, req)
+}
+
+// List 蓝图列表
+func (b *Blueprint) List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error) {
+	return blueprint_svc.Blueprint().List(ctx, req)
+}

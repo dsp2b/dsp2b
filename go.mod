@@ -4,7 +4,9 @@ go 1.21
 
 require (
 	github.com/codfrm/cago v1.0.2-0.20240106162239-df2ec85a37dc
+	github.com/gin-gonic/gin v1.9.1
 	github.com/swaggo/swag v1.16.2
+	go.mongodb.org/mongo-driver v1.12.1
 	go.uber.org/zap v1.26.0
 )
 
@@ -24,7 +26,6 @@ require (
 	github.com/elastic/go-elasticsearch/v8 v8.10.1 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.9.1 // indirect
 	github.com/go-logr/logr v1.3.0 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.20.0 // indirect
@@ -75,7 +76,6 @@ require (
 	go.etcd.io/etcd/api/v3 v3.5.9 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.5.9 // indirect
 	go.etcd.io/etcd/client/v3 v3.5.9 // indirect
-	go.mongodb.org/mongo-driver v1.12.1 // indirect
 	go.opentelemetry.io/contrib/instrumentation/go.mongodb.org/mongo-driver/mongo/otelmongo v0.45.0 // indirect
 	go.opentelemetry.io/otel v1.19.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.19.0 // indirect
