@@ -3,14 +3,15 @@ package collection_ctr
 import (
 	"archive/zip"
 	"context"
+	"path/filepath"
+	"strings"
+	"time"
+
 	"github.com/codfrm/cago/pkg/utils/httputils"
 	api "github.com/dsp2b/dsp2b-go/internal/api/collection"
 	"github.com/dsp2b/dsp2b-go/internal/service/collection_svc"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"path/filepath"
-	"strings"
-	"time"
 )
 
 type Collection struct {
