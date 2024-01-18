@@ -19,6 +19,8 @@ WORKDIR /app
 
 COPY $APP_NAME .
 
+COPY ./data ./data
+
 RUN ls -l && chmod +x $APP_NAME
 
 CMD ["sh", "-c", "./$APP_NAME"]
