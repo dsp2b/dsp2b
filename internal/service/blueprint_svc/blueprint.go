@@ -147,32 +147,42 @@ type SpeedMultiplier struct {
 	Name string
 	// 速度倍率
 	Multiplier float64
+	// 增产速度
+	Productivity float64
 }
 
 var speedMultiplierMap = map[int16]SpeedMultiplier{
-	2302: {"电弧熔炉", 1},
-	2315: {"位面熔炉", 2},
-	2319: {"熔炉 Mk.III", 3},
+	2302: {"电弧熔炉", 1, 0},
+	2315: {"位面熔炉", 2, 0},
+	2319: {"熔炉 Mk.III", 3, 0},
 
-	2303: {"制作台Mk.Ⅰ", 0.75},
-	2304: {"制作台Mk.Ⅱ", 1},
-	2305: {"制作台Mk.Ⅲ", 1.5},
-	2318: {"重组式制造台", 3},
+	2303: {"制作台Mk.Ⅰ", 0.75, 0},
+	2304: {"制作台Mk.Ⅱ", 1, 0},
+	2305: {"制作台Mk.Ⅲ", 1.5, 0},
+	2318: {"重组式制造台", 3, 0},
 
-	2901: {"矩阵研究站", 1},
-	2902: {"自演化研究站", 3},
+	2901: {"矩阵研究站", 1, 0},
+	2902: {"自演化研究站", 3, 0},
 
-	2309: {"化工厂", 1},
-	2317: {"量子化工厂", 2},
+	2309: {"化工厂", 1, 0},
+	2317: {"量子化工厂", 2, 0},
 
-	1141: {"增产剂 Mk.I", 1},
-	1142: {"增产剂 Mk.II", 1},
-	1143: {"增产剂 Mk.III", 1},
+	1141: {"增产剂 Mk.I", 1.25, 1.125},
+	1142: {"增产剂 Mk.II", 1.5, 1.2},
+	1143: {"增产剂 Mk.III", 2, 1.25},
 }
 
 // 计算产量
 func (b *blueprintSvc) calcProduct(ctx context.Context, buildings []blueprint.Building) ([]*api.Product, error) {
 	productMap := make(map[int16]*api.Product)
+	// 判断是否有喷涂机, 有涂装直接算上三级增产剂
+	increase := false
+	for _, v := range buildings {
+		if v.ItemId == 2313 {
+			increase = true
+			break
+		}
+	}
 	for _, v := range buildings {
 		// 查看是否有配方
 		if v.RecipeId == 0 {
@@ -187,25 +197,44 @@ func (b *blueprintSvc) calcProduct(ctx context.Context, buildings []blueprint.Bu
 		if err != nil {
 			return nil, err
 		}
-		var speedMultiplier float64 = 1
+		var (
+			// 生产速度
+			pSpeedMultiplier float64 = 1
+			// 消费速度
+			mSpeedMultiplier float64 = 1
+		)
 		speedMultiplierValue, ok := speedMultiplierMap[v.ItemId]
 		if ok {
-			speedMultiplier = speedMultiplierValue.Multiplier
+			pSpeedMultiplier = speedMultiplierValue.Multiplier
+			mSpeedMultiplier = speedMultiplierValue.Multiplier
 		}
-		// TODO: 判断增产剂
+		if increase {
+			increaseMultiplier := speedMultiplierMap[1143]
+			// 判断增产还是增速
+			if len(v.Parameters) > 0 {
+				if v.Parameters[0] == 1 {
+					// 加速
+					pSpeedMultiplier = pSpeedMultiplier * increaseMultiplier.Multiplier
+					mSpeedMultiplier = mSpeedMultiplier * increaseMultiplier.Multiplier
+				} else {
+					// 增产
+					pSpeedMultiplier = pSpeedMultiplier * increaseMultiplier.Productivity
+				}
+			}
+		}
 		for k, v := range m {
 			if _, ok := productMap[k]; ok {
-				productMap[k].Count -= v.Count * speedMultiplier
+				productMap[k].Count -= v.Count * mSpeedMultiplier
 			} else {
-				v.Count = -v.Count * speedMultiplier
+				v.Count = -v.Count * mSpeedMultiplier
 				productMap[k] = v
 			}
 		}
 		for k, v := range p {
 			if _, ok := productMap[k]; ok {
-				productMap[k].Count += v.Count * speedMultiplier
+				productMap[k].Count += v.Count * pSpeedMultiplier
 			} else {
-				v.Count = v.Count * speedMultiplier
+				v.Count = v.Count * pSpeedMultiplier
 				productMap[k] = v
 			}
 		}
