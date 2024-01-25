@@ -42,8 +42,8 @@ func Blueprint() BlueprintSvc {
 	return defaultBlueprint
 }
 
-func InitBlueprint() error {
-	b, err := os.ReadFile("data/itemProtoSet.json")
+func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
+	b, err := os.ReadFile(itemProtoSetPath)
 	if err != nil {
 		return err
 	}
@@ -51,7 +51,7 @@ func InitBlueprint() error {
 	if err := json.Unmarshal(b, &itemProtoSet); err != nil {
 		return err
 	}
-	b, err = os.ReadFile("data/recipeProtoSet.json")
+	b, err = os.ReadFile(recipeProtoSetPath)
 	if err != nil {
 		return err
 	}
@@ -142,6 +142,34 @@ func (b *blueprintSvc) Parse(ctx context.Context, req *api.ParseRequest) (*api.P
 	}, nil
 }
 
+// SpeedMultiplier 速度倍率
+type SpeedMultiplier struct {
+	Name string
+	// 速度倍率
+	Multiplier float64
+}
+
+var speedMultiplierMap = map[int16]SpeedMultiplier{
+	2302: {"电弧熔炉", 1},
+	2315: {"位面熔炉", 2},
+	2319: {"熔炉 Mk.III", 3},
+
+	2303: {"制作台Mk.Ⅰ", 0.75},
+	2304: {"制作台Mk.Ⅱ", 1},
+	2305: {"制作台Mk.Ⅲ", 1.5},
+	2318: {"重组式制造台", 3},
+
+	2901: {"矩阵研究站", 1},
+	2902: {"自演化研究站", 3},
+
+	2309: {"化工厂", 1},
+	2317: {"量子化工厂", 2},
+
+	1141: {"增产剂 Mk.I", 1},
+	1142: {"增产剂 Mk.II", 1},
+	1143: {"增产剂 Mk.III", 1},
+}
+
 // 计算产量
 func (b *blueprintSvc) calcProduct(ctx context.Context, buildings []blueprint.Building) ([]*api.Product, error) {
 	productMap := make(map[int16]*api.Product)
@@ -159,18 +187,25 @@ func (b *blueprintSvc) calcProduct(ctx context.Context, buildings []blueprint.Bu
 		if err != nil {
 			return nil, err
 		}
+		var speedMultiplier float64 = 1
+		speedMultiplierValue, ok := speedMultiplierMap[v.ItemId]
+		if ok {
+			speedMultiplier = speedMultiplierValue.Multiplier
+		}
+		// TODO: 判断增产剂
 		for k, v := range m {
 			if _, ok := productMap[k]; ok {
-				productMap[k].Count -= v.Count
+				productMap[k].Count -= v.Count * speedMultiplier
 			} else {
-				v.Count = -v.Count
+				v.Count = -v.Count * speedMultiplier
 				productMap[k] = v
 			}
 		}
 		for k, v := range p {
 			if _, ok := productMap[k]; ok {
-				productMap[k].Count += v.Count
+				productMap[k].Count += v.Count * speedMultiplier
 			} else {
+				v.Count = v.Count * speedMultiplier
 				productMap[k] = v
 			}
 		}

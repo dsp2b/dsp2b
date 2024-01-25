@@ -27,7 +27,10 @@ func Router(ctx context.Context, root *mux.Router) error {
 	}
 
 	rg := r.Group("/")
-	if err := blueprint_svc.InitBlueprint(); err != nil {
+	if err := blueprint_svc.InitBlueprint(
+		"./data/itemProtoSet.json",
+		"./data/recipeProtoSet.json",
+	); err != nil {
 		return err
 	}
 	{
