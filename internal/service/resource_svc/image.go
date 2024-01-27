@@ -12,6 +12,7 @@ import (
 	"io"
 	"net/http"
 	"path"
+	"runtime"
 	"strings"
 	"sync"
 
@@ -51,6 +52,7 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 	if err != nil {
 		return nil, err
 	}
+	defer f.Close()
 	info, err := f.Stat()
 	if err != nil {
 		var e oss2.RespError
@@ -73,18 +75,21 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 			}, nil
 		}
 	}
-
 	r, err := oss.DefaultBucket().GetObject(ctx, "images"+req.Path)
 	if err != nil {
 		return nil, err
 	}
+	defer r.Close()
+	i.lock.Lock()
+	defer func() {
+		i.lock.Unlock()
+		runtime.GC()
+	}()
 	img, s, err := image.Decode(r)
 	// 生成缩略图
 	if err != nil {
 		return nil, err
 	}
-	i.lock.Lock()
-	defer i.lock.Unlock()
 	logger.Ctx(ctx).Info("image format", zap.String("path", req.Path), zap.String("format", s))
 
 	// 计算裁剪区域，以保持宽高比
@@ -117,18 +122,19 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 	}).SubImage(image.Rect(startX, startY, startX+cropWidth, startY+cropHeight))
 
 	// 缩放图片
-	resizedImg := resize.Resize(req.Width, req.Height, croppedImg, resize.Lanczos3)
+	resizedImg := resize.Resize(req.Width, req.Height, croppedImg, resize.NearestNeighbor)
 
 	buf := bytes.NewBuffer(nil)
-	if err := jpeg.Encode(buf, resizedImg, nil); err != nil {
+	if err := jpeg.Encode(buf, resizedImg, &jpeg.Options{
+		Quality: 80,
+	}); err != nil {
 		return nil, err
 	}
-	data := buf.Bytes()
 	// 上传oss
-	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, bytes.NewReader(data)); err != nil {
+	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, bytes.NewReader(buf.Bytes())); err != nil {
 		return nil, err
 	}
 	return &api.ImageThumbnailResponse{
-		Bytes: data,
+		Bytes: buf.Bytes(),
 	}, nil
 }
