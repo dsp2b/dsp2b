@@ -4,6 +4,8 @@ import (
 	"context"
 	"log"
 
+	"github.com/codfrm/cago/pkg/oss"
+
 	"github.com/codfrm/cago/pkg/component"
 	"github.com/dsp2b/dsp2b-go/internal/api"
 
@@ -22,6 +24,7 @@ func main() {
 		Registry(component.Core()).
 		Registry(component.Cache()).
 		Registry(component.Mongo()).
+		Registry(cago.FuncComponent(oss.OSS)).
 		RegistryCancel(mux.HTTP(api.Router)).
 		Start()
 	if err != nil {

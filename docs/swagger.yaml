@@ -175,6 +175,8 @@ definitions:
     type: object
   primitive.ObjectID:
     type: string
+  resource.ImageThumbnailResponse:
+    type: object
 info:
   title: api文档
   version: "1.0"
@@ -401,4 +403,42 @@ paths:
       summary: 查询子蓝图集
       tags:
       - collection
+  /image/thumbnail/{width}/{height}/images/*path:
+    get:
+      consumes:
+      - application/json
+      description: 缩略图
+      parameters:
+      - in: path
+        name: path
+        required: true
+        type: string
+      - in: path
+        name: width
+        required: true
+        type: integer
+      - in: path
+        name: height
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/resource.ImageThumbnailResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 缩略图
+      tags:
+      - resource/image
 swagger: "2.0"

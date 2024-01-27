@@ -3,14 +3,14 @@ package api
 import (
 	"context"
 
-	"github.com/dsp2b/dsp2b-go/internal/controller/collection_ctr"
-	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
-	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
-	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
-
 	"github.com/codfrm/cago/server/mux"
 	_ "github.com/dsp2b/dsp2b-go/docs"
 	"github.com/dsp2b/dsp2b-go/internal/controller/blueprint_ctr"
+	"github.com/dsp2b/dsp2b-go/internal/controller/collection_ctr"
+	"github.com/dsp2b/dsp2b-go/internal/controller/resource_ctr"
+	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
+	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
+	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
 )
 
@@ -19,6 +19,7 @@ import (
 // @version  1.0
 // @BasePath /api/v1
 func Router(ctx context.Context, root *mux.Router) error {
+
 	r := root.Group("/api/v1")
 	{
 		blueprint_repo.RegisterBlueprint(blueprint_repo.NewBlueprint())
@@ -45,5 +46,9 @@ func Router(ctx context.Context, root *mux.Router) error {
 		rg.GET("/collection/:id/download", ctr.Download())
 	}
 
+	{
+		ctr := resource_ctr.NewImage()
+		rg.GET("/image/thumbnail/:width/:height/images/*path", ctr.ImageThumbnail())
+	}
 	return nil
 }

@@ -358,6 +358,65 @@
                     }
                 }
             }
+        },
+        "/image/thumbnail/{width}/{height}/images/*path": {
+            "get": {
+                "description": "缩略图",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "resource/image"
+                ],
+                "summary": "缩略图",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "path",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "name": "width",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "name": "height",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/resource.ImageThumbnailResponse"
+                                },
+                                "msg": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/BadRequest"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -628,6 +687,9 @@
         },
         "primitive.ObjectID": {
             "type": "string"
+        },
+        "resource.ImageThumbnailResponse": {
+            "type": "object"
         }
     }
 }
