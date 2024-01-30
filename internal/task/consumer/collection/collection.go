@@ -6,7 +6,6 @@ import (
 	"context"
 	"errors"
 	"path/filepath"
-	"strings"
 	"time"
 
 	"github.com/codfrm/cago/pkg/logger"
@@ -47,6 +46,9 @@ func (c *Collection) Update(ctx context.Context, id primitive.ObjectID, exist ma
 	if err := func() error {
 		w := zip.NewWriter(buf)
 		defer w.Close()
+		if err := w.SetComment(collection.Description); err != nil {
+			return err
+		}
 		err = c.writeZip(ctx, w, id, "", map[primitive.ObjectID]struct{}{
 			id: {},
 		})
@@ -99,7 +101,7 @@ func (c *Collection) writeZip(ctx context.Context, w *zip.Writer, id primitive.O
 	// 写入蓝图子集
 	for _, v := range blueprint.Blueprint {
 		fh := &zip.FileHeader{
-			Name:     filepath.Join(pathname, strings.ReplaceAll(v.Title, "/", " ")+".txt"),
+			Name:     filepath.Join(pathname, filepath.Clean(v.Title)+".txt"),
 			Comment:  v.Description,
 			Method:   zip.Deflate,
 			Modified: time.Unix(v.Updatetime, 0),
