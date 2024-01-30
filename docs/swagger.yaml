@@ -155,6 +155,10 @@ definitions:
           $ref: '#/definitions/collection.Collection'
         type: array
     type: object
+  collection.UpdateNotifyRequest:
+    type: object
+  collection.UpdateNotifyResponse:
+    type: object
   httputils.PageRequest:
     properties:
       page:
@@ -372,6 +376,36 @@ paths:
           schema:
             $ref: '#/definitions/BadRequest'
       summary: 下载蓝图zip包
+      tags:
+      - collection
+  /collection/:id/notify:
+    put:
+      consumes:
+      - application/json
+      description: 更新通知
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/collection.UpdateNotifyRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/collection.UpdateNotifyResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 更新通知
       tags:
       - collection
   /collection/:id/sub:

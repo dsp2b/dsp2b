@@ -4,6 +4,9 @@ import (
 	"context"
 	"errors"
 
+	"github.com/dsp2b/dsp2b-go/internal/task/producer"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
@@ -12,14 +15,14 @@ import (
 )
 
 type CollectionSvc interface {
-	// Download 下载蓝图zip包
-	Download(ctx context.Context, req *api.DownloadRequest) (*api.DownloadResponse, error)
 	// SubCollection 查询子蓝图集
 	SubCollection(ctx context.Context, req *api.SubCollectionRequest) (*api.SubCollectionResponse, error)
 	// GetCollectionBlueprint 查询蓝图
 	GetCollectionBlueprint(ctx context.Context, req *api.GetCollectionBlueprintRequest) (*api.GetCollectionBlueprintResponse, error)
 	// Detail 获取蓝图集详情
 	Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error)
+	// UpdateNotify 更新通知
+	UpdateNotify(ctx context.Context, req *api.UpdateNotifyRequest) (*api.UpdateNotifyResponse, error)
 }
 
 type collectionSvc struct {
@@ -29,11 +32,6 @@ var defaultCollection = &collectionSvc{}
 
 func Collection() CollectionSvc {
 	return defaultCollection
-}
-
-// Download 下载蓝图zip包
-func (c *collectionSvc) Download(ctx context.Context, req *api.DownloadRequest) (*api.DownloadResponse, error) {
-	return nil, nil
 }
 
 // SubCollection 查询子蓝图集
@@ -80,6 +78,10 @@ func (c *collectionSvc) GetCollectionBlueprint(ctx context.Context, req *api.Get
 	return resp, nil
 }
 
+var (
+	ErrNotFound = errors.New("collection not found")
+)
+
 // Detail 获取蓝图集详情
 func (c *collectionSvc) Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error) {
 	collection, err := collection_repo.Colletcion().Find(ctx, req.ID)
@@ -87,11 +89,22 @@ func (c *collectionSvc) Detail(ctx context.Context, req *api.DetailRequest) (*ap
 		return nil, err
 	}
 	if collection == nil {
-		return nil, errors.New("collection not found")
+		return nil, ErrNotFound
 	}
 	return &api.DetailResponse{
 		ID:          collection.ID,
 		Title:       collection.Title,
 		Description: collection.Description,
+		ParentID:    collection.ParentID,
 	}, nil
+}
+
+// UpdateNotify 更新通知
+func (c *collectionSvc) UpdateNotify(ctx context.Context, req *api.UpdateNotifyRequest) (*api.UpdateNotifyResponse, error) {
+	if err := producer.PublishCollectionUpdate(ctx, req.ID, map[primitive.ObjectID]struct{}{
+		req.ID: {},
+	}); err != nil {
+		return nil, err
+	}
+	return &api.UpdateNotifyResponse{}, nil
 }

@@ -8,9 +8,6 @@ import (
 	"github.com/dsp2b/dsp2b-go/internal/controller/blueprint_ctr"
 	"github.com/dsp2b/dsp2b-go/internal/controller/collection_ctr"
 	"github.com/dsp2b/dsp2b-go/internal/controller/resource_ctr"
-	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
-	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
-	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
 )
 
@@ -19,15 +16,10 @@ import (
 // @version  1.0
 // @BasePath /api/v1
 func Router(ctx context.Context, root *mux.Router) error {
-
 	r := root.Group("/api/v1")
-	{
-		blueprint_repo.RegisterBlueprint(blueprint_repo.NewBlueprint())
-		collection_repo.RegisterColletcion(collection_repo.NewColletcion())
-		blueprint_collection_repo.RegisterBlueprintCollection(blueprint_collection_repo.NewBlueprintCollection())
-	}
-
+	rpc := root.Group("/rpc")
 	rg := r.Group("/")
+	rpcg := rpc.Group("/")
 	if err := blueprint_svc.InitBlueprint(
 		"./data/itemProtoSet.json",
 		"./data/recipeProtoSet.json",
@@ -36,14 +28,16 @@ func Router(ctx context.Context, root *mux.Router) error {
 	}
 	{
 		ctr := blueprint_ctr.NewBlueprint()
-		rg.Bind(
+		rpcg.Bind(
 			ctr.Parse,
 			ctr.GetRecipePanel,
 		)
 	}
 	{
 		ctr := collection_ctr.NewCollection()
-		rg.GET("/collection/:id/download", ctr.Download())
+		rpcg.Bind(
+			ctr.UpdateNotify,
+		)
 	}
 
 	{

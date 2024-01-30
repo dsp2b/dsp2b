@@ -82,8 +82,8 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 	defer r.Close()
 	i.lock.Lock()
 	defer func() {
-		i.lock.Unlock()
 		runtime.GC()
+		i.lock.Unlock()
 	}()
 	img, s, err := image.Decode(r)
 	// 生成缩略图

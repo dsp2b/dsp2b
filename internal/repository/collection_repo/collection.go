@@ -19,6 +19,7 @@ type ColletcionRepo interface {
 	Update(ctx context.Context, colletcion *collection_entity.Collection) error
 	Delete(ctx context.Context, id primitive.ObjectID) error
 	FindByParent(ctx context.Context, id primitive.ObjectID) ([]*collection_entity.Collection, error)
+	UpdateDownloadFile(ctx context.Context, id primitive.ObjectID, downloadFile string) error
 }
 
 var defaultColletcion ColletcionRepo
@@ -126,4 +127,17 @@ func (u *colletcionRepo) FindByParent(ctx context.Context, id primitive.ObjectID
 		return nil, err
 	}
 	return list, nil
+}
+
+func (u *colletcionRepo) UpdateDownloadFile(ctx context.Context, id primitive.ObjectID, downloadFile string) error {
+	collection := collection_entity.Collection{}
+	_, err := mongo.Ctx(ctx).Collection(collection.CollectionName()).UpdateOne(bson.M{
+		"_id":    id,
+		"status": consts.ACTIVE,
+	}, bson.M{
+		"$set": bson.M{
+			"download_file": downloadFile,
+		},
+	})
+	return err
 }
