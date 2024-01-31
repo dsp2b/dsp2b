@@ -2,14 +2,15 @@ package command
 
 import (
 	"fmt"
+	"os"
+	"strings"
+
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/spf13/cobra"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.uber.org/zap"
-	"os"
-	"strings"
 )
 
 func initCmd(cmd *cobra.Command, args []string) error {

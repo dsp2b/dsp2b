@@ -6,6 +6,8 @@ import (
 	"context"
 	"errors"
 	"path/filepath"
+	"runtime"
+	"sync"
 	"time"
 
 	"github.com/codfrm/cago/pkg/logger"
@@ -19,6 +21,7 @@ import (
 )
 
 type Collection struct {
+	lock sync.Mutex
 }
 
 func (c *Collection) Subscribe(ctx context.Context) error {
@@ -29,6 +32,10 @@ func (c *Collection) Subscribe(ctx context.Context) error {
 }
 
 func (c *Collection) Update(ctx context.Context, id primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
+	c.lock.Lock()
+	defer c.lock.Unlock()
+	runtime.GC()
+	logger.Ctx(ctx).Info("collection update", zap.String("id", id.Hex()))
 	// 打包蓝图集zip文件上传到oss
 	collection, err := collection_svc.Collection().Detail(ctx, &api.DetailRequest{
 		ID: id,

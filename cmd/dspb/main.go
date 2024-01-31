@@ -1,12 +1,13 @@
 package main
 
 import (
+	"log"
+
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/dsp2b/dsp2b-go/cmd/dspb/command"
 	"github.com/dsp2b/dsp2b-go/configs"
 	"github.com/spf13/cobra"
 	"go.uber.org/zap"
-	"log"
 )
 
 func main() {

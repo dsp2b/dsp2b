@@ -9,7 +9,9 @@ func pull(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	cloneRepo(repo.ID)
+	if err := cloneRepo(repo.ID); err != nil {
+		return err
+	}
 
 	return nil
 }

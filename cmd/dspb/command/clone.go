@@ -5,14 +5,15 @@ import (
 	"bytes"
 	"context"
 	"errors"
-	"github.com/codfrm/cago/pkg/logger"
-	"github.com/spf13/cobra"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.uber.org/zap"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
+
+	"github.com/codfrm/cago/pkg/logger"
+	"github.com/spf13/cobra"
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.uber.org/zap"
 )
 
 func cloneCmd(cmd *cobra.Command, args []string) error {
@@ -84,8 +85,8 @@ func cloneRepo(id primitive.ObjectID) error {
 				return err
 			}
 			defer f.Close()
-			var buf bytes.Buffer
-			if _, err := io.Copy(&buf, f); err != nil {
+			buf := bytes.NewBuffer(nil)
+			if _, err := io.Copy(buf, f); err != nil { //nolint:gosec
 				return err
 			}
 			// 计算一次hash

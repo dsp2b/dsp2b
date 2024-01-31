@@ -4,9 +4,10 @@ import (
 	"crypto/sha1"
 	"encoding/json"
 	"fmt"
-	"github.com/codfrm/cago/pkg/logger"
 	"io"
 	"os"
+
+	"github.com/codfrm/cago/pkg/logger"
 )
 
 func ReadRepository() (*Repository, error) {

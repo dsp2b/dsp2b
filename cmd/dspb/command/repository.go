@@ -1,8 +1,9 @@
 package command
 
 import (
-	"go.mongodb.org/mongo-driver/bson/primitive"
 	"path/filepath"
+
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 type Blueprint struct {

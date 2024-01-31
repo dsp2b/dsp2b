@@ -2,10 +2,11 @@ package command
 
 import (
 	"fmt"
-	"github.com/spf13/cobra"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/spf13/cobra"
 )
 
 type diffBlueprint struct {
@@ -40,14 +41,14 @@ func statusCmd(cmd *cobra.Command, args []string) error {
 
 	// 按新文件蓝色 修改文件黄色 删除文件红色输出
 	if len(diff.newFile) > 0 {
-		for k, _ := range diff.newFile {
+		for k := range diff.newFile {
 			printBlueColor("新蓝图: " + k + "\n")
 		}
 		fmt.Printf("\n")
 	}
 
 	if len(diff.modifyFile) > 0 {
-		for k, _ := range diff.modifyFile {
+		for k := range diff.modifyFile {
 			printYellowColor("修改蓝图: " + k + "\n")
 		}
 
@@ -55,7 +56,7 @@ func statusCmd(cmd *cobra.Command, args []string) error {
 	}
 
 	if len(diff.blueprintFile) > 0 {
-		for k, _ := range diff.blueprintFile {
+		for k := range diff.blueprintFile {
 			printRedColor("删除蓝图: " + k + "\n")
 		}
 	}
