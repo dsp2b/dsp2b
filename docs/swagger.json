@@ -43,6 +43,52 @@
                         }
                     }
                 }
+            },
+            "post": {
+                "description": "创建蓝图",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "blueprint"
+                ],
+                "summary": "创建蓝图",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/definitions/blueprint.CreateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "properties": {
+                                "code": {
+                                    "type": "integer"
+                                },
+                                "data": {
+                                    "$ref": "#/definitions/blueprint.CreateResponse"
+                                },
+                                "msg": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/BadRequest"
+                        }
+                    }
+                }
             }
         },
         "/blueprint/parse": {
@@ -177,7 +223,7 @@
                 }
             }
         },
-        "/collection/:id": {
+        "/collection/{id}": {
             "get": {
                 "consumes": [
                     "application/json"
@@ -191,8 +237,9 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "name": "ID",
-                        "in": "query"
+                        "name": "id",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -221,7 +268,7 @@
                 }
             }
         },
-        "/collection/:id/blueprint": {
+        "/collection/{id}/blueprint": {
             "get": {
                 "description": "查询蓝图",
                 "consumes": [
@@ -237,8 +284,9 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "name": "ID",
-                        "in": "query"
+                        "name": "id",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -267,53 +315,7 @@
                 }
             }
         },
-        "/collection/:id/download": {
-            "get": {
-                "description": "下载蓝图zip包",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "collection"
-                ],
-                "summary": "下载蓝图zip包",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "name": "ID",
-                        "in": "query"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "properties": {
-                                "code": {
-                                    "type": "integer"
-                                },
-                                "data": {
-                                    "$ref": "#/definitions/collection.DownloadResponse"
-                                },
-                                "msg": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "$ref": "#/definitions/BadRequest"
-                        }
-                    }
-                }
-            }
-        },
-        "/collection/:id/notify": {
+        "/collection/{id}/notify": {
             "put": {
                 "description": "更新通知",
                 "consumes": [
@@ -361,7 +363,7 @@
                 }
             }
         },
-        "/collection/:id/sub": {
+        "/collection/{id}/sub": {
             "get": {
                 "description": "查询子蓝图集",
                 "consumes": [
@@ -377,8 +379,9 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "name": "ID",
-                        "in": "query"
+                        "name": "id",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -516,6 +519,75 @@
                 }
             }
         },
+        "blueprint.CreateProduct": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "icon_path": {
+                    "type": "string"
+                },
+                "item_id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "blueprint.CreateRequest": {
+            "type": "object",
+            "properties": {
+                "blueprint": {
+                    "description": "蓝图代码",
+                    "type": "string"
+                },
+                "collections": {
+                    "description": "蓝图集id",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/primitive.ObjectID"
+                    }
+                },
+                "description": {
+                    "description": "蓝图描述",
+                    "type": "string"
+                },
+                "pic_list": {
+                    "description": "蓝图图片",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "products": {
+                    "description": "蓝图产物",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/blueprint.CreateProduct"
+                    }
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/blueprint.Tag"
+                    }
+                },
+                "title": {
+                    "description": "蓝图标题",
+                    "type": "string"
+                }
+            }
+        },
+        "blueprint.CreateResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/primitive.ObjectID"
+                }
+            }
+        },
         "blueprint.DetailResponse": {
             "type": "object"
         },
@@ -633,6 +705,20 @@
                 }
             }
         },
+        "blueprint.Tag": {
+            "type": "object",
+            "properties": {
+                "icon_path": {
+                    "type": "string"
+                },
+                "item_id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
         "collection.Collection": {
             "type": "object",
             "properties": {
@@ -656,13 +742,13 @@
                 "id": {
                     "$ref": "#/definitions/primitive.ObjectID"
                 },
+                "parent_id": {
+                    "$ref": "#/definitions/primitive.ObjectID"
+                },
                 "title": {
                     "type": "string"
                 }
             }
-        },
-        "collection.DownloadResponse": {
-            "type": "object"
         },
         "collection.GetCollectionBlueprintItem": {
             "type": "object",

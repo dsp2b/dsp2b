@@ -46,6 +46,9 @@ func (c *Collection) Update(ctx context.Context, id primitive.ObjectID, exist ma
 	if err := func() error {
 		w := zip.NewWriter(buf)
 		defer w.Close()
+		if len(collection.Description) > 3000 {
+			collection.Description = collection.Description[:3000]
+		}
 		if err := w.SetComment(collection.Description); err != nil {
 			return err
 		}
@@ -98,7 +101,6 @@ func (c *Collection) writeZip(ctx context.Context, w *zip.Writer, id primitive.O
 	if err != nil {
 		return err
 	}
-	// 写入蓝图子集
 	for _, v := range blueprint.Blueprint {
 		fh := &zip.FileHeader{
 			Name:     filepath.Join(pathname, filepath.Clean(v.Title)+".txt"),
@@ -121,7 +123,7 @@ func (c *Collection) writeZip(ctx context.Context, w *zip.Writer, id primitive.O
 			continue
 		}
 		subCollectionMap[v.ID] = struct{}{}
-		err := c.writeZip(ctx, w, v.ID, filepath.Join(pathname, v.Title), subCollectionMap)
+		err := c.writeZip(ctx, w, v.ID, filepath.Join(pathname, filepath.Clean(v.Title)), subCollectionMap)
 		if err != nil {
 			return err
 		}

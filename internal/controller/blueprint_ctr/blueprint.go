@@ -33,3 +33,8 @@ func (b *Blueprint) Detail(ctx context.Context, req *api.DetailRequest) (*api.De
 func (b *Blueprint) List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error) {
 	return blueprint_svc.Blueprint().List(ctx, req)
 }
+
+// Create 创建蓝图
+func (b *Blueprint) Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error) {
+	return blueprint_svc.Blueprint().Create(ctx, req)
+}

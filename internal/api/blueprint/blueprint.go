@@ -4,7 +4,30 @@ import (
 	"github.com/codfrm/cago/pkg/utils/httputils"
 	"github.com/codfrm/cago/server/mux"
 	"github.com/dsp2b/dsp2b-go/pkg/blueprint"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
+
+type Tag struct {
+	ItemId   int    `json:"item_id"`
+	Name     string `json:"name"`
+	IconPath string `json:"icon_path"`
+}
+
+// CreateRequest 创建蓝图
+type CreateRequest struct {
+	mux.Meta    `path:"/blueprint" method:"POST"`
+	Blueprint   string               `json:"blueprint"`   // 蓝图代码
+	Collections []primitive.ObjectID `json:"collections"` // 蓝图集id
+	Title       string               `json:"title"`       // 蓝图标题
+	Description string               `json:"description"` // 蓝图描述
+	Products    []*Product           `json:"products"`    // 蓝图产物
+	PicList     []string             `json:"pic_list"`    // 蓝图图片
+	Tags        []*Tag               `json:"tags"`
+}
+
+type CreateResponse struct {
+	ID primitive.ObjectID `json:"id"`
+}
 
 type Blueprint struct {
 	ID          string `json:"id"`

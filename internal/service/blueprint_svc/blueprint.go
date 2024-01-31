@@ -28,6 +28,8 @@ type BlueprintSvc interface {
 	Detail(ctx context.Context, req *api.DetailRequest) (*api.DetailResponse, error)
 	// List 蓝图列表
 	List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error)
+	// Create 创建蓝图
+	Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error)
 }
 
 type blueprintSvc struct {
@@ -320,5 +322,10 @@ func (b *blueprintSvc) Detail(ctx context.Context, req *api.DetailRequest) (*api
 
 // List 蓝图列表
 func (b *blueprintSvc) List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error) {
+	return nil, nil
+}
+
+// Create 创建蓝图
+func (b *blueprintSvc) Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error) {
 	return nil, nil
 }

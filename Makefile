@@ -42,3 +42,6 @@ cache_proxy:
 
 goconvey:
 	goconvey
+
+install:
+	go install ./cmd/dspb
