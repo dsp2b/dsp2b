@@ -2,8 +2,11 @@ package blueprint
 
 import (
 	"errors"
+	"fmt"
 	"net/url"
 	"strings"
+
+	"github.com/dsp2b/dsp2b-go/pkg/blueprint/md5f"
 )
 
 func Decode(data string) (Blueprint, error) {
@@ -24,5 +27,13 @@ func Rename(data, name string) (string, error) {
 		return "", errors.New("not a blueprint")
 	}
 	arr[9] = url.QueryEscape(name)
-	return "BLUEPRINT:0," + strings.Join(arr, ","), nil
+
+	data = "BLUEPRINT:0," + strings.Join(arr, ",")
+
+	arr = strings.Split(data, "\"")
+	data = strings.Join(arr[:len(arr)-1], "\"")
+
+	data = data + "\"" + fmt.Sprintf("%X", md5f.MD5Hash(data))
+
+	return data, nil
 }
