@@ -79,7 +79,6 @@ func cloneRepo(id primitive.ObjectID) error {
 				// 本地也创建目录
 				return nil
 			}
-			logger.Ctx(ctx).Info("解压文件", zap.String("name", file.Name))
 			f, err := file.Open()
 			if err != nil {
 				return err
@@ -104,6 +103,7 @@ func cloneRepo(id primitive.ObjectID) error {
 			stat, err := os.Stat(file.Name)
 			if err != nil {
 				if os.IsNotExist(err) {
+					logger.Ctx(ctx).Info("解压文件", zap.String("name", file.Name))
 					// 不存在
 					// 创建目录
 					if dir := filepath.Dir(file.Name); dir != "" {
@@ -167,7 +167,7 @@ func bfs(ctx context.Context, path string, repo *Repository, id primitive.Object
 		filename := filepath.Join(path, filepath.Clean(item.Title)+".txt")
 		hash, ok := hashMap[filename]
 		if !ok {
-			logger.Ctx(ctx).Error("未找到hash", zap.String("title", item.Title))
+			logger.Ctx(ctx).Error("未找到hash", zap.String("filename", filename), zap.String("title", item.Title))
 			return errors.New("未找到hash")
 		}
 		repo.Blueprint = append(repo.Blueprint, &Blueprint{

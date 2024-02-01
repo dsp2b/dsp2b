@@ -7,12 +7,13 @@ import (
 )
 
 type BlueprintCollection struct {
-	ID           primitive.ObjectID `bson:"_id"`
-	BlueprintID  primitive.ObjectID `bson:"blueprint_id"`
-	CollectionID primitive.ObjectID `bson:"collection_id"`
-	Status       int8               `bson:"status"`
-	Createtime   time.Time          `bson:"createtime"`
-	Updatetime   time.Time          `bson:"updatetime,omitempty"`
+	ID               primitive.ObjectID `bson:"_id"`
+	BlueprintID      primitive.ObjectID `bson:"blueprint_id"`
+	CollectionID     primitive.ObjectID `bson:"collection_id"`
+	RootCollectionID primitive.ObjectID `bson:"root_collection_id"`
+	Status           int8               `bson:"status"`
+	Createtime       time.Time          `bson:"createtime"`
+	Updatetime       time.Time          `bson:"updatetime,omitempty"`
 }
 
 func (b *BlueprintCollection) CollectionName() string {

@@ -14,14 +14,16 @@ const (
 )
 
 type CollectionUpdateMsg struct {
-	ID    primitive.ObjectID              `json:"id"`
-	Exist map[primitive.ObjectID]struct{} `json:"exist"`
+	ID          primitive.ObjectID              `json:"id"`
+	BlueprintID primitive.ObjectID              `json:"blueprint_id"`
+	Exist       map[primitive.ObjectID]struct{} `json:"exist"`
 }
 
-func PublishCollectionUpdate(ctx context.Context, id primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
+func PublishCollectionUpdate(ctx context.Context, id, blueprint primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
 	body, err := json.Marshal(&CollectionUpdateMsg{
-		ID:    id,
-		Exist: exist,
+		ID:          id,
+		BlueprintID: blueprint,
+		Exist:       exist,
 	})
 	if err != nil {
 		return err
@@ -32,14 +34,14 @@ func PublishCollectionUpdate(ctx context.Context, id primitive.ObjectID, exist m
 }
 
 func SubscribeCollectionUpdate(ctx context.Context,
-	handler func(ctx context.Context, id primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error) error {
+	handler func(ctx context.Context, id, blueprint primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error) error {
 	_, err := broker.Default().Subscribe(ctx, CollectionUpdateTopic, func(ctx context.Context, ev broker2.Event) error {
 		msg := &CollectionUpdateMsg{}
 		err := json.Unmarshal(ev.Message().Body, msg)
 		if err != nil {
 			return err
 		}
-		return handler(ctx, msg.ID, msg.Exist)
+		return handler(ctx, msg.ID, msg.BlueprintID, msg.Exist)
 	})
 	return err
 }

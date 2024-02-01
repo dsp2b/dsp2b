@@ -20,7 +20,7 @@ func push(cmd *cobra.Command, args []string) error {
 		return err
 	}
 	// 比较
-	diff := newDiff(repo)
+	diff := newScan(repo)
 	err = diff.Diff(".")
 	if err != nil {
 		return err

@@ -25,26 +25,33 @@ type Repository struct {
 }
 
 func (r *Repository) BlueprintMap() map[string]*Blueprint {
+	return r.blueprintMap("")
+}
+func (r *Repository) blueprintMap(path string) map[string]*Blueprint {
 	ret := make(map[string]*Blueprint, 0)
 	for _, v := range r.Blueprint {
-		ret[v.Title] = v
+		ret[filepath.Join(path, v.Title)] = v
 	}
 	for _, v := range r.Repository {
-		for _, v2 := range v.BlueprintMap() {
-			ret[filepath.Join(v.Title, v2.Title)] = v2
+		for k, v2 := range v.blueprintMap(filepath.Join(path, v.Title)) {
+			ret[k] = v2
 		}
 	}
 	return ret
 }
 
 func (r *Repository) RepositoryMap() map[string]*Repository {
+	return r.repositoryMap("")
+}
+
+func (r *Repository) repositoryMap(path string) map[string]*Repository {
 	ret := make(map[string]*Repository, 0)
 	for _, v := range r.Repository {
-		ret[v.Title] = v
+		ret[filepath.Join(path, v.Title)] = v
 	}
 	for _, v := range r.Repository {
-		for _, v2 := range v.RepositoryMap() {
-			ret[filepath.Join(v.Title, v2.Title)] = v2
+		for k, v2 := range v.repositoryMap(filepath.Join(path, v.Title)) {
+			ret[k] = v2
 		}
 	}
 	return ret

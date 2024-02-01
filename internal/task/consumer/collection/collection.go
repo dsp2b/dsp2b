@@ -10,6 +10,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
+	"github.com/dsp2b/dsp2b-go/internal/utils"
+
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/codfrm/cago/pkg/oss"
 	api "github.com/dsp2b/dsp2b-go/internal/api/collection"
@@ -31,11 +34,28 @@ func (c *Collection) Subscribe(ctx context.Context) error {
 	return nil
 }
 
-func (c *Collection) Update(ctx context.Context, id primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
+func (c *Collection) Update(ctx context.Context, id, blueprint primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
 	c.lock.Lock()
 	defer c.lock.Unlock()
 	runtime.GC()
 	logger.Ctx(ctx).Info("collection update", zap.String("id", id.Hex()))
+	// 如果有蓝图id, 则将root蓝图集记录一下
+	if !blueprint.IsZero() {
+		m, err := blueprint_collection_repo.BlueprintCollection().FindByCollectionBlueprint(ctx, id, blueprint)
+		if err != nil {
+			return err
+		}
+		if m != nil {
+			root, err := utils.RootCollection(ctx, m.CollectionID)
+			if err != nil {
+				return err
+			}
+			m.RootCollectionID = root
+			if err := blueprint_collection_repo.BlueprintCollection().Update(ctx, m); err != nil {
+				return err
+			}
+		}
+	}
 	// 打包蓝图集zip文件上传到oss
 	collection, err := collection_svc.Collection().Detail(ctx, &api.DetailRequest{
 		ID: id,
@@ -85,7 +105,7 @@ func (c *Collection) Update(ctx context.Context, id primitive.ObjectID, exist ma
 			return nil
 		}
 		exist[collection.ParentID] = struct{}{}
-		if err := producer.PublishCollectionUpdate(ctx, collection.ParentID, exist); err != nil {
+		if err := producer.PublishCollectionUpdate(ctx, collection.ParentID, primitive.NilObjectID, exist); err != nil {
 			return err
 		}
 	}

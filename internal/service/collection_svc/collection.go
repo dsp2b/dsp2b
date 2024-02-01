@@ -4,12 +4,11 @@ import (
 	"context"
 	"errors"
 
-	"github.com/dsp2b/dsp2b-go/internal/task/producer"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
+	"github.com/dsp2b/dsp2b-go/internal/task/producer"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 
 	api "github.com/dsp2b/dsp2b-go/internal/api/collection"
 )
@@ -101,7 +100,7 @@ func (c *collectionSvc) Detail(ctx context.Context, req *api.DetailRequest) (*ap
 
 // UpdateNotify 更新通知
 func (c *collectionSvc) UpdateNotify(ctx context.Context, req *api.UpdateNotifyRequest) (*api.UpdateNotifyResponse, error) {
-	if err := producer.PublishCollectionUpdate(ctx, req.ID, map[primitive.ObjectID]struct{}{
+	if err := producer.PublishCollectionUpdate(ctx, req.ID, req.BlueprintID, map[primitive.ObjectID]struct{}{
 		req.ID: {},
 	}); err != nil {
 		return nil, err

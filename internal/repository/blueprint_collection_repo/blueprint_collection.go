@@ -19,6 +19,7 @@ type BlueprintCollectionRepo interface {
 	Update(ctx context.Context, blueprintCollection *blueprint_collection_entity.BlueprintCollection) error
 	Delete(ctx context.Context, id primitive.ObjectID) error
 	FindByCollection(ctx context.Context, id primitive.ObjectID) ([]*blueprint_collection_entity.BlueprintCollection, error)
+	FindByCollectionBlueprint(ctx context.Context, id primitive.ObjectID, blueprint primitive.ObjectID) (*blueprint_collection_entity.BlueprintCollection, error)
 }
 
 var defaultBlueprintCollection BlueprintCollectionRepo
@@ -131,4 +132,23 @@ func (u *blueprintCollectionRepo) FindByCollection(ctx context.Context, id primi
 	}
 
 	return list, nil
+}
+
+func (u *blueprintCollectionRepo) FindByCollectionBlueprint(ctx context.Context, id primitive.ObjectID, blueprint primitive.ObjectID) (*blueprint_collection_entity.BlueprintCollection, error) {
+	blueprintCollection := blueprint_collection_entity.BlueprintCollection{}
+	filter := bson.M{
+		"collection_id": id,
+		"blueprint_id":  blueprint,
+		"status":        consts.ACTIVE,
+	}
+
+	err := mongo.Ctx(ctx).Collection(blueprintCollection.CollectionName()).FindOne(filter).Decode(&blueprintCollection)
+	if err != nil {
+		if mongo.IsNoDocuments(err) {
+			return nil, nil
+		}
+		return nil, err
+	}
+
+	return &blueprintCollection, nil
 }

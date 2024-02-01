@@ -6,18 +6,21 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/codfrm/cago/pkg/logger"
+	"go.uber.org/zap"
+
 	"github.com/spf13/cobra"
 )
 
-type diffBlueprint struct {
+type scanBlueprint struct {
 	repo          *Repository
 	blueprintFile map[string]*Blueprint
 	newFile       map[string]os.DirEntry
 	modifyFile    map[string]string
 }
 
-func newDiff(repo *Repository) *diffBlueprint {
-	return &diffBlueprint{
+func newScan(repo *Repository) *scanBlueprint {
+	return &scanBlueprint{
 		repo:          repo,
 		blueprintFile: repo.BlueprintMap(),
 		newFile:       make(map[string]os.DirEntry),
@@ -32,7 +35,7 @@ func statusCmd(cmd *cobra.Command, args []string) error {
 		return err
 	}
 	// 比较
-	diff := newDiff(repo)
+	diff := newScan(repo)
 
 	err = diff.Diff(".")
 	if err != nil {
@@ -68,7 +71,7 @@ func statusCmd(cmd *cobra.Command, args []string) error {
 	return nil
 }
 
-func (d *diffBlueprint) Diff(path string) error {
+func (d *scanBlueprint) Diff(path string) error {
 	err := d.diff(path)
 	if err != nil {
 		return err
@@ -77,7 +80,40 @@ func (d *diffBlueprint) Diff(path string) error {
 	return nil
 }
 
-func (d *diffBlueprint) diff(path string) error {
+func (d *scanBlueprint) Scan(path string, callback func(path string, entry os.DirEntry) error) error {
+	err := d.scan(path, callback)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (d *scanBlueprint) scan(path string, callback func(path string, entity os.DirEntry) error) error {
+	// 遍历所有文件
+	dir, err := os.ReadDir(path)
+	if err != nil {
+		return err
+	}
+	for _, v := range dir {
+		if v.IsDir() {
+			if err := d.scan(filepath.Join(path, v.Name()), callback); err != nil {
+				return err
+			}
+		} else {
+			name := strings.TrimSuffix(v.Name(), ".txt")
+			if name == v.Name() {
+				continue
+			}
+			if err := callback(path, v); err != nil {
+				logger.Default().Error("文件处理失败", zap.String("file", v.Name()), zap.Error(err))
+				return err
+			}
+		}
+	}
+	return nil
+}
+
+func (d *scanBlueprint) diff(path string) error {
 	// 遍历所有文件
 	dir, err := os.ReadDir(path)
 	if err != nil {

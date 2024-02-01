@@ -23,5 +23,9 @@ func AddCommand(cmd *cobra.Command) {
 		Use:   "status",
 		Short: "查看戴森球蓝图集状态",
 		RunE:  statusCmd,
+	}, {
+		Use:   "rename",
+		Short: "重命名所有蓝图",
+		RunE:  renameCmd,
 	}}...)
 }

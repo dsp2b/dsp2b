@@ -53,8 +53,9 @@ type DetailResponse struct {
 
 // UpdateNotifyRequest 更新通知
 type UpdateNotifyRequest struct {
-	mux.Meta `path:"/collection/:id/notify" method:"PUT"`
-	ID       primitive.ObjectID `uri:"id"`
+	mux.Meta    `path:"/collection/:id/notify" method:"POST"`
+	ID          primitive.ObjectID `uri:"id"`
+	BlueprintID primitive.ObjectID `json:"blueprint_id"`
 }
 
 type UpdateNotifyResponse struct {
