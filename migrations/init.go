@@ -26,6 +26,7 @@ func Migrations(ctx context.Context, cfg *configs.Config) error {
 	defer redis.Default().Del(context.Background(), "migrations")
 	return run(ctx,
 		T20240130,
+		T20240201,
 	)
 }
 

@@ -4,6 +4,8 @@ import (
 	"context"
 	"log"
 
+	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
+
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
@@ -30,6 +32,13 @@ func main() {
 		blueprint_repo.RegisterBlueprint(blueprint_repo.NewBlueprint())
 		collection_repo.RegisterColletcion(collection_repo.NewColletcion())
 		blueprint_collection_repo.RegisterBlueprintCollection(blueprint_collection_repo.NewBlueprintCollection())
+
+		if err := blueprint_svc.InitBlueprint(
+			"./data/itemProtoSet.json",
+			"./data/recipeProtoSet.json",
+		); err != nil {
+			log.Fatalf("init blueprint err: %v", err)
+		}
 	}
 	err = cago.New(ctx, cfg).
 		Registry(component.Core()).

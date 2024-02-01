@@ -8,7 +8,6 @@ import (
 	"github.com/dsp2b/dsp2b-go/internal/controller/blueprint_ctr"
 	"github.com/dsp2b/dsp2b-go/internal/controller/collection_ctr"
 	"github.com/dsp2b/dsp2b-go/internal/controller/resource_ctr"
-	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
 )
 
 // Router 路由
@@ -20,12 +19,6 @@ func Router(ctx context.Context, root *mux.Router) error {
 	rpc := root.Group("/rpc")
 	rg := r.Group("/")
 	rpcg := rpc.Group("/")
-	if err := blueprint_svc.InitBlueprint(
-		"./data/itemProtoSet.json",
-		"./data/recipeProtoSet.json",
-	); err != nil {
-		return err
-	}
 	{
 		ctr := blueprint_ctr.NewBlueprint()
 		rpcg.Bind(

@@ -10,6 +10,8 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/dsp2b/dsp2b-go/internal/model/entity/blueprint_entity"
+
 	"github.com/codfrm/cago/database/cache"
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/codfrm/cago/pkg/utils/httputils"
@@ -30,6 +32,8 @@ type BlueprintSvc interface {
 	List(ctx context.Context, req *api.ListRequest) (*api.ListResponse, error)
 	// Create 创建蓝图
 	Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error)
+	// IconInfo 获取icon信息
+	IconInfo(ctx context.Context, itemId int) (*blueprint_entity.IconInfo, error)
 }
 
 type blueprintSvc struct {
@@ -65,9 +69,15 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
 		ItemProtoMap:   itemProtoSet.Map(),
 		RecipeProtoMap: recipeProtoSet.Map(),
 	}
+	for k, v := range svc.ItemProtoMap {
+		v.Proto.IconPath = path.Base(v.Proto.IconPath)
+		svc.ItemProtoMap[k] = v
+	}
 	// 	生成配方面板文件
 	panel := api.RecipePanel{}
-	for _, v := range recipeProtoSet.DataArray {
+	for k, v := range svc.RecipeProtoMap {
+		v.Proto.IconPath = path.Base(v.Proto.IconPath)
+		svc.RecipeProtoMap[k] = v
 		if v.Proto.GridIndex == 0 {
 			continue
 		}
@@ -87,7 +97,6 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
 			}
 			item.IconPath = i.Proto.IconPath
 		}
-		item.IconPath = path.Base(item.IconPath)
 		if v.Proto.GridIndex > 2000 {
 			panel.BuildingPanel[x][y] = item
 		} else {
@@ -123,7 +132,7 @@ func (b *blueprintSvc) Parse(ctx context.Context, req *api.ParseRequest) (*api.P
 			buldingsMap[v.ItemId] = &api.Building{
 				ItemId:   v.ItemId,
 				Name:     item.Name,
-				IconPath: path.Base(item.Proto.IconPath),
+				IconPath: item.Proto.IconPath,
 				Count:    1,
 			}
 		}
@@ -274,7 +283,7 @@ func (b *blueprintSvc) recipeSpeed(ctx context.Context, recipe assets.Proto[asse
 				productMap[int16(v)] = &api.Product{
 					ItemId:   int16(v),
 					Name:     item.Name,
-					IconPath: path.Base(item.Proto.IconPath),
+					IconPath: item.Proto.IconPath,
 					Count:    speed,
 				}
 			}
@@ -294,7 +303,7 @@ func (b *blueprintSvc) recipeSpeed(ctx context.Context, recipe assets.Proto[asse
 				materialMap[int16(v)] = &api.Product{
 					ItemId:   int16(v),
 					Name:     item.Name,
-					IconPath: path.Base(item.Proto.IconPath),
+					IconPath: item.Proto.IconPath,
 					Count:    speed,
 				}
 			}
@@ -328,4 +337,16 @@ func (b *blueprintSvc) List(ctx context.Context, req *api.ListRequest) (*api.Lis
 // Create 创建蓝图
 func (b *blueprintSvc) Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error) {
 	return nil, nil
+}
+
+func (b *blueprintSvc) IconInfo(ctx context.Context, itemId int) (*blueprint_entity.IconInfo, error) {
+	item, ok := b.ItemProtoMap[int32(itemId)]
+	if !ok {
+		return nil, errors.New("not found item")
+	}
+	return &blueprint_entity.IconInfo{
+		ItemID:   item.ID,
+		Name:     item.Name,
+		IconPath: item.Proto.IconPath,
+	}, nil
 }
