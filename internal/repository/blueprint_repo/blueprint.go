@@ -102,10 +102,10 @@ func (u *blueprintRepo) FindPage(ctx context.Context, page httputils.PageRequest
 	if err != nil {
 		return nil, 0, err
 	}
-	userList := make([]*blueprint_entity.Blueprint, 0, page.GetSize())
-	if err = curs.All(ctx, &userList); err != nil {
+	blueprintList := make([]*blueprint_entity.Blueprint, 0, page.GetSize())
+	if err = curs.All(ctx, &blueprintList); err != nil {
 		return nil, 0, err
 	}
 
-	return userList, total, nil
+	return blueprintList, total, nil
 }

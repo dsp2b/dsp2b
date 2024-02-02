@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
+	"runtime"
 	"strconv"
 
 	"github.com/codfrm/cago/pkg/logger"
@@ -20,12 +22,21 @@ import (
 
 const BaseURL = "https://www.dsp2b.com/zh-CN"
 
+var configDir = "~/.dsp2b"
+
+func init() {
+	// 判断是否为windows
+	if runtime.GOOS == "windows" {
+		configDir, _ = os.UserHomeDir()
+	}
+}
+
 type ApiClient struct {
 	cookie string
 }
 
 func NewApiClient() (*ApiClient, error) {
-	cookie, err := os.ReadFile(".cookie")
+	cookie, err := os.ReadFile(filepath.Join(configDir, ".cookie"))
 	if err != nil {
 		logger.Default().Error("读取cookie失败", zap.Error(err))
 		return nil, err
@@ -71,7 +82,7 @@ func (a *ApiClient) POST(ctx context.Context, url, contentType string, body io.R
 
 func CollectionDetail(ctx context.Context, id primitive.ObjectID, page int) (*CollectionDetailResponse, error) {
 	resp, err := http.Get(BaseURL + "/collection/" + id.Hex() +
-		"?page=" + strconv.Itoa(page) + "&_data=routes%2F%24lng.collection_.%24id")
+		"?page=" + strconv.Itoa(page) + "&_data=routes%2F%24lng.collection_.%24id&root=false")
 	if err != nil {
 		return nil, err
 	}

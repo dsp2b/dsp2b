@@ -40,7 +40,7 @@ func push(cmd *cobra.Command, args []string) error {
 			if dir == "." {
 				collection = repo
 			} else {
-				logger.Ctx(ctx).Error("蓝图集不存在, 请手动创建蓝图集, 再执行dsp pull", zap.String("dir", dir))
+				logger.Ctx(ctx).Error("蓝图集不存在, 请手动创建蓝图集, 再执行dsp pullCmd", zap.String("dir", dir))
 				break
 			}
 		}
