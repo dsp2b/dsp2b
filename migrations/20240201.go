@@ -2,15 +2,16 @@ package migrations
 
 import (
 	"context"
-	"math"
 
 	"github.com/codfrm/cago/database/migrate/mongomigrate"
 	"github.com/codfrm/cago/database/mongo"
+	"github.com/codfrm/cago/pkg/logger"
 	"github.com/codfrm/cago/pkg/utils/httputils"
 	"github.com/dsp2b/dsp2b-go/internal/model/entity/blueprint_entity"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
 	"github.com/dsp2b/dsp2b-go/pkg/blueprint"
+	"go.uber.org/zap"
 )
 
 func T20240201() *mongomigrate.Migration {
@@ -18,7 +19,7 @@ func T20240201() *mongomigrate.Migration {
 		ID: "20240201",
 		Migrate: func(ctx context.Context, db *mongo.Client) error {
 			// 解析所有蓝图的icon
-			for page := 1; page < math.MaxInt32; page++ {
+			for page := 1; ; page++ {
 				list, _, err := blueprint_repo.Blueprint().FindPage(ctx, httputils.PageRequest{
 					Page: page,
 					Size: 20,
@@ -54,6 +55,7 @@ func T20240201() *mongomigrate.Migration {
 					if err := blueprint_repo.Blueprint().Update(ctx, v); err != nil {
 						return err
 					}
+					logger.Ctx(ctx).Info("处理蓝图成功", zap.String("id", v.ID.Hex()))
 				}
 			}
 			return nil
