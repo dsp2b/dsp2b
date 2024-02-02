@@ -5,10 +5,13 @@ import (
 	"compress/gzip"
 	"encoding/base64"
 	"errors"
+	"fmt"
 	"net/url"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/dsp2b/dsp2b-go/pkg/blueprint/md5f"
 
 	"github.com/dsp2b/dsp2b-go/pkg/utils"
 )
@@ -35,6 +38,12 @@ func (b *Blueprint) Decode(data string) error {
 	s := strings.Split(arr[10], "\"")
 	if len(s) != 3 {
 		return errors.New("not a blueprint header")
+	}
+	hash := s[2]
+	removeHash := "BLUEPRINT:0," + strings.Join(arr[:10], ",") + "," + strings.Join(s[:2], "\"")
+	// hash校验
+	if fmt.Sprintf("%X", md5f.MD5Hash(removeHash)) != hash {
+		return errors.New("blueprint hash not match")
 	}
 	building := s[1]
 	buildingByte := make([]byte, base64.StdEncoding.DecodedLen(len(building)))
