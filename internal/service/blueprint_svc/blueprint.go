@@ -70,14 +70,18 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
 		RecipeProtoMap: recipeProtoSet.Map(),
 	}
 	for k, v := range svc.ItemProtoMap {
-		v.Proto.IconPath = path.Base(v.Proto.IconPath)
-		svc.ItemProtoMap[k] = v
+		if v.Proto.IconPath != "" {
+			v.Proto.IconPath = path.Base(v.Proto.IconPath)
+			svc.ItemProtoMap[k] = v
+		}
 	}
 	// 	生成配方面板文件
 	panel := api.RecipePanel{}
 	for k, v := range svc.RecipeProtoMap {
-		v.Proto.IconPath = path.Base(v.Proto.IconPath)
-		svc.RecipeProtoMap[k] = v
+		if v.Proto.IconPath != "" {
+			v.Proto.IconPath = path.Base(v.Proto.IconPath)
+			svc.RecipeProtoMap[k] = v
+		}
 		if v.Proto.GridIndex == 0 {
 			continue
 		}
