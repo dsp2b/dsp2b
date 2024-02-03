@@ -6,7 +6,6 @@ import (
 	"errors"
 	"math"
 	"os"
-	"path"
 	"strconv"
 	"time"
 
@@ -37,6 +36,7 @@ type BlueprintSvc interface {
 }
 
 type blueprintSvc struct {
+	IconPathMap    map[int32]*blueprint_entity.IconInfo
 	ItemProtoMap   map[int32]assets.Proto[assets.ItemProto]
 	RecipeProtoMap map[int32]assets.Proto[assets.RecipeProto]
 	RecipePanel    api.RecipePanel
@@ -48,7 +48,7 @@ func Blueprint() BlueprintSvc {
 	return defaultBlueprint
 }
 
-func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
+func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSet string) error {
 	b, err := os.ReadFile(itemProtoSetPath)
 	if err != nil {
 		return err
@@ -66,21 +66,28 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath string) error {
 		return err
 	}
 	svc := &blueprintSvc{
+		IconPathMap:    make(map[int32]*blueprint_entity.IconInfo),
 		ItemProtoMap:   itemProtoSet.Map(),
 		RecipeProtoMap: recipeProtoSet.Map(),
 	}
 	for k, v := range svc.ItemProtoMap {
 		if v.Proto.IconPath != "" {
-			v.Proto.IconPath = path.Base(v.Proto.IconPath)
-			svc.ItemProtoMap[k] = v
+			svc.IconPathMap[k] = &blueprint_entity.IconInfo{
+				ItemID:   k,
+				Name:     v.Name,
+				IconPath: v.Proto.IconPath,
+			}
 		}
 	}
 	// 	生成配方面板文件
 	panel := api.RecipePanel{}
 	for k, v := range svc.RecipeProtoMap {
 		if v.Proto.IconPath != "" {
-			v.Proto.IconPath = path.Base(v.Proto.IconPath)
-			svc.RecipeProtoMap[k] = v
+			svc.IconPathMap[k] = &blueprint_entity.IconInfo{
+				ItemID:   k,
+				Name:     v.Name,
+				IconPath: v.Proto.IconPath,
+			}
 		}
 		if v.Proto.GridIndex == 0 {
 			continue
@@ -344,13 +351,9 @@ func (b *blueprintSvc) Create(ctx context.Context, req *api.CreateRequest) (*api
 }
 
 func (b *blueprintSvc) IconInfo(ctx context.Context, itemId int) (*blueprint_entity.IconInfo, error) {
-	item, ok := b.ItemProtoMap[int32(itemId)]
+	item, ok := b.IconPathMap[int32(itemId)]
 	if !ok {
 		return nil, errors.New("not found item")
 	}
-	return &blueprint_entity.IconInfo{
-		ItemID:   item.ID,
-		Name:     item.Name,
-		IconPath: item.Proto.IconPath,
-	}, nil
+	return item, nil
 }

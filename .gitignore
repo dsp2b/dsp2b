@@ -26,6 +26,8 @@ go.work
 
 ItemProtoSet.dat
 RecipeProtoSet.dat
+TechProtoSet.dat
+SignalProtoSet.dat
 
 .vscode
 .idea

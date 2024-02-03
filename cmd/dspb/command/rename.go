@@ -39,3 +39,34 @@ func renameCmd(cmd *cobra.Command, args []string) error {
 
 	return nil
 }
+
+func renameFileCmd(cmd *cobra.Command, args []string) error {
+	repo, err := ReadRepository()
+	if err != nil {
+		return err
+	}
+
+	scan := newScan(repo)
+
+	err = scan.Scan(".", func(path string, entry os.DirEntry) error {
+		filename := filepath.Join(path, entry.Name())
+		data, err := os.ReadFile(filename)
+		if err != nil {
+			return err
+		}
+		blueprint, err := blueprint.Decode(string(data))
+		if err != nil {
+			return err
+		}
+		err = os.Rename(filename, filepath.Join(path, blueprint.ShortDesc+".txt"))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

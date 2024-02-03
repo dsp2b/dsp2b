@@ -12,6 +12,7 @@ import (
 	"path/filepath"
 	"runtime"
 	"strconv"
+	"strings"
 
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/codfrm/cago/pkg/utils/httputils"
@@ -24,11 +25,24 @@ const BaseURL = "https://www.dsp2b.com/zh-CN"
 
 var configDir = "~/.dsp2b"
 
+// Abs 转绝对路径,处理了"~"
+func Abs(p string) (string, error) {
+	if strings.HasPrefix(p, "~") {
+		home, err := os.UserHomeDir()
+		if err != nil {
+			return "", err
+		}
+		return filepath.Abs(filepath.Join(home, p[1:]))
+	}
+	return filepath.Abs(p)
+}
+
 func init() {
 	// 判断是否为windows
 	if runtime.GOOS == "windows" {
 		configDir, _ = os.UserHomeDir()
 	}
+	configDir, _ = Abs(configDir)
 }
 
 type ApiClient struct {

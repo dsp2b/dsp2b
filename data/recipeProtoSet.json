@@ -1,7 +1,7 @@
 {
   "Type": "RecipeProtoSet",
   "TableName": "Recipe",
-  "Signature": "2A3B5C22E9EB1498D71C223C38F9A907",
+  "Signature": "982A21A87698B16CFEAE5A9CEF4882C9",
   "DataArray": [
     {
       "Name": "铁块",
@@ -230,7 +230,7 @@
     {
       "Name": "电磁矩阵",
       "ID": 9,
-      "SID": "1701",
+      "SID": "1801",
       "Proto": {
         "Type": 15,
         "Handcraft": true,
@@ -250,7 +250,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1701,
+        "GridIndex": 1801,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -377,7 +377,7 @@
     {
       "Name": "原油萃取站",
       "ID": 14,
-      "SID": "2307",
+      "SID": "2308",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -401,7 +401,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2307,
+        "GridIndex": 2308,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -410,7 +410,7 @@
     {
       "Name": "原油精炼厂",
       "ID": 15,
-      "SID": "2308",
+      "SID": "2309",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -434,7 +434,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2308,
+        "GridIndex": 2309,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -499,7 +499,7 @@
     {
       "Name": "能量矩阵",
       "ID": 18,
-      "SID": "1702",
+      "SID": "1802",
       "Proto": {
         "Type": 15,
         "Handcraft": true,
@@ -519,7 +519,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1702,
+        "GridIndex": 1802,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -528,7 +528,7 @@
     {
       "Name": "氢燃料棒",
       "ID": 19,
-      "SID": "1607",
+      "SID": "1609",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -548,7 +548,7 @@
         "ResultCounts": [
           2
         ],
-        "GridIndex": 1607,
+        "GridIndex": 1609,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -615,7 +615,7 @@
     {
       "Name": "化工厂",
       "ID": 22,
-      "SID": "2310",
+      "SID": "2311",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -639,7 +639,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2310,
+        "GridIndex": 2311,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -768,7 +768,7 @@
     {
       "Name": "结构矩阵",
       "ID": 27,
-      "SID": "1703",
+      "SID": "1803",
       "Proto": {
         "Type": 15,
         "Handcraft": true,
@@ -788,7 +788,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1703,
+        "GridIndex": 1803,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1089,7 +1089,7 @@
     {
       "Name": "位面过滤器",
       "ID": 38,
-      "SID": "1611",
+      "SID": "1607",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1109,7 +1109,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1611,
+        "GridIndex": 1607,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1118,7 +1118,7 @@
     {
       "Name": "微型粒子对撞机",
       "ID": 39,
-      "SID": "2312",
+      "SID": "2313",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1144,7 +1144,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2312,
+        "GridIndex": 2313,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1180,7 +1180,7 @@
     {
       "Name": "氘核燃料棒",
       "ID": 41,
-      "SID": "1608",
+      "SID": "1610",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1202,7 +1202,7 @@
         "ResultCounts": [
           2
         ],
-        "GridIndex": 1608,
+        "GridIndex": 1610,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1211,7 +1211,7 @@
     {
       "Name": "湮灭约束球",
       "ID": 42,
-      "SID": "1613",
+      "SID": "1608",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1231,7 +1231,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1613,
+        "GridIndex": 1608,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1273,7 +1273,7 @@
     {
       "Name": "反物质燃料棒",
       "ID": 44,
-      "SID": "1609",
+      "SID": "1611",
       "Proto": {
         "Type": 4,
         "Handcraft": false,
@@ -1297,7 +1297,7 @@
         "ResultCounts": [
           2
         ],
-        "GridIndex": 1609,
+        "GridIndex": 1611,
         "IconPath": "",
         "Description": "",
         "NonProductive": true
@@ -1399,7 +1399,7 @@
     {
       "Name": "采矿机",
       "ID": 48,
-      "SID": "2304",
+      "SID": "2305",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1423,7 +1423,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2304,
+        "GridIndex": 2305,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1432,7 +1432,7 @@
     {
       "Name": "抽水站",
       "ID": 49,
-      "SID": "2306",
+      "SID": "2307",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -1456,7 +1456,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2306,
+        "GridIndex": 2307,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -1612,7 +1612,7 @@
     {
       "Name": "信息矩阵",
       "ID": 55,
-      "SID": "1704",
+      "SID": "1804",
       "Proto": {
         "Type": 15,
         "Handcraft": true,
@@ -1632,7 +1632,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1704,
+        "GridIndex": 1804,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -2175,7 +2175,7 @@
     {
       "Name": "光子物质化",
       "ID": 74,
-      "SID": "1612",
+      "SID": "1708",
       "Proto": {
         "Type": 5,
         "Handcraft": false,
@@ -2195,7 +2195,7 @@
           2,
           2
         ],
-        "GridIndex": 1612,
+        "GridIndex": 1708,
         "IconPath": "Icons/ItemRecipe/photon-formula",
         "Description": "R光子物质化",
         "NonProductive": true
@@ -2204,7 +2204,7 @@
     {
       "Name": "宇宙矩阵",
       "ID": 75,
-      "SID": "1706",
+      "SID": "1806",
       "Proto": {
         "Type": 15,
         "Handcraft": false,
@@ -2232,7 +2232,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1706,
+        "GridIndex": 1806,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -2305,7 +2305,7 @@
     {
       "Name": "空间翘曲器",
       "ID": 78,
-      "SID": "1712",
+      "SID": "1706",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -2323,7 +2323,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1712,
+        "GridIndex": 1706,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -2332,7 +2332,7 @@
     {
       "Name": "空间翘曲器（高级）",
       "ID": 79,
-      "SID": "1713",
+      "SID": "1707",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -2350,7 +2350,7 @@
         "ResultCounts": [
           8
         ],
-        "GridIndex": 1713,
+        "GridIndex": 1707,
         "IconPath": "Icons/ItemRecipe/space-warper-lv2",
         "Description": "R空间翘曲器（高级）",
         "NonProductive": false
@@ -3025,7 +3025,7 @@
     {
       "Name": "引力矩阵",
       "ID": 102,
-      "SID": "1705",
+      "SID": "1805",
       "Proto": {
         "Type": 15,
         "Handcraft": true,
@@ -3045,7 +3045,7 @@
         "ResultCounts": [
           2
         ],
-        "GridIndex": 1705,
+        "GridIndex": 1805,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3234,7 +3234,7 @@
     {
       "Name": "分馏塔",
       "ID": 110,
-      "SID": "2309",
+      "SID": "2310",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3258,7 +3258,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2309,
+        "GridIndex": 2310,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3519,7 +3519,7 @@
     {
       "Name": "大型采矿机",
       "ID": 119,
-      "SID": "2305",
+      "SID": "2306",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3545,7 +3545,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2305,
+        "GridIndex": 2306,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3680,7 +3680,7 @@
     {
       "Name": "化工厂 Mk.II",
       "ID": 124,
-      "SID": "2311",
+      "SID": "2312",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3704,7 +3704,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2311,
+        "GridIndex": 2312,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3746,7 +3746,7 @@
     {
       "Name": "高频激光塔",
       "ID": 126,
-      "SID": "2505",
+      "SID": "2504",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3812,7 +3812,7 @@
     {
       "Name": "磁化电浆炮",
       "ID": 128,
-      "SID": "2507",
+      "SID": "2505",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3880,7 +3880,7 @@
     {
       "Name": "干扰塔",
       "ID": 130,
-      "SID": "2509",
+      "SID": "2508",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3893,10 +3893,10 @@
           1303
         ],
         "ItemCounts": [
-          10,
-          10,
-          10,
-          2
+          12,
+          9,
+          6,
+          3
         ],
         "Results": [
           3006
@@ -3904,7 +3904,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 0,
+        "GridIndex": 2508,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3913,7 +3913,7 @@
     {
       "Name": "信标",
       "ID": 131,
-      "SID": "2504",
+      "SID": "2509",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3935,7 +3935,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2507,
+        "GridIndex": 2509,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -3944,7 +3944,7 @@
     {
       "Name": "护盾发生器",
       "ID": 132,
-      "SID": "2506",
+      "SID": "2510",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -3968,7 +3968,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2508,
+        "GridIndex": 2510,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4076,7 +4076,7 @@
           1104
         ],
         "ItemCounts": [
-          4
+          3
         ],
         "Results": [
           1601
@@ -4134,7 +4134,7 @@
         ],
         "ItemCounts": [
           1,
-          2
+          1
         ],
         "Results": [
           1603
@@ -4403,7 +4403,7 @@
     {
       "Name": "地面战斗机-E型",
       "ID": 147,
-      "SID": "1707",
+      "SID": "1701",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4427,7 +4427,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1707,
+        "GridIndex": 1701,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4436,7 +4436,7 @@
     {
       "Name": "地面战斗机-A型",
       "ID": 148,
-      "SID": "1708",
+      "SID": "1702",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4460,7 +4460,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1708,
+        "GridIndex": 1702,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4469,7 +4469,7 @@
     {
       "Name": "地面战斗机-F型",
       "ID": 149,
-      "SID": "1709",
+      "SID": "1703",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4493,7 +4493,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1709,
+        "GridIndex": 1703,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4502,7 +4502,7 @@
     {
       "Name": "太空战斗机-A型",
       "ID": 150,
-      "SID": "1710",
+      "SID": "1704",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4526,7 +4526,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1710,
+        "GridIndex": 1704,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4535,7 +4535,7 @@
     {
       "Name": "太空战斗机-F型",
       "ID": 151,
-      "SID": "1711",
+      "SID": "1705",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4559,7 +4559,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1711,
+        "GridIndex": 1705,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4597,7 +4597,7 @@
     {
       "Name": "战场分析基站",
       "ID": 152,
-      "SID": "2508",
+      "SID": "2507",
       "Proto": {
         "Type": 4,
         "Handcraft": true,
@@ -4621,7 +4621,7 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 2506,
+        "GridIndex": 2507,
         "IconPath": "",
         "Description": "",
         "NonProductive": false
@@ -4729,7 +4729,7 @@
     {
       "Name": "金色燃料棒",
       "ID": 156,
-      "SID": "1610",
+      "SID": "1612",
       "Proto": {
         "Type": 4,
         "Handcraft": false,
@@ -4753,7 +4753,133 @@
         "ResultCounts": [
           1
         ],
-        "GridIndex": 1610,
+        "GridIndex": 1612,
+        "IconPath": "",
+        "Description": "",
+        "NonProductive": false
+      }
+    },
+    {
+      "Name": "地面电浆炮",
+      "ID": 157,
+      "SID": "2506",
+      "Proto": {
+        "Type": 4,
+        "Handcraft": true,
+        "Explicit": false,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1205,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          15,
+          5,
+          5,
+          5
+        ],
+        "Results": [
+          3010
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "GridIndex": 2506,
+        "IconPath": "",
+        "Description": "",
+        "NonProductive": false
+      }
+    },
+    {
+      "Name": "电磁干扰胶囊",
+      "ID": 158,
+      "SID": "1613",
+      "Proto": {
+        "Type": 4,
+        "Handcraft": true,
+        "Explicit": false,
+        "TimeSpend": 120,
+        "Items": [
+          1204,
+          1401,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          3
+        ],
+        "Results": [
+          1612
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "GridIndex": 1613,
+        "IconPath": "",
+        "Description": "",
+        "NonProductive": false
+      }
+    },
+    {
+      "Name": "电磁压制胶囊",
+      "ID": 159,
+      "SID": "1713",
+      "Proto": {
+        "Type": 4,
+        "Handcraft": true,
+        "Explicit": false,
+        "TimeSpend": 480,
+        "Items": [
+          1612,
+          1205,
+          1119
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          2
+        ],
+        "Results": [
+          1613
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "GridIndex": 1713,
+        "IconPath": "",
+        "Description": "",
+        "NonProductive": false
+      }
+    },
+    {
+      "Name": "集装分拣器",
+      "ID": 160,
+      "SID": "2304",
+      "Proto": {
+        "Type": 4,
+        "Handcraft": true,
+        "Explicit": false,
+        "TimeSpend": 60,
+        "Items": [
+          2013,
+          1205,
+          1303
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          2014
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "GridIndex": 2304,
         "IconPath": "",
         "Description": "",
         "NonProductive": false

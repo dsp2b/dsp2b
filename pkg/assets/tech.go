@@ -46,6 +46,8 @@ type TechProto struct {
 	MaxLevel              int32
 	LevelCoef1            int32
 	LevelCoef2            int32
+	IconPath              string
+	IsLabTech             bool
 	PreTechs              []int32
 	PreTechsImplicit      []int32
 	PreTechsMax           bool

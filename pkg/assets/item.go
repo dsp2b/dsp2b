@@ -37,43 +37,44 @@ func (i *ItemProtoSet) Load(datFile string) error {
 }
 
 type ItemProto struct {
-	Type            EItemType
-	SubID           int32
-	MiningFrom      string
-	ProduceFrom     string
-	StackSize       int32
-	Grade           int32
-	Upgrades        []int32
-	IsFluid         bool
-	IsEntity        bool
-	CanBuild        bool
-	BuildInGas      bool
-	IconPath        string //15
-	ModelIndex      int32
-	ModelCount      int32
-	HpMax           int32
-	Ability         int32
-	HeatValue       int64
-	Potential       int64
-	ReactorInc      float32
-	FuelType        int32
-	AmmoType        EAmmoType
-	BombType        int32 //25
-	CraftType       int32
-	BuildIndex      int32
-	BuildMode       int32
-	GridIndex       int32
-	UnlockKey       int32
-	PreTechOverride int32
-	Productive      bool
-	MechaMaterialID int32
-	DropRate        float32
-	EnemyDropLevel  int32 //35
-	EnemyDropRange  Vector2
-	EnemyDropCount  float32
-	EnemyDropMask   int32
-	DescFields      []int32
-	Description     string
+	Type               EItemType
+	SubID              int32
+	MiningFrom         string
+	ProduceFrom        string
+	StackSize          int32
+	Grade              int32
+	Upgrades           []int32
+	IsFluid            bool
+	IsEntity           bool
+	CanBuild           bool
+	BuildInGas         bool
+	IconPath           string //15
+	ModelIndex         int32
+	ModelCount         int32
+	HpMax              int32
+	Ability            int32
+	HeatValue          int64
+	Potential          int64
+	ReactorInc         float32
+	FuelType           int32
+	AmmoType           EAmmoType
+	BombType           int32 //25
+	CraftType          int32
+	BuildIndex         int32
+	BuildMode          int32
+	GridIndex          int32
+	UnlockKey          int32
+	PreTechOverride    int32
+	Productive         bool
+	MechaMaterialID    int32
+	DropRate           float32
+	EnemyDropLevel     int32 //35
+	EnemyDropRange     Vector2
+	EnemyDropCount     float32
+	EnemyDropMask      int32
+	EnemyDropMaskRatio float32
+	DescFields         []int32
+	Description        string
 }
 
 type Vector2 struct {

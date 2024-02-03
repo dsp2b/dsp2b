@@ -3,8 +3,10 @@ package assets
 import (
 	"encoding/json"
 	"encoding/xml"
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"os"
-	"path"
+	"path/filepath"
+	"strings"
 	"testing"
 )
 
@@ -28,38 +30,51 @@ func TestRecipeProtoSet_Load(t *testing.T) {
 	_ = item.Load("ItemProtoSet.dat")
 	b, _ = json.MarshalIndent(item, "", "  ")
 	_ = os.WriteFile("data/ItemProtoSet.json", b, 0644)
+
+	tech := &TechProtoSet{}
+	_ = tech.Load("TechProtoSet.dat")
+	b, _ = json.MarshalIndent(tech, "", "  ")
+	_ = os.WriteFile("data/TechProtoSet.json", b, 0644)
+
+	signal := &SignalProtoSet{}
+	_ = signal.Load("SignalProtoSet.dat")
+	b, _ = json.MarshalIndent(signal, "", "  ")
+	_ = os.WriteFile("data/SignalProtoSet.json", b, 0644)
+
 	// 提取图片
 	_ = os.MkdirAll("data/icons/item_recipe", 0755)
-	for _, v := range item.DataArray {
-		// 从data/dsp/Texture2D中提取图片
-		if v.Proto.IconPath == "" {
-			continue
-		}
-		filename := path.Base(v.Proto.IconPath)
-		oldName := "data/dsp/Texture2D/" + filename + ".png"
+	mvIcon := func(iconPath string) {
+		filename := filepath.Join("data/dsp/asset/", strings.ToLower(iconPath)+".png")
 		// copy文件
-		err := os.Link(oldName,
-			"data/icons/item_recipe/"+filename+".png")
+		err := os.Link(filename, filepath.Join("data", strings.ToLower(utils.ToPathUnderline(iconPath)+".png")))
 		if err != nil {
 			if !os.IsExist(err) {
 				t.Fatalf("link err: %v", err)
 			}
 		}
 	}
-	for _, v := range recipe.DataArray {
-		// 从data/dsp/Texture2D中提取图片
+	for _, v := range item.DataArray {
 		if v.Proto.IconPath == "" {
 			continue
 		}
-		filename := path.Base(v.Proto.IconPath)
-		oldName := "data/dsp/Texture2D/" + filename + ".png"
-		// copy文件
-		err := os.Link(oldName,
-			"data/icons/item_recipe/"+filename+".png")
-		if err != nil {
-			if !os.IsExist(err) {
-				t.Fatalf("link err: %v", err)
-			}
+		mvIcon(v.Proto.IconPath)
+	}
+	for _, v := range recipe.DataArray {
+		if v.Proto.IconPath == "" {
+			continue
 		}
+		mvIcon(v.Proto.IconPath)
+	}
+	for _, v := range tech.DataArray {
+		if v.Proto.IconPath == "" {
+			continue
+		}
+		mvIcon(v.Proto.IconPath)
+	}
+	for _, v := range signal.DataArray {
+		if v.Proto.IconPath == "" {
+			continue
+		}
+		mvIcon(v.Proto.IconPath)
 	}
 }

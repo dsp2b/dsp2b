@@ -4,6 +4,7 @@ import (
 	"encoding/binary"
 	"io"
 	"reflect"
+	"strings"
 )
 
 func ReadStruct(r io.Reader, data any) error {
@@ -29,6 +30,8 @@ func ReadStruct(r io.Reader, data any) error {
 			switch field.Type().Elem().Kind() {
 			case reflect.Int32:
 				field.Set(reflect.ValueOf(ReadInt32Array(r)))
+			case reflect.Float64:
+				field.Set(reflect.ValueOf(ReadFloat64Array(r)))
 			}
 		case reflect.Float32:
 			field.SetFloat(float64(ReadInt32(r)))
@@ -84,6 +87,16 @@ func ReadInt32Array(r io.Reader) []int32 {
 	return ret
 }
 
+func ReadFloat64Array(r io.Reader) []float64 {
+	var n int32
+	_ = binary.Read(r, binary.LittleEndian, &n)
+	ret := make([]float64, n)
+	for i := 0; i < int(n); i++ {
+		_ = binary.Read(r, binary.LittleEndian, &ret[i])
+	}
+	return ret
+}
+
 func ReadString(r io.Reader) string {
 	var l int32
 	_ = binary.Read(r, binary.LittleEndian, &l)
@@ -102,4 +115,23 @@ func ReadBool(r io.Reader) bool {
 	var b int32
 	_ = binary.Read(r, binary.LittleEndian, &b)
 	return b == 1
+}
+
+func ToPathUnderline(s string) string {
+	ss := strings.Split(s, "/")
+	for i, s := range ss {
+		ss[i] = ToUnderline(s)
+	}
+	return strings.Join(ss, "/")
+}
+
+func ToUnderline(s string) string {
+	var ret []rune
+	for i, r := range s {
+		if i > 0 && r >= 'A' && r <= 'Z' {
+			ret = append(ret, '_')
+		}
+		ret = append(ret, r)
+	}
+	return string(ret)
 }

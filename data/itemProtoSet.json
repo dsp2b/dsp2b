@@ -1,7 +1,7 @@
 {
   "Type": "ItemProtoSet",
   "TableName": "Item",
-  "Signature": "E48945562F2556B28A0BF0FFBDD07987",
+  "Signature": "360B9B15D82165CADD7F41572FB11B1B",
   "DataArray": [
     {
       "Name": "铁矿",
@@ -46,6 +46,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -96,6 +97,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -146,6 +148,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           1,
@@ -197,6 +200,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -247,6 +251,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -297,6 +302,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -346,10 +352,11 @@
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
           "X": 0,
-          "Y": 1000593150
+          "Y": 994352060
         },
-        "EnemyDropCount": 1084227600,
+        "EnemyDropCount": 1082130400,
         "EnemyDropMask": 2097695762,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -398,11 +405,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
-          "X": 1000593150,
-          "Y": 1000593150
+          "X": 994352060,
+          "Y": 994352060
         },
-        "EnemyDropCount": 1084227600,
+        "EnemyDropCount": 1082130400,
         "EnemyDropMask": 2097695762,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -456,6 +464,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -509,6 +518,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -559,6 +569,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -604,11 +615,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1008981760,
-          "Y": 1006834300
+          "X": 1002740700,
+          "Y": 1002740700
         },
-        "EnemyDropCount": 1082130400,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -659,6 +671,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -704,11 +717,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 8,
         "EnemyDropRange": {
-          "X": 1016296640,
-          "Y": 1000593150
+          "X": 1011129300,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1082130400,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -754,11 +768,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
-          "X": 1018981000,
+          "X": 1015222900,
           "Y": 1008981760
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -804,11 +819,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
-          "X": 1023879940,
+          "X": 1020591600,
           "Y": 1008981760
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1075419500,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -854,11 +870,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1026564300,
+          "X": 1024685250,
           "Y": 1006834300
         },
-        "EnemyDropCount": 1077936100,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1072064100,
+        "EnemyDropMask": 2131618808,
+        "EnemyDropMaskRatio": 1050253700,
         "DescFields": [
           1,
           40
@@ -904,11 +921,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1028711800,
+          "X": 1026832700,
           "Y": 1006834300
         },
-        "EnemyDropCount": 1077936100,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1074580700,
+        "EnemyDropMask": 2131733228,
+        "EnemyDropMaskRatio": 1048576000,
         "DescFields": [
           1,
           40
@@ -954,11 +972,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
-          "X": 1030859260,
-          "Y": 1008981760
+          "X": 1028980200,
+          "Y": 1002740700
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1072064100,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1004,11 +1023,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1032671170,
-          "Y": 1008981760
+          "X": 1030590850,
+          "Y": 1001666900
         },
-        "EnemyDropCount": 1077936100,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1070386370,
+        "EnemyDropMask": 2097798226,
+        "EnemyDropMaskRatio": 1060320060,
         "DescFields": [
           2,
           3,
@@ -1057,11 +1077,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1034013400,
-          "Y": 1008981760
+          "X": 1031933000,
+          "Y": 1004888100
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1070386370,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1107,11 +1128,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1035355600,
-          "Y": 1002740700
+          "X": 1032872500,
+          "Y": 1000593150
         },
-        "EnemyDropCount": 1077936100,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1066192060,
+        "EnemyDropMask": 2131733228,
+        "EnemyDropMaskRatio": 1050253700,
         "DescFields": [
           1,
           40
@@ -1157,11 +1179,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1036160830,
-          "Y": 1006834300
+          "X": 1033543600,
+          "Y": 1002740700
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1071225200,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1207,11 +1230,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1037234600,
-          "Y": 1000593150
+          "X": 1034348900,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1077936100,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1068708700,
+        "EnemyDropMask": 2131733228,
+        "EnemyDropMaskRatio": 1053609150,
         "DescFields": [
           1,
           40
@@ -1257,11 +1281,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1037905660,
-          "Y": 1004888100
+          "X": 1034885760,
+          "Y": 1001666900
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1068708700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1307,11 +1332,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1038845200,
-          "Y": 1000593150
+          "X": 1035624000,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1065353200,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -1360,11 +1386,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1039516300,
-          "Y": 1002740700
+          "X": 1036160830,
+          "Y": 1000593150
         },
-        "EnemyDropCount": 1073741800,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1067030900,
+        "EnemyDropMask": 2131618808,
+        "EnemyDropMaskRatio": 1053609150,
         "DescFields": [
           1,
           40
@@ -1410,11 +1437,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1040254500,
-          "Y": 1008981760
+          "X": 1036831940,
+          "Y": 1004888100
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1071225200,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1460,11 +1488,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 0,
         "EnemyDropRange": {
-          "X": 1040925600,
-          "Y": 1008981760
+          "X": 1037771460,
+          "Y": 1007908030
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1510,11 +1539,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1041596700,
-          "Y": 1006834300
+          "X": 1038979460,
+          "Y": 1004888100
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1560,11 +1590,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1042133570,
-          "Y": 1004888100
+          "X": 1039919000,
+          "Y": 1002740700
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1067030900,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1610,11 +1641,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1042603300,
-          "Y": 1004888100
+          "X": 1040455800,
+          "Y": 1001666900
         },
-        "EnemyDropCount": 1067030900,
+        "EnemyDropCount": 1061997760,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1660,11 +1692,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1043073100,
-          "Y": 1002740700
+          "X": 1040824900,
+          "Y": 1000593150
         },
-        "EnemyDropCount": 1061997760,
+        "EnemyDropCount": 1056964600,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1702,7 +1735,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1113,
+        "GridIndex": 1605,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -1710,11 +1743,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1043475700,
-          "Y": 1000593150
+          "X": 1041160450,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1056964600,
+        "EnemyDropCount": 1053609150,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1760,11 +1794,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 6,
         "EnemyDropRange": {
-          "X": 1043811260,
-          "Y": 998445700
+          "X": 1041428900,
+          "Y": 996499500
         },
-        "EnemyDropCount": 1065353200,
+        "EnemyDropCount": 1053609150,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1810,11 +1845,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1044079700,
-          "Y": 1006834300
+          "X": 1041663800,
+          "Y": 1004888100
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1860,11 +1896,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1044616600,
-          "Y": 1000593150
+          "X": 1042133570,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1069547500,
+        "EnemyDropCount": 1061158900,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1910,11 +1947,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1044952100,
+          "X": 1042402000,
           "Y": 994352060
         },
-        "EnemyDropCount": 1056964600,
+        "EnemyDropCount": 1048576000,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -1960,11 +1998,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1045153500,
+          "X": 1042603300,
           "Y": 1004888100
         },
-        "EnemyDropCount": 1069547500,
+        "EnemyDropCount": 1065353200,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -2010,11 +2049,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 6,
         "EnemyDropRange": {
-          "X": 1045623230,
+          "X": 1043073100,
           "Y": 998445700
         },
-        "EnemyDropCount": 1061997760,
+        "EnemyDropCount": 1053609150,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -2060,11 +2100,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1045891650,
+          "X": 1043341500,
           "Y": 998445700
         },
-        "EnemyDropCount": 1056964600,
+        "EnemyDropCount": 1048576000,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -2110,11 +2151,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1046160060,
-          "Y": 1002740700
+          "X": 1043609900,
+          "Y": 999519400
         },
-        "EnemyDropCount": 1069547500,
+        "EnemyDropCount": 1067869800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -2160,11 +2202,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1046562750,
-          "Y": 1004888100
+          "X": 1043911940,
+          "Y": 999519400
         },
-        "EnemyDropCount": 1069547500,
+        "EnemyDropCount": 1068708700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -2202,7 +2245,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1808,
+        "GridIndex": 1708,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -2215,6 +2258,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           36,
           1,
@@ -2240,7 +2284,7 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/water",
-        "ModelIndex": 0,
+        "ModelIndex": 494,
         "ModelCount": 0,
         "HpMax": 1,
         "Ability": 0,
@@ -2249,7 +2293,7 @@
         "ReactorInc": 0,
         "FuelType": 0,
         "AmmoType": 0,
-        "BombType": 0,
+        "BombType": 1,
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
@@ -2266,8 +2310,10 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
+          71,
           40
         ],
         "Description": "I水"
@@ -2316,6 +2362,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2369,6 +2416,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2422,6 +2470,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           0,
@@ -2468,11 +2517,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1047032500,
-          "Y": 1006834300
+          "X": 1044213950,
+          "Y": 998445700
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1069547500,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2522,11 +2572,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1047569340,
-          "Y": 1002740700
+          "X": 1044482370,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1065353200,
+        "EnemyDropCount": 1061997760,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2576,11 +2627,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1047972030,
-          "Y": 1000593150
+          "X": 1044616600,
+          "Y": 990057100
         },
         "EnemyDropCount": 1050253700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           37,
           1,
@@ -2619,7 +2671,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1213,
+        "GridIndex": 1113,
         "UnlockKey": 1122,
         "PreTechOverride": 1506,
         "Productive": false,
@@ -2632,6 +2684,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           37,
           1,
@@ -2678,11 +2731,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1048307600,
-          "Y": 1000593150
+          "X": 1044750800,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1048576000,
+        "EnemyDropCount": 1056964600,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2731,11 +2785,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 6,
         "EnemyDropRange": {
-          "X": 1048609540,
-          "Y": 998445700
+          "X": 1044885000,
+          "Y": 981668500
         },
-        "EnemyDropCount": 1048576000,
+        "EnemyDropCount": 1053609150,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2784,11 +2839,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 8,
         "EnemyDropRange": {
-          "X": 1048743740,
-          "Y": 994352060
+          "X": 1044952100,
+          "Y": 981668500
         },
-        "EnemyDropCount": 1048576000,
+        "EnemyDropCount": 1050253700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2842,6 +2898,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -2890,11 +2947,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1048844400,
-          "Y": 1002740700
+          "X": 1045019200,
+          "Y": 994352060
         },
-        "EnemyDropCount": 1069547500,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1065353200,
+        "EnemyDropMask": 2097798226,
+        "EnemyDropMaskRatio": 1050253700,
         "DescFields": [
           1,
           40
@@ -2940,11 +2998,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1049045760,
-          "Y": 1002740700
+          "X": 1045220540,
+          "Y": 994352060
         },
-        "EnemyDropCount": 1073741800,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1065353200,
+        "EnemyDropMask": 2097798226,
+        "EnemyDropMaskRatio": 1056964600,
         "DescFields": [
           2,
           3,
@@ -2993,11 +3052,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1049247100,
-          "Y": 1002740700
+          "X": 1045421900,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1069547500,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1061997760,
+        "EnemyDropMask": 2097798226,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -3051,6 +3111,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -3100,11 +3161,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1049448400,
-          "Y": 1000593150
+          "X": 1045556100,
+          "Y": 994352060
         },
-        "EnemyDropCount": 1056964600,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropCount": 1061997760,
+        "EnemyDropMask": 2131733228,
+        "EnemyDropMaskRatio": 1056964600,
         "DescFields": [
           1,
           40
@@ -3150,11 +3212,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1049616200,
-          "Y": 998445700
+          "X": 1045757440,
+          "Y": 994352060
         },
-        "EnemyDropCount": 1065353200,
+        "EnemyDropCount": 1057803460,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3179,16 +3242,16 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/explosive",
-        "ModelIndex": 0,
+        "ModelIndex": 489,
         "ModelCount": 0,
         "HpMax": 1,
-        "Ability": 0,
+        "Ability": 10000,
         "HeatValue": 9720000,
         "Potential": 0,
         "ReactorInc": 1061997760,
         "FuelType": 1,
         "AmmoType": 0,
-        "BombType": 0,
+        "BombType": 2,
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
@@ -3200,17 +3263,21 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1049750400,
-          "Y": 994352060
+          "X": 1045958800,
+          "Y": 998445700
         },
         "EnemyDropCount": 1065353200,
-        "EnemyDropMask": 2147483647,
+        "EnemyDropMask": 2097798226,
+        "EnemyDropMaskRatio": 1060320060,
         "DescFields": [
           2,
           3,
           31,
           1,
-          40
+          40,
+          71,
+          55,
+          61
         ],
         "Description": "I燃烧单元"
       }
@@ -3232,16 +3299,16 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/high-explosive",
-        "ModelIndex": 0,
+        "ModelIndex": 490,
         "ModelCount": 0,
         "HpMax": 1,
-        "Ability": 0,
+        "Ability": 32000,
         "HeatValue": 21600000,
         "Potential": 0,
         "ReactorInc": 1067030900,
         "FuelType": 1,
         "AmmoType": 0,
-        "BombType": 0,
+        "BombType": 2,
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
@@ -3253,17 +3320,21 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1049851100,
+          "X": 1046227200,
           "Y": 994352060
         },
         "EnemyDropCount": 1060320060,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
           31,
           1,
-          40
+          40,
+          71,
+          55,
+          61
         ],
         "Description": "I爆破单元"
       }
@@ -3285,16 +3356,16 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/particle-explosive",
-        "ModelIndex": 0,
+        "ModelIndex": 491,
         "ModelCount": 0,
         "HpMax": 1,
-        "Ability": 0,
+        "Ability": 75000,
         "HeatValue": 54000000,
         "Potential": 0,
         "ReactorInc": 1073741800,
         "FuelType": 1,
         "AmmoType": 0,
-        "BombType": 0,
+        "BombType": 2,
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
@@ -3306,17 +3377,21 @@
         "DropRate": 0,
         "EnemyDropLevel": 6,
         "EnemyDropRange": {
-          "X": 1049951740,
-          "Y": 994352060
+          "X": 1046428540,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1053609150,
+        "EnemyDropCount": 1056964600,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
           31,
           1,
-          40
+          40,
+          71,
+          55,
+          61
         ],
         "Description": "I晶石爆破单元"
       }
@@ -3351,7 +3426,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1605,
+        "GridIndex": 1705,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -3359,11 +3434,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1050052400,
-          "Y": 994352060
+          "X": 1046562750,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1050253700,
+        "EnemyDropCount": 1053609150,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3401,7 +3477,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1812,
+        "GridIndex": 1704,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -3409,11 +3485,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1050153100,
-          "Y": 1000593150
+          "X": 1046696960,
+          "Y": 990057100
         },
-        "EnemyDropCount": 1056964600,
+        "EnemyDropCount": 1050253700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3459,11 +3536,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1050320830,
-          "Y": 1000593150
+          "X": 1046831170,
+          "Y": 985963460
         },
-        "EnemyDropCount": 1056964600,
+        "EnemyDropCount": 1050253700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3509,11 +3587,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1050488600,
-          "Y": 1006834300
+          "X": 1046931840,
+          "Y": 1004888100
         },
         "EnemyDropCount": 1065353200,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3559,11 +3638,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 3,
         "EnemyDropRange": {
-          "X": 1050757060,
-          "Y": 1006834300
+          "X": 1047401600,
+          "Y": 1002740700
         },
-        "EnemyDropCount": 1065353200,
+        "EnemyDropCount": 1058642300,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3609,11 +3689,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1051025500,
-          "Y": 1006834300
+          "X": 1047804200,
+          "Y": 1000593150
         },
-        "EnemyDropCount": 1065353200,
+        "EnemyDropCount": 1050253700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3664,6 +3745,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           45,
           46,
@@ -3716,6 +3798,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           25,
           27,
@@ -3768,6 +3851,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           26,
           1,
@@ -3806,7 +3890,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1809,
+        "GridIndex": 1709,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -3819,6 +3903,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3856,7 +3941,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1810,
+        "GridIndex": 1710,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -3869,6 +3954,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3906,7 +3992,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1811,
+        "GridIndex": 1711,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -3919,6 +4005,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -3956,7 +4043,7 @@
         "CraftType": 0,
         "BuildIndex": 901,
         "BuildMode": 4,
-        "GridIndex": 1704,
+        "GridIndex": 1706,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -3964,11 +4051,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 2,
         "EnemyDropRange": {
-          "X": 1051293900,
-          "Y": 1004888100
+          "X": 1048139800,
+          "Y": 1000593150
         },
-        "EnemyDropCount": 1092616200,
+        "EnemyDropCount": 1073741800,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -4019,6 +4107,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           29,
           41,
@@ -4076,6 +4165,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           29,
           41,
@@ -4133,6 +4223,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           29,
           41,
@@ -4166,7 +4257,7 @@
         "IconPath": "Icons/ItemRecipe/bullet",
         "ModelIndex": 0,
         "ModelCount": 0,
-        "HpMax": 20,
+        "HpMax": 30,
         "Ability": 700,
         "HeatValue": 0,
         "Potential": 0,
@@ -4190,6 +4281,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4220,8 +4312,8 @@
         "IconPath": "Icons/ItemRecipe/bullet-titanium",
         "ModelIndex": 0,
         "ModelCount": 0,
-        "HpMax": 20,
-        "Ability": 1300,
+        "HpMax": 30,
+        "Ability": 1600,
         "HeatValue": 0,
         "Potential": 0,
         "ReactorInc": 0,
@@ -4244,6 +4336,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4274,8 +4367,8 @@
         "IconPath": "Icons/ItemRecipe/bullet-alloy",
         "ModelIndex": 0,
         "ModelCount": 0,
-        "HpMax": 20,
-        "Ability": 3200,
+        "HpMax": 30,
+        "Ability": 3600,
         "HeatValue": 0,
         "Potential": 0,
         "ReactorInc": 0,
@@ -4298,6 +4391,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4326,7 +4420,7 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/cannonball",
-        "ModelIndex": 0,
+        "ModelIndex": 486,
         "ModelCount": 0,
         "HpMax": 12,
         "Ability": 4500,
@@ -4339,7 +4433,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1613,
+        "GridIndex": 1513,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4352,6 +4446,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4381,7 +4476,7 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/cannonball-cluster",
-        "ModelIndex": 0,
+        "ModelIndex": 487,
         "ModelCount": 0,
         "HpMax": 12,
         "Ability": 10000,
@@ -4394,7 +4489,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1713,
+        "GridIndex": 1613,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4407,6 +4502,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4436,7 +4532,7 @@
         "CanBuild": false,
         "BuildInGas": false,
         "IconPath": "Icons/ItemRecipe/cannonball-alloy",
-        "ModelIndex": 0,
+        "ModelIndex": 488,
         "ModelCount": 0,
         "HpMax": 12,
         "Ability": 22000,
@@ -4449,7 +4545,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1813,
+        "GridIndex": 1713,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4462,6 +4558,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4517,6 +4614,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4572,6 +4670,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4614,7 +4713,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1313,
+        "GridIndex": 1213,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4627,6 +4726,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4669,7 +4769,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1413,
+        "GridIndex": 1313,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4682,6 +4782,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4724,7 +4825,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1513,
+        "GridIndex": 1413,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": true,
@@ -4737,6 +4838,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           48,
           55,
@@ -4747,6 +4849,118 @@
           40
         ],
         "Description": "I引力导弹组"
+      }
+    },
+    {
+      "Name": "电磁干扰胶囊",
+      "ID": 1612,
+      "SID": "",
+      "Proto": {
+        "Type": 4,
+        "SubID": 0,
+        "MiningFrom": "",
+        "ProduceFrom": "",
+        "StackSize": 100,
+        "Grade": 0,
+        "Upgrades": [],
+        "IsFluid": false,
+        "IsEntity": false,
+        "CanBuild": false,
+        "BuildInGas": false,
+        "IconPath": "Icons/ItemRecipe/em-disturb",
+        "ModelIndex": 492,
+        "ModelCount": 0,
+        "HpMax": 60,
+        "Ability": 50,
+        "HeatValue": 0,
+        "Potential": 0,
+        "ReactorInc": 0,
+        "FuelType": 0,
+        "AmmoType": 6,
+        "BombType": 3,
+        "CraftType": 0,
+        "BuildIndex": 0,
+        "BuildMode": 0,
+        "GridIndex": 1812,
+        "UnlockKey": 0,
+        "PreTechOverride": 0,
+        "Productive": true,
+        "MechaMaterialID": 0,
+        "DropRate": 0,
+        "EnemyDropLevel": 0,
+        "EnemyDropRange": {
+          "X": 0,
+          "Y": 0
+        },
+        "EnemyDropCount": 0,
+        "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
+        "DescFields": [
+          68,
+          69,
+          70,
+          52,
+          1,
+          40,
+          71
+        ],
+        "Description": "I电磁干扰胶囊"
+      }
+    },
+    {
+      "Name": "电磁压制胶囊",
+      "ID": 1613,
+      "SID": "",
+      "Proto": {
+        "Type": 4,
+        "SubID": 0,
+        "MiningFrom": "",
+        "ProduceFrom": "",
+        "StackSize": 100,
+        "Grade": 0,
+        "Upgrades": [],
+        "IsFluid": false,
+        "IsEntity": false,
+        "CanBuild": false,
+        "BuildInGas": false,
+        "IconPath": "Icons/ItemRecipe/em-suppress",
+        "ModelIndex": 493,
+        "ModelCount": 0,
+        "HpMax": 60,
+        "Ability": 80,
+        "HeatValue": 0,
+        "Potential": 0,
+        "ReactorInc": 0,
+        "FuelType": 0,
+        "AmmoType": 6,
+        "BombType": 3,
+        "CraftType": 0,
+        "BuildIndex": 0,
+        "BuildMode": 0,
+        "GridIndex": 1813,
+        "UnlockKey": 0,
+        "PreTechOverride": 0,
+        "Productive": true,
+        "MechaMaterialID": 0,
+        "DropRate": 0,
+        "EnemyDropLevel": 0,
+        "EnemyDropRange": {
+          "X": 0,
+          "Y": 0
+        },
+        "EnemyDropCount": 0,
+        "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
+        "DescFields": [
+          68,
+          69,
+          70,
+          52,
+          1,
+          40,
+          71
+        ],
+        "Description": "I电磁压制胶囊"
       }
     },
     {
@@ -4792,6 +5006,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           48,
@@ -4848,6 +5063,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           48,
@@ -4904,6 +5120,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           48,
@@ -4960,6 +5177,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           48,
@@ -5016,6 +5234,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           55,
@@ -5070,11 +5289,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 4,
         "EnemyDropRange": {
-          "X": 1051528770,
-          "Y": 1010592400
+          "X": 1048475300,
+          "Y": 1008981760
         },
-        "EnemyDropCount": 1077936100,
+        "EnemyDropCount": 1075839000,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -5112,7 +5332,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1709,
+        "GridIndex": 1809,
         "UnlockKey": -2,
         "PreTechOverride": 0,
         "Productive": true,
@@ -5120,11 +5340,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 6,
         "EnemyDropRange": {
-          "X": 1051914700,
-          "Y": 1007371140
+          "X": 1048861200,
+          "Y": 1007908030
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1069547500,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -5162,7 +5383,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1711,
+        "GridIndex": 1811,
         "UnlockKey": -2,
         "PreTechOverride": 0,
         "Productive": true,
@@ -5170,11 +5391,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 5,
         "EnemyDropRange": {
-          "X": 1052199900,
+          "X": 1049163200,
           "Y": 1006834300
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1069547500,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -5212,7 +5434,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1710,
+        "GridIndex": 1810,
         "UnlockKey": -2,
         "PreTechOverride": 0,
         "Productive": true,
@@ -5220,11 +5442,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 7,
         "EnemyDropRange": {
-          "X": 1052468300,
+          "X": 1049431600,
           "Y": 1002740700
         },
-        "EnemyDropCount": 1073741800,
+        "EnemyDropCount": 1068708700,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -5270,11 +5493,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 8,
         "EnemyDropRange": {
-          "X": 1052669630,
-          "Y": 1008981760
+          "X": 1049632960,
+          "Y": 1003814400
         },
-        "EnemyDropCount": 1082130400,
+        "EnemyDropCount": 1069547500,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0,
           40
@@ -5312,7 +5536,7 @@
         "CraftType": 0,
         "BuildIndex": 0,
         "BuildMode": 0,
-        "GridIndex": 1708,
+        "GridIndex": 1808,
         "UnlockKey": -2,
         "PreTechOverride": 0,
         "Productive": true,
@@ -5320,11 +5544,12 @@
         "DropRate": 0,
         "EnemyDropLevel": 1,
         "EnemyDropRange": {
-          "X": 1053005200,
-          "Y": 1013706240
+          "X": 1049851100,
+          "Y": 1011129300
         },
-        "EnemyDropCount": 1086324700,
+        "EnemyDropCount": 1075839000,
         "EnemyDropMask": 2147483647,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           2,
           3,
@@ -5383,6 +5608,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           15,
@@ -5439,6 +5665,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           15,
@@ -5495,6 +5722,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           15,
@@ -5518,7 +5746,8 @@
         "Upgrades": [
           2011,
           2012,
-          2013
+          2013,
+          2014
         ],
         "IsFluid": false,
         "IsEntity": true,
@@ -5551,6 +5780,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           20,
@@ -5577,7 +5807,8 @@
         "Upgrades": [
           2011,
           2012,
-          2013
+          2013,
+          2014
         ],
         "IsFluid": false,
         "IsEntity": true,
@@ -5610,6 +5841,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           20,
@@ -5636,7 +5868,8 @@
         "Upgrades": [
           2011,
           2012,
-          2013
+          2013,
+          2014
         ],
         "IsFluid": false,
         "IsEntity": true,
@@ -5669,6 +5902,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           20,
@@ -5679,6 +5913,68 @@
           40
         ],
         "Description": "I极速分拣器"
+      }
+    },
+    {
+      "Name": "集装分拣器",
+      "ID": 2014,
+      "SID": "",
+      "Proto": {
+        "Type": 5,
+        "SubID": 4,
+        "MiningFrom": "",
+        "ProduceFrom": "",
+        "StackSize": 200,
+        "Grade": 4,
+        "Upgrades": [
+          2011,
+          2012,
+          2013,
+          2014
+        ],
+        "IsFluid": false,
+        "IsEntity": true,
+        "CanBuild": true,
+        "BuildInGas": false,
+        "IconPath": "Icons/ItemRecipe/inserter-4",
+        "ModelIndex": 483,
+        "ModelCount": 1,
+        "HpMax": 300,
+        "Ability": 0,
+        "HeatValue": 0,
+        "Potential": 0,
+        "ReactorInc": 0,
+        "FuelType": 0,
+        "AmmoType": 0,
+        "BombType": 0,
+        "CraftType": 0,
+        "BuildIndex": 307,
+        "BuildMode": 3,
+        "GridIndex": 2304,
+        "UnlockKey": 0,
+        "PreTechOverride": 0,
+        "Productive": false,
+        "MechaMaterialID": 0,
+        "DropRate": 0,
+        "EnemyDropLevel": 0,
+        "EnemyDropRange": {
+          "X": 0,
+          "Y": 0
+        },
+        "EnemyDropCount": 0,
+        "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
+        "DescFields": [
+          53,
+          20,
+          72,
+          73,
+          11,
+          12,
+          1,
+          40
+        ],
+        "Description": "I集装分拣器"
       }
     },
     {
@@ -5709,7 +6005,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 307,
+        "BuildIndex": 308,
         "BuildMode": 1,
         "GridIndex": 2204,
         "UnlockKey": 0,
@@ -5724,6 +6020,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           16,
@@ -5761,7 +6058,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 308,
+        "BuildIndex": 602,
         "BuildMode": 1,
         "GridIndex": 2205,
         "UnlockKey": 0,
@@ -5776,6 +6073,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -5829,6 +6127,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -5882,6 +6181,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -5935,6 +6235,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           38,
@@ -5990,6 +6291,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           17,
@@ -6042,6 +6344,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           17,
@@ -6094,6 +6397,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           30,
@@ -6151,6 +6455,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -6210,6 +6515,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -6269,6 +6575,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -6328,6 +6635,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -6382,6 +6690,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           13,
@@ -6435,6 +6744,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           13,
@@ -6490,6 +6800,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           13,
@@ -6544,6 +6855,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -6599,6 +6911,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -6653,6 +6966,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -6706,6 +7020,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -6746,7 +7061,7 @@
         "CraftType": 0,
         "BuildIndex": 201,
         "BuildMode": 1,
-        "GridIndex": 2304,
+        "GridIndex": 2305,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -6759,6 +7074,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           18,
@@ -6801,7 +7117,7 @@
         "CraftType": 0,
         "BuildIndex": 202,
         "BuildMode": 1,
-        "GridIndex": 2305,
+        "GridIndex": 2306,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -6814,6 +7130,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           18,
@@ -6856,7 +7173,7 @@
         "CraftType": 0,
         "BuildIndex": 203,
         "BuildMode": 1,
-        "GridIndex": 2306,
+        "GridIndex": 2307,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -6869,6 +7186,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           18,
@@ -6928,6 +7246,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -6986,6 +7305,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7044,6 +7364,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7085,7 +7406,7 @@
         "CraftType": 0,
         "BuildIndex": 204,
         "BuildMode": 1,
-        "GridIndex": 2307,
+        "GridIndex": 2308,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7098,6 +7419,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           18,
@@ -7140,7 +7462,7 @@
         "CraftType": 0,
         "BuildIndex": 506,
         "BuildMode": 1,
-        "GridIndex": 2308,
+        "GridIndex": 2309,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7153,6 +7475,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7197,7 +7520,7 @@
         "CraftType": 0,
         "BuildIndex": 508,
         "BuildMode": 1,
-        "GridIndex": 2310,
+        "GridIndex": 2311,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7210,6 +7533,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7254,7 +7578,7 @@
         "CraftType": 0,
         "BuildIndex": 509,
         "BuildMode": 1,
-        "GridIndex": 2311,
+        "GridIndex": 2312,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7267,6 +7591,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7308,7 +7633,7 @@
         "CraftType": 0,
         "BuildIndex": 507,
         "BuildMode": 1,
-        "GridIndex": 2309,
+        "GridIndex": 2310,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7321,6 +7646,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -7374,6 +7700,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -7427,6 +7754,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           8,
@@ -7481,6 +7809,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           2,
@@ -7538,6 +7867,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           34,
@@ -7592,6 +7922,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -7645,6 +7976,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           35,
@@ -7684,7 +8016,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 605,
+        "BuildIndex": 606,
         "BuildMode": 1,
         "GridIndex": 2109,
         "UnlockKey": 0,
@@ -7699,6 +8031,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           8,
@@ -7740,7 +8073,7 @@
         "CraftType": 0,
         "BuildIndex": 510,
         "BuildMode": 1,
-        "GridIndex": 2312,
+        "GridIndex": 2313,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -7753,6 +8086,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -7807,6 +8141,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           4,
@@ -7846,7 +8181,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 602,
+        "BuildIndex": 603,
         "BuildMode": 1,
         "GridIndex": 2212,
         "UnlockKey": 0,
@@ -7861,6 +8196,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           24,
@@ -7901,7 +8237,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 603,
+        "BuildIndex": 604,
         "BuildMode": 1,
         "GridIndex": 2213,
         "UnlockKey": 0,
@@ -7916,6 +8252,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           24,
@@ -7956,7 +8293,7 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 604,
+        "BuildIndex": 605,
         "BuildMode": 1,
         "GridIndex": 2214,
         "UnlockKey": 0,
@@ -7971,6 +8308,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           18,
@@ -8028,6 +8366,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -8086,6 +8425,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           22,
@@ -8141,6 +8481,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           51,
@@ -8199,6 +8540,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           51,
@@ -8256,6 +8598,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           51,
@@ -8314,6 +8657,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           51,
@@ -8372,6 +8716,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           51,
@@ -8404,7 +8749,7 @@
         "IsEntity": true,
         "CanBuild": true,
         "BuildInGas": false,
-        "IconPath": "Icons/ItemRecipe/turret-jammer",
+        "IconPath": "Icons/ItemRecipe/turret-disturb",
         "ModelIndex": 422,
         "ModelCount": 1,
         "HpMax": 3000,
@@ -8416,9 +8761,9 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 0,
-        "BuildMode": 1,
-        "GridIndex": 0,
+        "BuildIndex": 708,
+        "BuildMode": 5,
+        "GridIndex": 2508,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -8431,8 +8776,14 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
+          51,
+          56,
+          57,
+          52,
+          49,
           11,
           12,
           1,
@@ -8469,9 +8820,9 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 707,
+        "BuildIndex": 709,
         "BuildMode": 1,
-        "GridIndex": 2507,
+        "GridIndex": 2509,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -8484,6 +8835,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           13,
@@ -8524,9 +8876,9 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 708,
+        "BuildIndex": 710,
         "BuildMode": 1,
-        "GridIndex": 2508,
+        "GridIndex": 2510,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -8539,6 +8891,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -8577,9 +8930,9 @@
         "AmmoType": 0,
         "BombType": 0,
         "CraftType": 0,
-        "BuildIndex": 706,
+        "BuildIndex": 707,
         "BuildMode": 1,
-        "GridIndex": 2506,
+        "GridIndex": 2507,
         "UnlockKey": 0,
         "PreTechOverride": 0,
         "Productive": false,
@@ -8592,6 +8945,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           53,
           11,
@@ -8601,6 +8955,65 @@
           40
         ],
         "Description": "I战场分析基站"
+      }
+    },
+    {
+      "Name": "地面电浆炮",
+      "ID": 3010,
+      "SID": "",
+      "Proto": {
+        "Type": 8,
+        "SubID": 0,
+        "MiningFrom": "",
+        "ProduceFrom": "",
+        "StackSize": 20,
+        "Grade": 0,
+        "Upgrades": [],
+        "IsFluid": false,
+        "IsEntity": true,
+        "CanBuild": true,
+        "BuildInGas": false,
+        "IconPath": "Icons/ItemRecipe/turret-plasma-ground",
+        "ModelIndex": 482,
+        "ModelCount": 1,
+        "HpMax": 3000,
+        "Ability": 0,
+        "HeatValue": 0,
+        "Potential": 0,
+        "ReactorInc": 0,
+        "FuelType": 0,
+        "AmmoType": 0,
+        "BombType": 0,
+        "CraftType": 0,
+        "BuildIndex": 706,
+        "BuildMode": 5,
+        "GridIndex": 2506,
+        "UnlockKey": 0,
+        "PreTechOverride": 0,
+        "Productive": false,
+        "MechaMaterialID": 0,
+        "DropRate": 0,
+        "EnemyDropLevel": 0,
+        "EnemyDropRange": {
+          "X": 0,
+          "Y": 0
+        },
+        "EnemyDropCount": 0,
+        "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
+        "DescFields": [
+          53,
+          51,
+          56,
+          57,
+          52,
+          49,
+          11,
+          12,
+          1,
+          40
+        ],
+        "Description": "I地面电浆炮"
       }
     },
     {
@@ -8646,6 +9059,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8696,6 +9110,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8746,6 +9161,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8796,6 +9212,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8846,6 +9263,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8896,6 +9314,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           1,
           40
@@ -8946,6 +9365,7 @@
         },
         "EnemyDropCount": 0,
         "EnemyDropMask": 0,
+        "EnemyDropMaskRatio": 0,
         "DescFields": [
           0
         ],

@@ -12,7 +12,7 @@ func AddCommand(cmd *cobra.Command) {
 		Short: "发布戴森球蓝图集",
 		RunE:  push,
 	}, {
-		Use:   "pullCmd",
+		Use:   "pull",
 		Short: "拉取戴森球蓝图集",
 		Long:  "拉取戴森球蓝图集，如果本地存在蓝图集则会跳过，如果不存在则会创建新的蓝图集，使用dspb status可以查看远程和本地的状况",
 		RunE:  pullCmd,
@@ -28,5 +28,9 @@ func AddCommand(cmd *cobra.Command) {
 		Use:   "rename",
 		Short: "重命名所有蓝图",
 		RunE:  renameCmd,
+	}, {
+		Use:   "renamefile",
+		Short: "重命名文件",
+		RunE:  renameFileCmd,
 	}}...)
 }
