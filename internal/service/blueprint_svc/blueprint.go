@@ -39,6 +39,8 @@ type blueprintSvc struct {
 	IconPathMap    map[int32]*blueprint_entity.IconInfo
 	ItemProtoMap   map[int32]assets.Proto[assets.ItemProto]
 	RecipeProtoMap map[int32]assets.Proto[assets.RecipeProto]
+	TechProtoMap   map[int32]assets.Proto[assets.TechProto]
+	SignalProtoMap map[int32]assets.Proto[assets.SignalProto]
 	RecipePanel    api.RecipePanel
 }
 
@@ -48,7 +50,7 @@ func Blueprint() BlueprintSvc {
 	return defaultBlueprint
 }
 
-func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSet string) error {
+func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSetPath, signalProtoSetPath string) error {
 	b, err := os.ReadFile(itemProtoSetPath)
 	if err != nil {
 		return err
@@ -65,10 +67,28 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSet string) er
 	if err := json.Unmarshal(b, &recipeProtoSet); err != nil {
 		return err
 	}
+	b, err = os.ReadFile(techProtoSetPath)
+	if err != nil {
+		return err
+	}
+	techProtoSet := assets.TechProtoSet{}
+	if err := json.Unmarshal(b, &techProtoSet); err != nil {
+		return err
+	}
+	b, err = os.ReadFile(signalProtoSetPath)
+	if err != nil {
+		return err
+	}
+	signalProtoSet := assets.SignalProtoSet{}
+	if err := json.Unmarshal(b, &signalProtoSet); err != nil {
+		return err
+	}
 	svc := &blueprintSvc{
 		IconPathMap:    make(map[int32]*blueprint_entity.IconInfo),
 		ItemProtoMap:   itemProtoSet.Map(),
 		RecipeProtoMap: recipeProtoSet.Map(),
+		TechProtoMap:   techProtoSet.Map(),
+		SignalProtoMap: signalProtoSet.Map(),
 	}
 	for k, v := range svc.ItemProtoMap {
 		if v.Proto.IconPath != "" {
@@ -83,6 +103,12 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSet string) er
 	panel := api.RecipePanel{}
 	for k, v := range svc.RecipeProtoMap {
 		if v.Proto.IconPath != "" {
+			id := k + 20000
+			svc.IconPathMap[id] = &blueprint_entity.IconInfo{
+				ItemID:   k,
+				Name:     v.Name,
+				IconPath: v.Proto.IconPath,
+			}
 			svc.IconPathMap[k] = &blueprint_entity.IconInfo{
 				ItemID:   k,
 				Name:     v.Name,
@@ -112,6 +138,26 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSet string) er
 			panel.BuildingPanel[x][y] = item
 		} else {
 			panel.ThingPanel[x][y] = item
+		}
+	}
+	for k, v := range svc.TechProtoMap {
+		if v.Proto.IconPath != "" {
+			id := k + 40000
+			svc.IconPathMap[id] = &blueprint_entity.IconInfo{
+				ItemID:   k,
+				Name:     v.Name,
+				IconPath: v.Proto.IconPath,
+			}
+		}
+	}
+	for k, v := range svc.SignalProtoMap {
+		if v.Proto.IconPath != "" {
+			id := k
+			svc.IconPathMap[id] = &blueprint_entity.IconInfo{
+				ItemID:   k,
+				Name:     v.Name,
+				IconPath: v.Proto.IconPath,
+			}
 		}
 	}
 	svc.RecipePanel = panel

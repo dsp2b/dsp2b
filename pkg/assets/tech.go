@@ -2,8 +2,9 @@ package assets
 
 import (
 	"encoding/binary"
-	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"os"
+
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 )
 
 type TechProtoSet struct {

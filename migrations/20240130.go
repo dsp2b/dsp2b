@@ -24,6 +24,7 @@ func T20240130() *mongomigrate.Migration {
 				list, _, err := blueprint_collection_repo.BlueprintCollection().FindPage(ctx, httputils.PageRequest{
 					Page: page,
 					Size: 20,
+					Sort: "id",
 				})
 				if err != nil {
 					return err

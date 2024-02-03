@@ -96,7 +96,7 @@ type GetRecipePanelResponse struct {
 }
 
 type RecipePanel struct {
-	ThingPanel    [8][14]RecipePanelItem `json:"thing_panel"`
+	ThingPanel    [9][14]RecipePanelItem `json:"thing_panel"`
 	BuildingPanel [8][14]RecipePanelItem `json:"building_panel"`
 }
 

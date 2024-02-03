@@ -36,6 +36,8 @@ func main() {
 		if err := blueprint_svc.InitBlueprint(
 			"./data/itemProtoSet.json",
 			"./data/recipeProtoSet.json",
+			"./data/techProtoSet.json",
+			"./data/signalProtoSet.json",
 		); err != nil {
 			log.Fatalf("init blueprint err: %v", err)
 		}

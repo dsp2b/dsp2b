@@ -2,6 +2,8 @@ package migrations
 
 import (
 	"context"
+	"encoding/json"
+	"strings"
 
 	"github.com/codfrm/cago/database/migrate/mongomigrate"
 	"github.com/codfrm/cago/database/mongo"
@@ -23,6 +25,7 @@ func T20240201() *mongomigrate.Migration {
 				list, _, err := blueprint_repo.Blueprint().FindPage(ctx, httputils.PageRequest{
 					Page: page,
 					Size: 20,
+					Sort: "id",
 				})
 				if err != nil {
 					return err
@@ -48,14 +51,31 @@ func T20240201() *mongomigrate.Migration {
 							return err
 						}
 					}
-					v.Blueprint, err = blueprint.Rename(v.Blueprint, decode.ShortDesc)
+					// 处理buildings图标
+					var buildings []*blueprint_entity.Buildings
+					if err := json.Unmarshal([]byte(v.Buildings), &buildings); err != nil {
+						return err
+					}
+					// con_path":"icons/item_recipe/
+					// "icon_path":"icons/item_recipe/belt-3"
+					// "icon_path":"assembler-1"
+					for _, v := range buildings {
+						ss := strings.Split(v.IconPath, "/")
+						if len(ss) > 1 {
+							v.IconPath = "icons/item_recipe/" + ss[len(ss)-1]
+						}
+					}
+					data, err := json.Marshal(buildings)
 					if err != nil {
 						return err
 					}
+					v.Buildings = string(data)
+					// 更新蓝图
 					if err := blueprint_repo.Blueprint().Update(ctx, v); err != nil {
 						return err
 					}
-					logger.Ctx(ctx).Info("处理蓝图成功", zap.String("id", v.ID.Hex()))
+					logger.Ctx(ctx).Info("处理蓝图成功",
+						zap.Int("page", page), zap.String("id", v.ID.Hex()))
 				}
 			}
 			return nil

@@ -91,7 +91,11 @@ func (u *blueprintRepo) FindPage(ctx context.Context, page httputils.PageRequest
 	findOptions := options.Find()
 	findOptions.SetSkip(int64(page.GetOffset()))
 	findOptions.SetLimit(int64(page.GetSize()))
-	findOptions.SetSort(bson.M{"createtime": -1})
+	if page.GetSort() == "id" {
+		findOptions.SetSort(bson.M{"_id": -1})
+	} else {
+		findOptions.SetSort(bson.M{"createtime": -1})
+	}
 
 	total, err := mongo.Ctx(ctx).Collection(blueprint.CollectionName()).CountDocuments(filter)
 	if err != nil {

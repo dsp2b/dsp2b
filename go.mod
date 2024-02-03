@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/charmbracelet/bubbles v0.17.1
 	github.com/charmbracelet/bubbletea v0.25.0
-	github.com/codfrm/cago v1.0.2-0.20240127103127-686a7163e281
+	github.com/codfrm/cago v1.0.2-0.20240203154248-efb63154ae66
 	github.com/gin-gonic/gin v1.9.1
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/spf13/cobra v1.8.0

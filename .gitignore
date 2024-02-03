@@ -24,10 +24,7 @@ go.work
 
 /icondesc
 
-ItemProtoSet.dat
-RecipeProtoSet.dat
-TechProtoSet.dat
-SignalProtoSet.dat
+protodata
 
 .vscode
 .idea

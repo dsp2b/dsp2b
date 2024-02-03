@@ -36,8 +36,8 @@ github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d h1:77cEq6EriyTZ
 github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d/go.mod h1:8EPpVsBuRksnlj1mLy4AWzRNQYxauNi62uWcE3to6eA=
 github.com/chenzhuoyu/iasm v0.9.0 h1:9fhXjVzq5hUy2gkhhgHl95zG2cEAhw9OSGs8toWWAwo=
 github.com/chenzhuoyu/iasm v0.9.0/go.mod h1:Xjy2NpN3h7aUqeqM+woSuuvxmIe6+DDsiNLIrkAmYog=
-github.com/codfrm/cago v1.0.2-0.20240127103127-686a7163e281 h1:nK4i+s972/5SLOTljUstHwp9tZ87EXDJlWWuvd0Hc3o=
-github.com/codfrm/cago v1.0.2-0.20240127103127-686a7163e281/go.mod h1:Bb7g0twnLpTe2ZO9eGKIUYuGyZFuwdPs2g71Qr+T5wI=
+github.com/codfrm/cago v1.0.2-0.20240203154248-efb63154ae66 h1:0xeJAdKljbLB9W8nnvXLyQxW772nI1J4jaDNrs7HUOA=
+github.com/codfrm/cago v1.0.2-0.20240203154248-efb63154ae66/go.mod h1:Bb7g0twnLpTe2ZO9eGKIUYuGyZFuwdPs2g71Qr+T5wI=
 github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81 h1:q2hJAaP1k2wIvVRd/hEHD7lacgqrCPS+k8g1MndzfWY=
 github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81/go.mod h1:YynlIjWYF8myEu6sdkwKIvGQq+cOckRm6So2avqoYAk=
 github.com/coreos/go-semver v0.3.1 h1:yi21YpKnrx1gt5R+la8n5WgS0kCrsPp33dmEyHReZr4=

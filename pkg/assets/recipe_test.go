@@ -3,11 +3,12 @@ package assets
 import (
 	"encoding/json"
 	"encoding/xml"
-	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 )
 
 type AssetsXML struct {
@@ -73,14 +74,14 @@ func TestRecipeProtoSet_Load(t *testing.T) {
 		signal.DataArray[k].Proto.IconPath = mvIcon(signal.DataArray[k].Proto.IconPath)
 	}
 	b, _ := json.MarshalIndent(recipe, "", "  ")
-	_ = os.WriteFile("data/RecipeProtoSet.json", b, 0644)
+	_ = os.WriteFile("data/recipeProtoSet.json", b, 0644)
 
 	b, _ = json.MarshalIndent(item, "", "  ")
-	_ = os.WriteFile("data/ItemProtoSet.json", b, 0644)
+	_ = os.WriteFile("data/itemProtoSet.json", b, 0644)
 
 	b, _ = json.MarshalIndent(tech, "", "  ")
-	_ = os.WriteFile("data/TechProtoSet.json", b, 0644)
+	_ = os.WriteFile("data/techProtoSet.json", b, 0644)
 
 	b, _ = json.MarshalIndent(signal, "", "  ")
-	_ = os.WriteFile("data/SignalProtoSet.json", b, 0644)
+	_ = os.WriteFile("data/signalProtoSet.json", b, 0644)
 }

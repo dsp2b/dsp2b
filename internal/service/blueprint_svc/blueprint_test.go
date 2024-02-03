@@ -25,6 +25,8 @@ func TestMain(m *testing.M) {
 		panic(err)
 	}
 	err = InitBlueprint("../../../data/itemProtoSet.json",
+		"../../../data/recipeProtoSet.json",
+		"../../../data/techProtoSet.json",
 		"../../../data/recipeProtoSet.json")
 	if err != nil {
 		panic(err)

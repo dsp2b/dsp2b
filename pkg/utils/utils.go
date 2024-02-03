@@ -126,7 +126,7 @@ func ToPathUnderline(s string) string {
 }
 
 func ToUnderline(s string) string {
-	var ret []rune
+	ret := make([]rune, 0)
 	for i, r := range s {
 		if i > 0 && r >= 'A' && r <= 'Z' {
 			ret = append(ret, '_')

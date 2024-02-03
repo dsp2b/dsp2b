@@ -23,6 +23,13 @@ type Icons struct {
 	Icon5  *IconInfo
 }
 
+type Buildings struct {
+	ItemId   int    `json:"item_id"`
+	Name     string `json:"name"`
+	IconPath string `json:"icon_path"`
+	Count    int    `json:"count"`
+}
+
 type Blueprint struct {
 	ID          primitive.ObjectID `bson:"_id"`
 	UserID      primitive.ObjectID `bson:"user_id"`
