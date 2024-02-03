@@ -23,58 +23,64 @@ type Asset struct {
 func TestRecipeProtoSet_Load(t *testing.T) {
 	recipe := &RecipeProtoSet{}
 	_ = recipe.Load("RecipeProtoSet.dat")
-	b, _ := json.MarshalIndent(recipe, "", "  ")
-	_ = os.WriteFile("data/RecipeProtoSet.json", b, 0644)
-
 	item := &ItemProtoSet{}
 	_ = item.Load("ItemProtoSet.dat")
-	b, _ = json.MarshalIndent(item, "", "  ")
-	_ = os.WriteFile("data/ItemProtoSet.json", b, 0644)
 
 	tech := &TechProtoSet{}
 	_ = tech.Load("TechProtoSet.dat")
-	b, _ = json.MarshalIndent(tech, "", "  ")
-	_ = os.WriteFile("data/TechProtoSet.json", b, 0644)
 
 	signal := &SignalProtoSet{}
 	_ = signal.Load("SignalProtoSet.dat")
-	b, _ = json.MarshalIndent(signal, "", "  ")
-	_ = os.WriteFile("data/SignalProtoSet.json", b, 0644)
 
 	// 提取图片
 	_ = os.MkdirAll("data/icons/item_recipe", 0755)
-	mvIcon := func(iconPath string) {
+	_ = os.MkdirAll("data/icons/tech", 0755)
+	_ = os.MkdirAll("data/icons/signal", 0755)
+	mvIcon := func(iconPath string) string {
 		filename := filepath.Join("data/dsp/asset/", strings.ToLower(iconPath)+".png")
 		// copy文件
-		err := os.Link(filename, filepath.Join("data", strings.ToLower(utils.ToPathUnderline(iconPath)+".png")))
+		newFilename := strings.ToLower(utils.ToPathUnderline(iconPath))
+		err := os.Link(filename, filepath.Join("data", newFilename+".png"))
 		if err != nil {
 			if !os.IsExist(err) {
 				t.Fatalf("link err: %v", err)
 			}
 		}
+		return newFilename
 	}
-	for _, v := range item.DataArray {
+	for k, v := range item.DataArray {
 		if v.Proto.IconPath == "" {
 			continue
 		}
-		mvIcon(v.Proto.IconPath)
+		item.DataArray[k].Proto.IconPath = mvIcon(item.DataArray[k].Proto.IconPath)
 	}
-	for _, v := range recipe.DataArray {
+	for k, v := range recipe.DataArray {
 		if v.Proto.IconPath == "" {
 			continue
 		}
-		mvIcon(v.Proto.IconPath)
+		recipe.DataArray[k].Proto.IconPath = mvIcon(recipe.DataArray[k].Proto.IconPath)
 	}
-	for _, v := range tech.DataArray {
+	for k, v := range tech.DataArray {
 		if v.Proto.IconPath == "" {
 			continue
 		}
-		mvIcon(v.Proto.IconPath)
+		tech.DataArray[k].Proto.IconPath = mvIcon(tech.DataArray[k].Proto.IconPath)
 	}
-	for _, v := range signal.DataArray {
+	for k, v := range signal.DataArray {
 		if v.Proto.IconPath == "" {
 			continue
 		}
-		mvIcon(v.Proto.IconPath)
+		signal.DataArray[k].Proto.IconPath = mvIcon(signal.DataArray[k].Proto.IconPath)
 	}
+	b, _ := json.MarshalIndent(recipe, "", "  ")
+	_ = os.WriteFile("data/RecipeProtoSet.json", b, 0644)
+
+	b, _ = json.MarshalIndent(item, "", "  ")
+	_ = os.WriteFile("data/ItemProtoSet.json", b, 0644)
+
+	b, _ = json.MarshalIndent(tech, "", "  ")
+	_ = os.WriteFile("data/TechProtoSet.json", b, 0644)
+
+	b, _ = json.MarshalIndent(signal, "", "  ")
+	_ = os.WriteFile("data/SignalProtoSet.json", b, 0644)
 }

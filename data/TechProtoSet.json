@@ -18,7 +18,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1",
+        "IconPath": "icons/tech/1",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [],
@@ -54,7 +54,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1001",
+        "IconPath": "icons/tech/1001",
         "IsLabTech": false,
         "PreTechs": [
           1
@@ -112,7 +112,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1002",
+        "IconPath": "icons/tech/1002",
         "IsLabTech": false,
         "PreTechs": [
           1001
@@ -167,7 +167,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1101",
+        "IconPath": "icons/tech/1101",
         "IsLabTech": true,
         "PreTechs": [
           1001
@@ -217,7 +217,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1102",
+        "IconPath": "icons/tech/1102",
         "IsLabTech": true,
         "PreTechs": [
           1120,
@@ -264,7 +264,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1103",
+        "IconPath": "icons/tech/1103",
         "IsLabTech": true,
         "PreTechs": [
           1121,
@@ -311,7 +311,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1104",
+        "IconPath": "icons/tech/1104",
         "IsLabTech": true,
         "PreTechs": [
           1103
@@ -357,7 +357,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1111",
+        "IconPath": "icons/tech/1111",
         "IsLabTech": true,
         "PreTechs": [
           1102
@@ -401,7 +401,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1112",
+        "IconPath": "icons/tech/1112",
         "IsLabTech": true,
         "PreTechs": [
           1111
@@ -445,7 +445,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1113",
+        "IconPath": "icons/tech/1113",
         "IsLabTech": true,
         "PreTechs": [
           1112
@@ -489,7 +489,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1114",
+        "IconPath": "icons/tech/1114",
         "IsLabTech": true,
         "PreTechs": [
           1113
@@ -533,7 +533,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1120",
+        "IconPath": "icons/tech/1120",
         "IsLabTech": true,
         "PreTechs": [
           1001
@@ -582,7 +582,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1121",
+        "IconPath": "icons/tech/1121",
         "IsLabTech": true,
         "PreTechs": [
           1120,
@@ -629,7 +629,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1122",
+        "IconPath": "icons/tech/1122",
         "IsLabTech": true,
         "PreTechs": [
           1121
@@ -676,7 +676,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1123",
+        "IconPath": "icons/tech/1123",
         "IsLabTech": true,
         "PreTechs": [
           1122
@@ -722,7 +722,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1124",
+        "IconPath": "icons/tech/1124",
         "IsLabTech": true,
         "PreTechs": [
           1123
@@ -768,7 +768,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1125",
+        "IconPath": "icons/tech/1125",
         "IsLabTech": true,
         "PreTechs": [
           1124
@@ -817,7 +817,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1126",
+        "IconPath": "icons/tech/1126",
         "IsLabTech": true,
         "PreTechs": [
           1132
@@ -863,7 +863,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1131",
+        "IconPath": "icons/tech/1131",
         "IsLabTech": true,
         "PreTechs": [
           1121
@@ -908,7 +908,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1132",
+        "IconPath": "icons/tech/1132",
         "IsLabTech": true,
         "PreTechs": [
           1131
@@ -955,7 +955,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1133",
+        "IconPath": "icons/tech/1133",
         "IsLabTech": true,
         "PreTechs": [
           1132
@@ -1004,7 +1004,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1134",
+        "IconPath": "icons/tech/1134",
         "IsLabTech": true,
         "PreTechs": [
           1412,
@@ -1052,7 +1052,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1141",
+        "IconPath": "icons/tech/1141",
         "IsLabTech": true,
         "PreTechs": [
           1126,
@@ -1101,7 +1101,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1142",
+        "IconPath": "icons/tech/1142",
         "IsLabTech": true,
         "PreTechs": [
           1124
@@ -1150,7 +1150,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1143",
+        "IconPath": "icons/tech/1143",
         "IsLabTech": true,
         "PreTechs": [
           1142
@@ -1198,7 +1198,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1144",
+        "IconPath": "icons/tech/1144",
         "IsLabTech": true,
         "PreTechs": [
           1145
@@ -1250,7 +1250,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1145",
+        "IconPath": "icons/tech/1145",
         "IsLabTech": true,
         "PreTechs": [
           1506
@@ -1297,7 +1297,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1151",
+        "IconPath": "icons/tech/1151",
         "IsLabTech": true,
         "PreTechs": [
           1311,
@@ -1343,7 +1343,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1152",
+        "IconPath": "icons/tech/1152",
         "IsLabTech": true,
         "PreTechs": [
           1302,
@@ -1390,7 +1390,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1153",
+        "IconPath": "icons/tech/1153",
         "IsLabTech": true,
         "PreTechs": [
           1152,
@@ -1439,7 +1439,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1201",
+        "IconPath": "icons/tech/1201",
         "IsLabTech": false,
         "PreTechs": [
           1001
@@ -1493,7 +1493,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1202",
+        "IconPath": "icons/tech/1202",
         "IsLabTech": true,
         "PreTechs": [
           1201,
@@ -1544,7 +1544,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1203",
+        "IconPath": "icons/tech/1203",
         "IsLabTech": true,
         "PreTechs": [
           1202,
@@ -1599,7 +1599,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1302",
+        "IconPath": "icons/tech/1302",
         "IsLabTech": true,
         "PreTechs": [
           1311
@@ -1643,7 +1643,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1303",
+        "IconPath": "icons/tech/1303",
         "IsLabTech": true,
         "PreTechs": [
           1312,
@@ -1692,7 +1692,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1304",
+        "IconPath": "icons/tech/1304",
         "IsLabTech": true,
         "PreTechs": [
           1303
@@ -1744,7 +1744,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1305",
+        "IconPath": "icons/tech/1305",
         "IsLabTech": true,
         "PreTechs": [
           1303,
@@ -1795,7 +1795,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1311",
+        "IconPath": "icons/tech/1311",
         "IsLabTech": true,
         "PreTechs": [
           1201
@@ -1839,7 +1839,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1312",
+        "IconPath": "icons/tech/1312",
         "IsLabTech": true,
         "PreTechs": [
           1302,
@@ -1886,7 +1886,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1401",
+        "IconPath": "icons/tech/1401",
         "IsLabTech": false,
         "PreTechs": [
           1001
@@ -1941,7 +1941,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1402",
+        "IconPath": "icons/tech/1402",
         "IsLabTech": true,
         "PreTechs": [
           1401
@@ -1987,7 +1987,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1403",
+        "IconPath": "icons/tech/1403",
         "IsLabTech": true,
         "PreTechs": [
           1402
@@ -2035,7 +2035,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1411",
+        "IconPath": "icons/tech/1411",
         "IsLabTech": true,
         "PreTechs": [
           1401
@@ -2083,7 +2083,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1412",
+        "IconPath": "icons/tech/1412",
         "IsLabTech": true,
         "PreTechs": [
           1201
@@ -2131,7 +2131,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1413",
+        "IconPath": "icons/tech/1413",
         "IsLabTech": true,
         "PreTechs": [
           1411
@@ -2177,7 +2177,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1414",
+        "IconPath": "icons/tech/1414",
         "IsLabTech": true,
         "PreTechs": [
           1413
@@ -2225,7 +2225,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1415",
+        "IconPath": "icons/tech/1415",
         "IsLabTech": true,
         "PreTechs": [
           1411
@@ -2269,7 +2269,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1416",
+        "IconPath": "icons/tech/1416",
         "IsLabTech": true,
         "PreTechs": [
           1134
@@ -2320,7 +2320,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1417",
+        "IconPath": "icons/tech/1417",
         "IsLabTech": true,
         "PreTechs": [
           1141
@@ -2372,7 +2372,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1501",
+        "IconPath": "icons/tech/1501",
         "IsLabTech": true,
         "PreTechs": [
           1402,
@@ -2422,7 +2422,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1502",
+        "IconPath": "icons/tech/1502",
         "IsLabTech": true,
         "PreTechs": [
           1501
@@ -2469,7 +2469,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1503",
+        "IconPath": "icons/tech/1503",
         "IsLabTech": true,
         "PreTechs": [
           1502
@@ -2518,7 +2518,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1504",
+        "IconPath": "icons/tech/1504",
         "IsLabTech": true,
         "PreTechs": [
           1503
@@ -2564,7 +2564,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1505",
+        "IconPath": "icons/tech/1505",
         "IsLabTech": true,
         "PreTechs": [
           1504
@@ -2618,7 +2618,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1506",
+        "IconPath": "icons/tech/1506",
         "IsLabTech": true,
         "PreTechs": [
           1505
@@ -2670,7 +2670,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1507",
+        "IconPath": "icons/tech/1507",
         "IsLabTech": true,
         "PreTechs": [
           1506
@@ -2722,7 +2722,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1508",
+        "IconPath": "icons/tech/1508",
         "IsLabTech": true,
         "PreTechs": [
           1507
@@ -2768,7 +2768,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1511",
+        "IconPath": "icons/tech/1511",
         "IsLabTech": true,
         "PreTechs": [
           1403,
@@ -2817,7 +2817,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1512",
+        "IconPath": "icons/tech/1512",
         "IsLabTech": true,
         "PreTechs": [
           1414,
@@ -2866,7 +2866,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1513",
+        "IconPath": "icons/tech/1513",
         "IsLabTech": true,
         "PreTechs": [
           1502
@@ -2914,7 +2914,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1521",
+        "IconPath": "icons/tech/1521",
         "IsLabTech": true,
         "PreTechs": [
           1503
@@ -2963,7 +2963,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1522",
+        "IconPath": "icons/tech/1522",
         "IsLabTech": true,
         "PreTechs": [
           1521
@@ -3016,7 +3016,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 180000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1523",
+        "IconPath": "icons/tech/1523",
         "IsLabTech": true,
         "PreTechs": [
           1522
@@ -3070,7 +3070,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1601",
+        "IconPath": "icons/tech/1601",
         "IsLabTech": false,
         "PreTechs": [
           1001
@@ -3128,7 +3128,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1602",
+        "IconPath": "icons/tech/1602",
         "IsLabTech": true,
         "PreTechs": [
           1601
@@ -3182,7 +3182,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1603",
+        "IconPath": "icons/tech/1603",
         "IsLabTech": true,
         "PreTechs": [
           1602
@@ -3232,7 +3232,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1604",
+        "IconPath": "icons/tech/1604",
         "IsLabTech": true,
         "PreTechs": [
           1603
@@ -3283,7 +3283,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1605",
+        "IconPath": "icons/tech/1605",
         "IsLabTech": true,
         "PreTechs": [
           1604,
@@ -3335,7 +3335,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1606",
+        "IconPath": "icons/tech/1606",
         "IsLabTech": true,
         "PreTechs": [
           1605,
@@ -3384,7 +3384,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1607",
+        "IconPath": "icons/tech/1607",
         "IsLabTech": true,
         "PreTechs": [
           1603
@@ -3435,7 +3435,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1608",
+        "IconPath": "icons/tech/1608",
         "IsLabTech": true,
         "PreTechs": [
           1602
@@ -3488,7 +3488,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1701",
+        "IconPath": "icons/tech/1701",
         "IsLabTech": true,
         "PreTechs": [
           1001
@@ -3532,7 +3532,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1702",
+        "IconPath": "icons/tech/1702",
         "IsLabTech": true,
         "PreTechs": [
           1701
@@ -3578,7 +3578,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1703",
+        "IconPath": "icons/tech/1703",
         "IsLabTech": true,
         "PreTechs": [
           1702
@@ -3625,7 +3625,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1704",
+        "IconPath": "icons/tech/1704",
         "IsLabTech": true,
         "PreTechs": [
           1143,
@@ -3675,7 +3675,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1705",
+        "IconPath": "icons/tech/1705",
         "IsLabTech": true,
         "PreTechs": [
           1303,
@@ -3725,7 +3725,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1711",
+        "IconPath": "icons/tech/1711",
         "IsLabTech": true,
         "PreTechs": [
           1702
@@ -3771,7 +3771,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1712",
+        "IconPath": "icons/tech/1712",
         "IsLabTech": true,
         "PreTechs": [
           1711
@@ -3821,7 +3821,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1801",
+        "IconPath": "icons/tech/1801",
         "IsLabTech": true,
         "PreTechs": [
           1001
@@ -3872,7 +3872,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1802",
+        "IconPath": "icons/tech/1802",
         "IsLabTech": true,
         "PreTechs": [
           1401
@@ -3916,7 +3916,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1803",
+        "IconPath": "icons/tech/1803",
         "IsLabTech": true,
         "PreTechs": [
           1123
@@ -3962,7 +3962,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1804",
+        "IconPath": "icons/tech/1804",
         "IsLabTech": true,
         "PreTechs": [
           1125
@@ -4012,7 +4012,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1805",
+        "IconPath": "icons/tech/1805",
         "IsLabTech": true,
         "PreTechs": [
           1001
@@ -4056,7 +4056,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1806",
+        "IconPath": "icons/tech/1806",
         "IsLabTech": true,
         "PreTechs": [
           1805,
@@ -4104,7 +4104,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1807",
+        "IconPath": "icons/tech/1807",
         "IsLabTech": true,
         "PreTechs": [
           1806
@@ -4153,7 +4153,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1808",
+        "IconPath": "icons/tech/1808",
         "IsLabTech": true,
         "PreTechs": [
           1806
@@ -4201,7 +4201,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1809",
+        "IconPath": "icons/tech/1809",
         "IsLabTech": true,
         "PreTechs": [
           1807
@@ -4250,7 +4250,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1810",
+        "IconPath": "icons/tech/1810",
         "IsLabTech": true,
         "PreTechs": [
           1806
@@ -4299,7 +4299,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1811",
+        "IconPath": "icons/tech/1811",
         "IsLabTech": true,
         "PreTechs": [
           1809
@@ -4353,7 +4353,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1812",
+        "IconPath": "icons/tech/1812",
         "IsLabTech": true,
         "PreTechs": [
           1801
@@ -4401,7 +4401,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1813",
+        "IconPath": "icons/tech/1813",
         "IsLabTech": true,
         "PreTechs": [
           1812
@@ -4451,7 +4451,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1814",
+        "IconPath": "icons/tech/1814",
         "IsLabTech": true,
         "PreTechs": [
           1807
@@ -4499,7 +4499,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1815",
+        "IconPath": "icons/tech/1815",
         "IsLabTech": true,
         "PreTechs": [
           1814
@@ -4549,7 +4549,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1816",
+        "IconPath": "icons/tech/1816",
         "IsLabTech": true,
         "PreTechs": [
           1815
@@ -4601,7 +4601,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1817",
+        "IconPath": "icons/tech/1817",
         "IsLabTech": true,
         "PreTechs": [
           1816
@@ -4655,7 +4655,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1818",
+        "IconPath": "icons/tech/1818",
         "IsLabTech": true,
         "PreTechs": [
           1145,
@@ -4708,7 +4708,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1819",
+        "IconPath": "icons/tech/1819",
         "IsLabTech": true,
         "PreTechs": [
           1826
@@ -4760,7 +4760,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1820",
+        "IconPath": "icons/tech/1820",
         "IsLabTech": true,
         "PreTechs": [
           1819
@@ -4808,7 +4808,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1821",
+        "IconPath": "icons/tech/1821",
         "IsLabTech": true,
         "PreTechs": [
           1819
@@ -4858,7 +4858,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1822",
+        "IconPath": "icons/tech/1822",
         "IsLabTech": true,
         "PreTechs": [
           1809,
@@ -4915,7 +4915,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1823",
+        "IconPath": "icons/tech/1823",
         "IsLabTech": true,
         "PreTechs": [
           1822,
@@ -4968,7 +4968,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1824",
+        "IconPath": "icons/tech/1824",
         "IsLabTech": true,
         "PreTechs": [
           1810
@@ -5016,7 +5016,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1826",
+        "IconPath": "icons/tech/1826",
         "IsLabTech": true,
         "PreTechs": [
           1801,
@@ -5063,7 +5063,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1901",
+        "IconPath": "icons/tech/1901",
         "IsLabTech": false,
         "PreTechs": [
           1312
@@ -5109,7 +5109,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1902",
+        "IconPath": "icons/tech/1902",
         "IsLabTech": false,
         "PreTechs": [
           1203
@@ -5155,7 +5155,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1903",
+        "IconPath": "icons/tech/1903",
         "IsLabTech": false,
         "PreTechs": [
           1417
@@ -5201,7 +5201,7 @@
         "MaxLevel": 0,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/1904",
+        "IconPath": "icons/tech/1904",
         "IsLabTech": false,
         "PreTechs": [
           1145
@@ -5245,7 +5245,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2101",
+        "IconPath": "icons/tech/2101",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [],
@@ -5299,7 +5299,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2102",
+        "IconPath": "icons/tech/2102",
         "IsLabTech": true,
         "PreTechs": [
           2101
@@ -5353,7 +5353,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2103",
+        "IconPath": "icons/tech/2103",
         "IsLabTech": true,
         "PreTechs": [
           2102
@@ -5409,7 +5409,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2104",
+        "IconPath": "icons/tech/2104",
         "IsLabTech": true,
         "PreTechs": [
           2103
@@ -5467,7 +5467,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2105",
+        "IconPath": "icons/tech/2105",
         "IsLabTech": true,
         "PreTechs": [
           2104
@@ -5527,7 +5527,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -8100000,
         "LevelCoef2": 900000,
-        "IconPath": "Icons/Tech/2106",
+        "IconPath": "icons/tech/2106",
         "IsLabTech": true,
         "PreTechs": [
           2105
@@ -5577,7 +5577,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2201",
+        "IconPath": "icons/tech/2201",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -5627,7 +5627,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2202",
+        "IconPath": "icons/tech/2202",
         "IsLabTech": true,
         "PreTechs": [
           2201
@@ -5677,7 +5677,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2203",
+        "IconPath": "icons/tech/2203",
         "IsLabTech": true,
         "PreTechs": [
           2202
@@ -5727,7 +5727,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2204",
+        "IconPath": "icons/tech/2204",
         "IsLabTech": true,
         "PreTechs": [
           2203
@@ -5779,7 +5779,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2205",
+        "IconPath": "icons/tech/2205",
         "IsLabTech": true,
         "PreTechs": [
           2204
@@ -5831,7 +5831,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2206",
+        "IconPath": "icons/tech/2206",
         "IsLabTech": true,
         "PreTechs": [
           2205
@@ -5885,7 +5885,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2207",
+        "IconPath": "icons/tech/2207",
         "IsLabTech": true,
         "PreTechs": [
           2206
@@ -5939,7 +5939,7 @@
         "MaxLevel": 8,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2208",
+        "IconPath": "icons/tech/2208",
         "IsLabTech": true,
         "PreTechs": [
           2207
@@ -5995,7 +5995,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2301",
+        "IconPath": "icons/tech/2301",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -6047,7 +6047,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2302",
+        "IconPath": "icons/tech/2302",
         "IsLabTech": true,
         "PreTechs": [
           2301
@@ -6097,7 +6097,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2303",
+        "IconPath": "icons/tech/2303",
         "IsLabTech": true,
         "PreTechs": [
           2302
@@ -6151,7 +6151,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2304",
+        "IconPath": "icons/tech/2304",
         "IsLabTech": true,
         "PreTechs": [
           2303
@@ -6207,7 +6207,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2305",
+        "IconPath": "icons/tech/2305",
         "IsLabTech": true,
         "PreTechs": [
           2304
@@ -6261,7 +6261,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2306",
+        "IconPath": "icons/tech/2306",
         "IsLabTech": true,
         "PreTechs": [
           2305
@@ -6319,7 +6319,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2307",
+        "IconPath": "icons/tech/2307",
         "IsLabTech": true,
         "PreTechs": [
           2306
@@ -6367,7 +6367,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2401",
+        "IconPath": "icons/tech/2401",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -6413,7 +6413,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2402",
+        "IconPath": "icons/tech/2402",
         "IsLabTech": true,
         "PreTechs": [
           2401
@@ -6463,7 +6463,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2403",
+        "IconPath": "icons/tech/2403",
         "IsLabTech": true,
         "PreTechs": [
           2402
@@ -6513,7 +6513,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2404",
+        "IconPath": "icons/tech/2404",
         "IsLabTech": true,
         "PreTechs": [
           2403
@@ -6565,7 +6565,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2405",
+        "IconPath": "icons/tech/2405",
         "IsLabTech": true,
         "PreTechs": [
           2404
@@ -6619,7 +6619,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2406",
+        "IconPath": "icons/tech/2406",
         "IsLabTech": true,
         "PreTechs": [
           2405
@@ -6675,7 +6675,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -21600000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/2407",
+        "IconPath": "icons/tech/2407",
         "IsLabTech": true,
         "PreTechs": [
           2406
@@ -6723,7 +6723,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2501",
+        "IconPath": "icons/tech/2501",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -6777,7 +6777,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2502",
+        "IconPath": "icons/tech/2502",
         "IsLabTech": true,
         "PreTechs": [
           2501
@@ -6827,7 +6827,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2503",
+        "IconPath": "icons/tech/2503",
         "IsLabTech": true,
         "PreTechs": [
           2502
@@ -6879,7 +6879,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2504",
+        "IconPath": "icons/tech/2504",
         "IsLabTech": true,
         "PreTechs": [
           2503
@@ -6931,7 +6931,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2505",
+        "IconPath": "icons/tech/2505",
         "IsLabTech": true,
         "PreTechs": [
           2504
@@ -6987,7 +6987,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -16200000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/2506",
+        "IconPath": "icons/tech/2506",
         "IsLabTech": true,
         "PreTechs": [
           2505
@@ -7035,7 +7035,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2601",
+        "IconPath": "icons/tech/2601",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -7081,7 +7081,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2602",
+        "IconPath": "icons/tech/2602",
         "IsLabTech": true,
         "PreTechs": [
           2601
@@ -7131,7 +7131,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2603",
+        "IconPath": "icons/tech/2603",
         "IsLabTech": true,
         "PreTechs": [
           2602
@@ -7183,7 +7183,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2604",
+        "IconPath": "icons/tech/2604",
         "IsLabTech": true,
         "PreTechs": [
           2603
@@ -7237,7 +7237,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2605",
+        "IconPath": "icons/tech/2605",
         "IsLabTech": true,
         "PreTechs": [
           2604
@@ -7293,7 +7293,7 @@
         "MaxLevel": 24,
         "LevelCoef1": -18000000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/2606",
+        "IconPath": "icons/tech/2606",
         "IsLabTech": true,
         "PreTechs": [
           2605
@@ -7341,7 +7341,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2701",
+        "IconPath": "icons/tech/2701",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -7391,7 +7391,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2702",
+        "IconPath": "icons/tech/2702",
         "IsLabTech": true,
         "PreTechs": [
           2701
@@ -7439,7 +7439,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2703",
+        "IconPath": "icons/tech/2703",
         "IsLabTech": true,
         "PreTechs": [
           2702
@@ -7489,7 +7489,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2704",
+        "IconPath": "icons/tech/2704",
         "IsLabTech": true,
         "PreTechs": [
           2703
@@ -7541,7 +7541,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2705",
+        "IconPath": "icons/tech/2705",
         "IsLabTech": true,
         "PreTechs": [
           2704
@@ -7595,7 +7595,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2801",
+        "IconPath": "icons/tech/2801",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -7645,7 +7645,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2802",
+        "IconPath": "icons/tech/2802",
         "IsLabTech": true,
         "PreTechs": [
           2801
@@ -7697,7 +7697,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2803",
+        "IconPath": "icons/tech/2803",
         "IsLabTech": true,
         "PreTechs": [
           2802
@@ -7753,7 +7753,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2804",
+        "IconPath": "icons/tech/2804",
         "IsLabTech": true,
         "PreTechs": [
           2803
@@ -7807,7 +7807,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2805",
+        "IconPath": "icons/tech/2805",
         "IsLabTech": true,
         "PreTechs": [
           2804
@@ -7865,7 +7865,7 @@
         "MaxLevel": 25,
         "LevelCoef1": -8100000,
         "LevelCoef2": 900000,
-        "IconPath": "Icons/Tech/2806",
+        "IconPath": "icons/tech/2806",
         "IsLabTech": true,
         "PreTechs": [
           2805
@@ -7915,7 +7915,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -8100000,
         "LevelCoef2": 900000,
-        "IconPath": "Icons/Tech/2807",
+        "IconPath": "icons/tech/2807",
         "IsLabTech": true,
         "PreTechs": [
           2806
@@ -7961,7 +7961,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2901",
+        "IconPath": "icons/tech/2901",
         "IsLabTech": false,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -8013,7 +8013,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2902",
+        "IconPath": "icons/tech/2902",
         "IsLabTech": true,
         "PreTechs": [
           2901
@@ -8063,7 +8063,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2903",
+        "IconPath": "icons/tech/2903",
         "IsLabTech": true,
         "PreTechs": [
           2902
@@ -8115,7 +8115,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2904",
+        "IconPath": "icons/tech/2904",
         "IsLabTech": true,
         "PreTechs": [
           2903
@@ -8168,7 +8168,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2904",
+        "IconPath": "icons/tech/2904",
         "IsLabTech": true,
         "PreTechs": [
           2904
@@ -8220,7 +8220,7 @@
         "MaxLevel": 100,
         "LevelCoef1": -1800000,
         "LevelCoef2": 360000,
-        "IconPath": "Icons/Tech/2904",
+        "IconPath": "icons/tech/2904",
         "IsLabTech": true,
         "PreTechs": [
           2905
@@ -8266,7 +8266,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2951",
+        "IconPath": "icons/tech/2951",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -8312,7 +8312,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2952",
+        "IconPath": "icons/tech/2952",
         "IsLabTech": true,
         "PreTechs": [
           2951
@@ -8360,7 +8360,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2953",
+        "IconPath": "icons/tech/2953",
         "IsLabTech": true,
         "PreTechs": [
           2952
@@ -8410,7 +8410,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2954",
+        "IconPath": "icons/tech/2954",
         "IsLabTech": true,
         "PreTechs": [
           2953
@@ -8462,7 +8462,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2955",
+        "IconPath": "icons/tech/2955",
         "IsLabTech": true,
         "PreTechs": [
           2954
@@ -8516,7 +8516,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/2956",
+        "IconPath": "icons/tech/2956",
         "IsLabTech": true,
         "PreTechs": [
           2955
@@ -8562,7 +8562,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3101",
+        "IconPath": "icons/tech/3101",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -8612,7 +8612,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3102",
+        "IconPath": "icons/tech/3102",
         "IsLabTech": true,
         "PreTechs": [
           3101
@@ -8662,7 +8662,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3103",
+        "IconPath": "icons/tech/3103",
         "IsLabTech": true,
         "PreTechs": [
           3102
@@ -8712,7 +8712,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3104",
+        "IconPath": "icons/tech/3104",
         "IsLabTech": true,
         "PreTechs": [
           3103
@@ -8764,7 +8764,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3105",
+        "IconPath": "icons/tech/3105",
         "IsLabTech": true,
         "PreTechs": [
           3104
@@ -8816,7 +8816,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3106",
+        "IconPath": "icons/tech/3106",
         "IsLabTech": true,
         "PreTechs": [
           3105
@@ -8868,7 +8868,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3201",
+        "IconPath": "icons/tech/3201",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -8918,7 +8918,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3202",
+        "IconPath": "icons/tech/3202",
         "IsLabTech": true,
         "PreTechs": [
           3201
@@ -8968,7 +8968,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3203",
+        "IconPath": "icons/tech/3203",
         "IsLabTech": true,
         "PreTechs": [
           3202
@@ -9018,7 +9018,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3204",
+        "IconPath": "icons/tech/3204",
         "IsLabTech": true,
         "PreTechs": [
           3203
@@ -9070,7 +9070,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3205",
+        "IconPath": "icons/tech/3205",
         "IsLabTech": true,
         "PreTechs": [
           3204
@@ -9122,7 +9122,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3206",
+        "IconPath": "icons/tech/3206",
         "IsLabTech": true,
         "PreTechs": [
           3205
@@ -9176,7 +9176,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3207",
+        "IconPath": "icons/tech/3207",
         "IsLabTech": true,
         "PreTechs": [
           3206
@@ -9230,7 +9230,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": 1800000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3208",
+        "IconPath": "icons/tech/3208",
         "IsLabTech": true,
         "PreTechs": [
           3207
@@ -9276,7 +9276,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3301",
+        "IconPath": "icons/tech/3301",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -9326,7 +9326,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3302",
+        "IconPath": "icons/tech/3302",
         "IsLabTech": true,
         "PreTechs": [
           3301
@@ -9376,7 +9376,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3303",
+        "IconPath": "icons/tech/3303",
         "IsLabTech": true,
         "PreTechs": [
           3302
@@ -9426,7 +9426,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3304",
+        "IconPath": "icons/tech/3304",
         "IsLabTech": true,
         "PreTechs": [
           3303
@@ -9476,7 +9476,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3305",
+        "IconPath": "icons/tech/3305",
         "IsLabTech": true,
         "PreTechs": [
           3304
@@ -9526,7 +9526,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3306",
+        "IconPath": "icons/tech/3306",
         "IsLabTech": true,
         "PreTechs": [
           3305
@@ -9580,7 +9580,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3311",
+        "IconPath": "icons/tech/3311",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -9630,7 +9630,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3312",
+        "IconPath": "icons/tech/3312",
         "IsLabTech": true,
         "PreTechs": [
           3311
@@ -9680,7 +9680,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3313",
+        "IconPath": "icons/tech/3313",
         "IsLabTech": true,
         "PreTechs": [
           3312
@@ -9730,7 +9730,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3314",
+        "IconPath": "icons/tech/3314",
         "IsLabTech": true,
         "PreTechs": [
           3313
@@ -9780,7 +9780,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3315",
+        "IconPath": "icons/tech/3315",
         "IsLabTech": true,
         "PreTechs": [
           3314
@@ -9830,7 +9830,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3316",
+        "IconPath": "icons/tech/3316",
         "IsLabTech": true,
         "PreTechs": [
           3315
@@ -9884,7 +9884,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4001",
+        "IconPath": "icons/tech/4001",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -9932,7 +9932,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4002",
+        "IconPath": "icons/tech/4002",
         "IsLabTech": true,
         "PreTechs": [
           4001
@@ -9982,7 +9982,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4003",
+        "IconPath": "icons/tech/4003",
         "IsLabTech": true,
         "PreTechs": [
           4002
@@ -10032,7 +10032,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4004",
+        "IconPath": "icons/tech/4004",
         "IsLabTech": true,
         "PreTechs": [
           4003
@@ -10084,7 +10084,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4005",
+        "IconPath": "icons/tech/4005",
         "IsLabTech": true,
         "PreTechs": [
           4004
@@ -10138,7 +10138,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3401",
+        "IconPath": "icons/tech/3401",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -10190,7 +10190,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3402",
+        "IconPath": "icons/tech/3402",
         "IsLabTech": true,
         "PreTechs": [
           3401
@@ -10242,7 +10242,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3403",
+        "IconPath": "icons/tech/3403",
         "IsLabTech": true,
         "PreTechs": [
           3402
@@ -10298,7 +10298,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3404",
+        "IconPath": "icons/tech/3404",
         "IsLabTech": true,
         "PreTechs": [
           3403
@@ -10358,7 +10358,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3405",
+        "IconPath": "icons/tech/3405",
         "IsLabTech": true,
         "PreTechs": [
           3404
@@ -10416,7 +10416,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3406",
+        "IconPath": "icons/tech/3406",
         "IsLabTech": true,
         "PreTechs": [
           3405
@@ -10474,7 +10474,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -21600000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/3407",
+        "IconPath": "icons/tech/3407",
         "IsLabTech": true,
         "PreTechs": [
           3406
@@ -10524,7 +10524,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3501",
+        "IconPath": "icons/tech/3501",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -10576,7 +10576,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3502",
+        "IconPath": "icons/tech/3502",
         "IsLabTech": true,
         "PreTechs": [
           3501
@@ -10628,7 +10628,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3503",
+        "IconPath": "icons/tech/3503",
         "IsLabTech": true,
         "PreTechs": [
           3502
@@ -10684,7 +10684,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3504",
+        "IconPath": "icons/tech/3504",
         "IsLabTech": true,
         "PreTechs": [
           3503
@@ -10738,7 +10738,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3505",
+        "IconPath": "icons/tech/3505",
         "IsLabTech": true,
         "PreTechs": [
           3504
@@ -10794,7 +10794,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3506",
+        "IconPath": "icons/tech/3506",
         "IsLabTech": true,
         "PreTechs": [
           3505
@@ -10850,7 +10850,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3507",
+        "IconPath": "icons/tech/3507",
         "IsLabTech": true,
         "PreTechs": [
           3506
@@ -10908,7 +10908,7 @@
         "MaxLevel": 8,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3508",
+        "IconPath": "icons/tech/3508",
         "IsLabTech": true,
         "PreTechs": [
           3507
@@ -10964,7 +10964,7 @@
         "MaxLevel": 11,
         "LevelCoef1": 2400000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3509",
+        "IconPath": "icons/tech/3509",
         "IsLabTech": true,
         "PreTechs": [
           3508
@@ -11016,7 +11016,7 @@
         "MaxLevel": 13,
         "LevelCoef1": 4800000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3510",
+        "IconPath": "icons/tech/3510",
         "IsLabTech": true,
         "PreTechs": [
           3509
@@ -11068,7 +11068,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3801",
+        "IconPath": "icons/tech/3801",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -11114,7 +11114,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3802",
+        "IconPath": "icons/tech/3802",
         "IsLabTech": true,
         "PreTechs": [
           3801
@@ -11162,7 +11162,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3803",
+        "IconPath": "icons/tech/3803",
         "IsLabTech": true,
         "PreTechs": [
           3802
@@ -11210,7 +11210,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3601",
+        "IconPath": "icons/tech/3601",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -11262,7 +11262,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3602",
+        "IconPath": "icons/tech/3602",
         "IsLabTech": true,
         "PreTechs": [
           3601
@@ -11316,7 +11316,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3603",
+        "IconPath": "icons/tech/3603",
         "IsLabTech": true,
         "PreTechs": [
           3602
@@ -11372,7 +11372,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3604",
+        "IconPath": "icons/tech/3604",
         "IsLabTech": true,
         "PreTechs": [
           3603
@@ -11428,7 +11428,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3605",
+        "IconPath": "icons/tech/3605",
         "IsLabTech": true,
         "PreTechs": [
           3604
@@ -11486,7 +11486,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": 3600000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3606",
+        "IconPath": "icons/tech/3606",
         "IsLabTech": true,
         "PreTechs": [
           3605
@@ -11536,7 +11536,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3701",
+        "IconPath": "icons/tech/3701",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -11584,7 +11584,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3702",
+        "IconPath": "icons/tech/3702",
         "IsLabTech": true,
         "PreTechs": [
           3701
@@ -11632,7 +11632,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3703",
+        "IconPath": "icons/tech/3703",
         "IsLabTech": true,
         "PreTechs": [
           3702
@@ -11682,7 +11682,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3704",
+        "IconPath": "icons/tech/3704",
         "IsLabTech": true,
         "PreTechs": [
           3703
@@ -11734,7 +11734,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3705",
+        "IconPath": "icons/tech/3705",
         "IsLabTech": true,
         "PreTechs": [
           3704
@@ -11786,7 +11786,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3706",
+        "IconPath": "icons/tech/3706",
         "IsLabTech": true,
         "PreTechs": [
           3705
@@ -11840,7 +11840,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3901",
+        "IconPath": "icons/tech/3901",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -11886,7 +11886,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3902",
+        "IconPath": "icons/tech/3902",
         "IsLabTech": true,
         "PreTechs": [
           3901
@@ -11932,7 +11932,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3903",
+        "IconPath": "icons/tech/3903",
         "IsLabTech": true,
         "PreTechs": [
           3902
@@ -11978,7 +11978,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": 14400000,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/3904",
+        "IconPath": "icons/tech/3904",
         "IsLabTech": true,
         "PreTechs": [
           3903
@@ -12024,7 +12024,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4101",
+        "IconPath": "icons/tech/4101",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [],
@@ -12068,7 +12068,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4102",
+        "IconPath": "icons/tech/4102",
         "IsLabTech": true,
         "PreTechs": [
           4101
@@ -12114,7 +12114,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4103",
+        "IconPath": "icons/tech/4103",
         "IsLabTech": true,
         "PreTechs": [
           4102
@@ -12166,7 +12166,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/4104",
+        "IconPath": "icons/tech/4104",
         "IsLabTech": true,
         "PreTechs": [
           4103
@@ -12218,7 +12218,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5001",
+        "IconPath": "icons/tech/5001",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -12264,7 +12264,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5002",
+        "IconPath": "icons/tech/5002",
         "IsLabTech": true,
         "PreTechs": [
           5001
@@ -12312,7 +12312,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5003",
+        "IconPath": "icons/tech/5003",
         "IsLabTech": true,
         "PreTechs": [
           5002
@@ -12362,7 +12362,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5004",
+        "IconPath": "icons/tech/5004",
         "IsLabTech": true,
         "PreTechs": [
           5003
@@ -12414,7 +12414,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5005",
+        "IconPath": "icons/tech/5005",
         "IsLabTech": true,
         "PreTechs": [
           5004
@@ -12468,7 +12468,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -16200000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/5006",
+        "IconPath": "icons/tech/5006",
         "IsLabTech": true,
         "PreTechs": [
           5005
@@ -12514,7 +12514,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5101",
+        "IconPath": "icons/tech/5101",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -12560,7 +12560,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5102",
+        "IconPath": "icons/tech/5102",
         "IsLabTech": true,
         "PreTechs": [
           5101
@@ -12608,7 +12608,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5103",
+        "IconPath": "icons/tech/5103",
         "IsLabTech": true,
         "PreTechs": [
           5102
@@ -12658,7 +12658,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5104",
+        "IconPath": "icons/tech/5104",
         "IsLabTech": true,
         "PreTechs": [
           5103
@@ -12710,7 +12710,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5105",
+        "IconPath": "icons/tech/5105",
         "IsLabTech": true,
         "PreTechs": [
           5104
@@ -12764,7 +12764,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -54000000,
         "LevelCoef2": 5400000,
-        "IconPath": "Icons/Tech/5106",
+        "IconPath": "icons/tech/5106",
         "IsLabTech": true,
         "PreTechs": [
           5105
@@ -12810,7 +12810,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5201",
+        "IconPath": "icons/tech/5201",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -12856,7 +12856,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5202",
+        "IconPath": "icons/tech/5202",
         "IsLabTech": true,
         "PreTechs": [
           5201
@@ -12904,7 +12904,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5203",
+        "IconPath": "icons/tech/5203",
         "IsLabTech": true,
         "PreTechs": [
           5202
@@ -12954,7 +12954,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5204",
+        "IconPath": "icons/tech/5204",
         "IsLabTech": true,
         "PreTechs": [
           5203
@@ -13006,7 +13006,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5205",
+        "IconPath": "icons/tech/5205",
         "IsLabTech": true,
         "PreTechs": [
           5204
@@ -13060,7 +13060,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -16200000,
         "LevelCoef2": 1800000,
-        "IconPath": "Icons/Tech/5206",
+        "IconPath": "icons/tech/5206",
         "IsLabTech": true,
         "PreTechs": [
           5205
@@ -13106,7 +13106,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5301",
+        "IconPath": "icons/tech/5301",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -13154,7 +13154,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5302",
+        "IconPath": "icons/tech/5302",
         "IsLabTech": true,
         "PreTechs": [
           5301
@@ -13204,7 +13204,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5303",
+        "IconPath": "icons/tech/5303",
         "IsLabTech": true,
         "PreTechs": [
           5302
@@ -13258,7 +13258,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5304",
+        "IconPath": "icons/tech/5304",
         "IsLabTech": true,
         "PreTechs": [
           5303
@@ -13314,7 +13314,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -43200000,
         "LevelCoef2": 5400000,
-        "IconPath": "Icons/Tech/5305",
+        "IconPath": "icons/tech/5305",
         "IsLabTech": true,
         "PreTechs": [
           5304
@@ -13362,7 +13362,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5401",
+        "IconPath": "icons/tech/5401",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -13410,7 +13410,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5402",
+        "IconPath": "icons/tech/5402",
         "IsLabTech": true,
         "PreTechs": [
           5401
@@ -13460,7 +13460,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5403",
+        "IconPath": "icons/tech/5403",
         "IsLabTech": true,
         "PreTechs": [
           5402
@@ -13514,7 +13514,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5404",
+        "IconPath": "icons/tech/5404",
         "IsLabTech": true,
         "PreTechs": [
           5403
@@ -13570,7 +13570,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5405",
+        "IconPath": "icons/tech/5405",
         "IsLabTech": true,
         "PreTechs": [
           5404
@@ -13618,7 +13618,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5601",
+        "IconPath": "icons/tech/5601",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -13666,7 +13666,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5602",
+        "IconPath": "icons/tech/5602",
         "IsLabTech": true,
         "PreTechs": [
           5601
@@ -13716,7 +13716,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5603",
+        "IconPath": "icons/tech/5603",
         "IsLabTech": true,
         "PreTechs": [
           5602
@@ -13770,7 +13770,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5604",
+        "IconPath": "icons/tech/5604",
         "IsLabTech": true,
         "PreTechs": [
           5603
@@ -13826,7 +13826,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5605",
+        "IconPath": "icons/tech/5605",
         "IsLabTech": true,
         "PreTechs": [
           5604
@@ -13874,7 +13874,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5701",
+        "IconPath": "icons/tech/5701",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -13924,7 +13924,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5702",
+        "IconPath": "icons/tech/5702",
         "IsLabTech": true,
         "PreTechs": [
           5701
@@ -13974,7 +13974,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5703",
+        "IconPath": "icons/tech/5703",
         "IsLabTech": true,
         "PreTechs": [
           5702
@@ -14026,7 +14026,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5704",
+        "IconPath": "icons/tech/5704",
         "IsLabTech": true,
         "PreTechs": [
           5703
@@ -14080,7 +14080,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5705",
+        "IconPath": "icons/tech/5705",
         "IsLabTech": true,
         "PreTechs": [
           5704
@@ -14126,7 +14126,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5801",
+        "IconPath": "icons/tech/5801",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -14174,7 +14174,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5802",
+        "IconPath": "icons/tech/5802",
         "IsLabTech": true,
         "PreTechs": [
           5801
@@ -14224,7 +14224,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5803",
+        "IconPath": "icons/tech/5803",
         "IsLabTech": true,
         "PreTechs": [
           5802
@@ -14276,7 +14276,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5804",
+        "IconPath": "icons/tech/5804",
         "IsLabTech": true,
         "PreTechs": [
           5803
@@ -14328,7 +14328,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5805",
+        "IconPath": "icons/tech/5805",
         "IsLabTech": true,
         "PreTechs": [
           5804
@@ -14382,7 +14382,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5806",
+        "IconPath": "icons/tech/5806",
         "IsLabTech": true,
         "PreTechs": [
           5805
@@ -14428,7 +14428,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5807",
+        "IconPath": "icons/tech/5807",
         "IsLabTech": true,
         "PreTechs": [
           5806
@@ -14474,7 +14474,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5901",
+        "IconPath": "icons/tech/5901",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -14526,7 +14526,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5902",
+        "IconPath": "icons/tech/5902",
         "IsLabTech": true,
         "PreTechs": [
           5901
@@ -14578,7 +14578,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5903",
+        "IconPath": "icons/tech/5903",
         "IsLabTech": true,
         "PreTechs": [
           5902
@@ -14630,7 +14630,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5904",
+        "IconPath": "icons/tech/5904",
         "IsLabTech": true,
         "PreTechs": [
           5903
@@ -14684,7 +14684,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5905",
+        "IconPath": "icons/tech/5905",
         "IsLabTech": true,
         "PreTechs": [
           5904
@@ -14738,7 +14738,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5906",
+        "IconPath": "icons/tech/5906",
         "IsLabTech": true,
         "PreTechs": [
           5905
@@ -14784,7 +14784,7 @@
         "MaxLevel": 7,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/5907",
+        "IconPath": "icons/tech/5907",
         "IsLabTech": true,
         "PreTechs": [
           5906
@@ -14830,7 +14830,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6001",
+        "IconPath": "icons/tech/6001",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -14876,7 +14876,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6002",
+        "IconPath": "icons/tech/6002",
         "IsLabTech": true,
         "PreTechs": [
           6001
@@ -14924,7 +14924,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6003",
+        "IconPath": "icons/tech/6003",
         "IsLabTech": true,
         "PreTechs": [
           6002
@@ -14974,7 +14974,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6004",
+        "IconPath": "icons/tech/6004",
         "IsLabTech": true,
         "PreTechs": [
           6003
@@ -15026,7 +15026,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6005",
+        "IconPath": "icons/tech/6005",
         "IsLabTech": true,
         "PreTechs": [
           6004
@@ -15080,7 +15080,7 @@
         "MaxLevel": 10000,
         "LevelCoef1": -3150000,
         "LevelCoef2": 450000,
-        "IconPath": "Icons/Tech/6006",
+        "IconPath": "icons/tech/6006",
         "IsLabTech": true,
         "PreTechs": [
           6005
@@ -15126,7 +15126,7 @@
         "MaxLevel": 1,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6101",
+        "IconPath": "icons/tech/6101",
         "IsLabTech": true,
         "PreTechs": [],
         "PreTechsImplicit": [
@@ -15174,7 +15174,7 @@
         "MaxLevel": 2,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6102",
+        "IconPath": "icons/tech/6102",
         "IsLabTech": true,
         "PreTechs": [
           6101
@@ -15222,7 +15222,7 @@
         "MaxLevel": 3,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6103",
+        "IconPath": "icons/tech/6103",
         "IsLabTech": true,
         "PreTechs": [
           6102
@@ -15272,7 +15272,7 @@
         "MaxLevel": 4,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6104",
+        "IconPath": "icons/tech/6104",
         "IsLabTech": true,
         "PreTechs": [
           6103
@@ -15324,7 +15324,7 @@
         "MaxLevel": 5,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6105",
+        "IconPath": "icons/tech/6105",
         "IsLabTech": true,
         "PreTechs": [
           6104
@@ -15378,7 +15378,7 @@
         "MaxLevel": 6,
         "LevelCoef1": 0,
         "LevelCoef2": 0,
-        "IconPath": "Icons/Tech/6106",
+        "IconPath": "icons/tech/6106",
         "IsLabTech": true,
         "PreTechs": [
           6105

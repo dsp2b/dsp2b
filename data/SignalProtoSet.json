@@ -9,7 +9,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3201,
-        "IconPath": "Icons/Signal/signal-501"
+        "IconPath": "icons/signal/signal-501"
       }
     },
     {
@@ -18,7 +18,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3202,
-        "IconPath": "Icons/Signal/signal-502"
+        "IconPath": "icons/signal/signal-502"
       }
     },
     {
@@ -27,7 +27,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3203,
-        "IconPath": "Icons/Signal/signal-503"
+        "IconPath": "icons/signal/signal-503"
       }
     },
     {
@@ -36,7 +36,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3204,
-        "IconPath": "Icons/Signal/signal-504"
+        "IconPath": "icons/signal/signal-504"
       }
     },
     {
@@ -45,7 +45,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3205,
-        "IconPath": "Icons/Signal/signal-506"
+        "IconPath": "icons/signal/signal-506"
       }
     },
     {
@@ -54,7 +54,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3206,
-        "IconPath": "Icons/Signal/signal-507"
+        "IconPath": "icons/signal/signal-507"
       }
     },
     {
@@ -63,7 +63,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3207,
-        "IconPath": "Icons/Signal/signal-508"
+        "IconPath": "icons/signal/signal-508"
       }
     },
     {
@@ -72,7 +72,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3208,
-        "IconPath": "Icons/Signal/signal-509"
+        "IconPath": "icons/signal/signal-509"
       }
     },
     {
@@ -81,7 +81,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3209,
-        "IconPath": "Icons/Signal/signal-510"
+        "IconPath": "icons/signal/signal-510"
       }
     },
     {
@@ -90,7 +90,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3210,
-        "IconPath": "Icons/Signal/signal-511"
+        "IconPath": "icons/signal/signal-511"
       }
     },
     {
@@ -99,7 +99,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3211,
-        "IconPath": "Icons/Signal/signal-512"
+        "IconPath": "icons/signal/signal-512"
       }
     },
     {
@@ -108,7 +108,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3212,
-        "IconPath": "Icons/Signal/signal-513"
+        "IconPath": "icons/signal/signal-513"
       }
     },
     {
@@ -117,7 +117,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3213,
-        "IconPath": "Icons/Signal/signal-514"
+        "IconPath": "icons/signal/signal-514"
       }
     },
     {
@@ -126,7 +126,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3214,
-        "IconPath": "Icons/Signal/signal-515"
+        "IconPath": "icons/signal/signal-515"
       }
     },
     {
@@ -135,7 +135,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3301,
-        "IconPath": "Icons/Signal/signal-516"
+        "IconPath": "icons/signal/signal-516"
       }
     },
     {
@@ -144,7 +144,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3302,
-        "IconPath": "Icons/Signal/signal-517"
+        "IconPath": "icons/signal/signal-517"
       }
     },
     {
@@ -153,7 +153,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3101,
-        "IconPath": "Icons/Signal/signal-401"
+        "IconPath": "icons/signal/signal-401"
       }
     },
     {
@@ -162,7 +162,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3102,
-        "IconPath": "Icons/Signal/signal-402"
+        "IconPath": "icons/signal/signal-402"
       }
     },
     {
@@ -171,7 +171,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3103,
-        "IconPath": "Icons/Signal/signal-403"
+        "IconPath": "icons/signal/signal-403"
       }
     },
     {
@@ -180,7 +180,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3104,
-        "IconPath": "Icons/Signal/signal-404"
+        "IconPath": "icons/signal/signal-404"
       }
     },
     {
@@ -189,7 +189,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3105,
-        "IconPath": "Icons/Signal/signal-405"
+        "IconPath": "icons/signal/signal-405"
       }
     },
     {
@@ -198,7 +198,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3106,
-        "IconPath": "Icons/Signal/signal-406"
+        "IconPath": "icons/signal/signal-406"
       }
     },
     {
@@ -207,7 +207,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3401,
-        "IconPath": "Icons/Signal/signal-600"
+        "IconPath": "icons/signal/signal-600"
       }
     },
     {
@@ -216,7 +216,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3402,
-        "IconPath": "Icons/Signal/signal-601"
+        "IconPath": "icons/signal/signal-601"
       }
     },
     {
@@ -225,7 +225,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3403,
-        "IconPath": "Icons/Signal/signal-602"
+        "IconPath": "icons/signal/signal-602"
       }
     },
     {
@@ -234,7 +234,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3404,
-        "IconPath": "Icons/Signal/signal-603"
+        "IconPath": "icons/signal/signal-603"
       }
     },
     {
@@ -243,7 +243,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3405,
-        "IconPath": "Icons/Signal/signal-604"
+        "IconPath": "icons/signal/signal-604"
       }
     },
     {
@@ -252,7 +252,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3406,
-        "IconPath": "Icons/Signal/signal-605"
+        "IconPath": "icons/signal/signal-605"
       }
     },
     {
@@ -261,7 +261,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3407,
-        "IconPath": "Icons/Signal/signal-606"
+        "IconPath": "icons/signal/signal-606"
       }
     },
     {
@@ -270,7 +270,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3408,
-        "IconPath": "Icons/Signal/signal-607"
+        "IconPath": "icons/signal/signal-607"
       }
     },
     {
@@ -279,7 +279,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3409,
-        "IconPath": "Icons/Signal/signal-608"
+        "IconPath": "icons/signal/signal-608"
       }
     },
     {
@@ -288,7 +288,7 @@
       "SID": "",
       "Proto": {
         "GridIndex": 3410,
-        "IconPath": "Icons/Signal/signal-609"
+        "IconPath": "icons/signal/signal-609"
       }
     }
   ]

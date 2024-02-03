@@ -464,7 +464,7 @@
           2
         ],
         "GridIndex": 1107,
-        "IconPath": "Icons/ItemRecipe/plasma-refining",
+        "IconPath": "icons/item_recipe/plasma-refining",
         "Description": "R等离子精炼",
         "NonProductive": false
       }
@@ -851,7 +851,7 @@
           1
         ],
         "GridIndex": 1605,
-        "IconPath": "Icons/ItemRecipe/casimir-crystal-lv2",
+        "IconPath": "icons/item_recipe/casimir-crystal-lv2",
         "Description": "R卡西米尔晶体（高效）",
         "NonProductive": false
       }
@@ -940,7 +940,7 @@
           1
         ],
         "GridIndex": 1208,
-        "IconPath": "Icons/ItemRecipe/graphene-lv2",
+        "IconPath": "icons/item_recipe/graphene-lv2",
         "Description": "R石墨烯（高效）",
         "NonProductive": false
       }
@@ -1023,7 +1023,7 @@
           2
         ],
         "GridIndex": 1508,
-        "IconPath": "Icons/ItemRecipe/nanotube-lv2",
+        "IconPath": "icons/item_recipe/nanotube-lv2",
         "Description": "R碳纳米管（高效）",
         "NonProductive": false
       }
@@ -1604,7 +1604,7 @@
           1
         ],
         "GridIndex": 1309,
-        "IconPath": "Icons/ItemRecipe/crystal-rubber-lv0",
+        "IconPath": "icons/item_recipe/crystal-rubber-lv0",
         "Description": "R有机晶体（原始）",
         "NonProductive": false
       }
@@ -1724,7 +1724,7 @@
           1
         ],
         "GridIndex": 1207,
-        "IconPath": "Icons/ItemRecipe/X-ray",
+        "IconPath": "icons/item_recipe/x-ray",
         "Description": "RX射线裂解",
         "NonProductive": true
       }
@@ -1805,7 +1805,7 @@
           2
         ],
         "GridIndex": 1306,
-        "IconPath": "Icons/ItemRecipe/diamond-lv2",
+        "IconPath": "icons/item_recipe/diamond-lv2",
         "Description": "R金刚石（高效）",
         "NonProductive": false
       }
@@ -1832,7 +1832,7 @@
           2
         ],
         "GridIndex": 1303,
-        "IconPath": "Icons/ItemRecipe/silicium-high-purity-lv2",
+        "IconPath": "icons/item_recipe/silicium-high-purity-lv2",
         "Description": "R晶格硅（高效）",
         "NonProductive": false
       }
@@ -2039,7 +2039,7 @@
           1
         ],
         "GridIndex": 1602,
-        "IconPath": "Icons/ItemRecipe/photo-shifter-lv2",
+        "IconPath": "icons/item_recipe/photo-shifter-lv2",
         "Description": "R光子合并器（高效）",
         "NonProductive": false
       }
@@ -2196,7 +2196,7 @@
           2
         ],
         "GridIndex": 1708,
-        "IconPath": "Icons/ItemRecipe/photon-formula",
+        "IconPath": "icons/item_recipe/photon-formula",
         "Description": "R光子物质化",
         "NonProductive": true
       }
@@ -2351,7 +2351,7 @@
           8
         ],
         "GridIndex": 1707,
-        "IconPath": "Icons/ItemRecipe/space-warper-lv2",
+        "IconPath": "icons/item_recipe/space-warper-lv2",
         "Description": "R空间翘曲器（高级）",
         "NonProductive": false
       }
@@ -2988,7 +2988,7 @@
           1
         ],
         "GridIndex": 1606,
-        "IconPath": "Icons/ItemRecipe/partical-capacitor-lv2",
+        "IconPath": "icons/item_recipe/partical-capacitor-lv2",
         "Description": "R粒子容器（高效）",
         "NonProductive": false
       }
@@ -3412,7 +3412,7 @@
           1
         ],
         "GridIndex": 1407,
-        "IconPath": "Icons/ItemRecipe/deuterium-formula",
+        "IconPath": "icons/item_recipe/deuterium-formula",
         "Description": "R重氢分馏",
         "NonProductive": false
       }
@@ -3610,7 +3610,7 @@
           3
         ],
         "GridIndex": 1307,
-        "IconPath": "Icons/ItemRecipe/reforming-refine",
+        "IconPath": "icons/item_recipe/reforming-refine",
         "Description": "R重整精炼",
         "NonProductive": true
       }
