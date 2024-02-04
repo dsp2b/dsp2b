@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"math"
 	"os"
 	"strconv"
@@ -33,6 +34,8 @@ type BlueprintSvc interface {
 	Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error)
 	// IconInfo 获取icon信息
 	IconInfo(ctx context.Context, itemId int) (*blueprint_entity.IconInfo, error)
+	// ReplaceBlueprint 替换蓝图配方和建筑
+	ReplaceBlueprint(ctx context.Context, req *api.ReplaceBlueprintRequest) (*api.ReplaceBlueprintResponse, error)
 }
 
 type blueprintSvc struct {
@@ -126,13 +129,16 @@ func InitBlueprint(itemProtoSetPath, recipeProtoSetPath, techProtoSetPath, signa
 			Name:     v.Name,
 			IconPath: v.Proto.IconPath,
 		}
+		i, ok := svc.ItemProtoMap[v.Proto.Results[0]]
+		if !ok {
+			return errors.New("not found item")
+		}
 		if item.IconPath == "" {
 			// 找第一个产物的icon
-			i, ok := svc.ItemProtoMap[v.Proto.Results[0]]
-			if !ok {
-				return errors.New("not found icon")
-			}
 			item.IconPath = i.Proto.IconPath
+		}
+		if len(i.Proto.Upgrades) > 0 {
+			item.Upgrades = i.Proto.Upgrades
 		}
 		if v.Proto.GridIndex > 2000 {
 			panel.BuildingPanel[x][y] = item
@@ -402,4 +408,47 @@ func (b *blueprintSvc) IconInfo(ctx context.Context, itemId int) (*blueprint_ent
 		return nil, errors.New("not found item")
 	}
 	return item, nil
+}
+
+// ReplaceBlueprint 替换蓝图配方和建筑
+func (b *blueprintSvc) ReplaceBlueprint(ctx context.Context, req *api.ReplaceBlueprintRequest) (*api.ReplaceBlueprintResponse, error) {
+	m, err := blueprint_repo.Blueprint().Find(ctx, req.ID)
+	if err != nil {
+		return nil, err
+	}
+	blueprint, err := blueprint.Decode(m.Blueprint)
+	if err != nil {
+		return nil, err
+	}
+	replaceBuildingMap := make(map[int16]int16)
+	for _, v := range req.Building {
+		if v.Target == nil {
+			continue
+		}
+		replaceBuildingMap[int16(v.Source.ItemID)] = int16(v.Target.ItemID)
+	}
+	// 替换配方
+	replaceRecipeMap := make(map[int16]int16)
+	for _, v := range req.Recipe {
+		if v.Target == nil {
+			continue
+		}
+		replaceRecipeMap[int16(v.Source.ID)] = int16(v.Target.ID)
+	}
+	for k, v := range blueprint.Buildings {
+		if v.RecipeId == 0 {
+			continue
+		}
+		if newId, ok := replaceRecipeMap[v.RecipeId]; ok {
+			blueprint.Buildings[k].RecipeId = newId
+		}
+		if newId, ok := replaceBuildingMap[v.ItemId]; ok {
+			blueprint.Buildings[k].ItemId = newId
+		}
+	}
+	code, err := blueprint.Encode()
+	if err != nil {
+		return nil, err
+	}
+	return &api.ReplaceBlueprintResponse{Blueprint: code}, nil
 }

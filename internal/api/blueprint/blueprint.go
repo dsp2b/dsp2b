@@ -101,8 +101,34 @@ type RecipePanel struct {
 }
 
 type RecipePanelItem struct {
-	ID       int32  `json:"id"`
-	ItemID   int32  `json:"item_id"`
+	ID       int32   `json:"id"`
+	ItemID   int32   `json:"item_id"`
+	Name     string  `json:"name"`
+	IconPath string  `json:"icon_path"`
+	Upgrades []int32 `json:"upgrades"`
+}
+
+type ReplaceItem struct {
+	ID       int    `json:"id"`
+	ItemID   int    `json:"item_id"`
 	Name     string `json:"name"`
 	IconPath string `json:"icon_path"`
+	Upgrades []int  `json:"upgrades"`
+}
+
+type Replace struct {
+	Source *ReplaceItem `json:"source"`
+	Target *ReplaceItem `json:"target,omitempty"`
+}
+
+// ReplaceBlueprintRequest 替换蓝图配方和建筑
+type ReplaceBlueprintRequest struct {
+	mux.Meta `path:"/blueprint/:id/replace" method:"POST"`
+	ID       primitive.ObjectID `uri:"id"`
+	Building []*Replace         `json:"building"`
+	Recipe   []*Replace         `json:"recipe"`
+}
+
+type ReplaceBlueprintResponse struct {
+	Blueprint string `json:"blueprint"`
 }

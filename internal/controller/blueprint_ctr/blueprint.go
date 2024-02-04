@@ -38,3 +38,8 @@ func (b *Blueprint) List(ctx context.Context, req *api.ListRequest) (*api.ListRe
 func (b *Blueprint) Create(ctx context.Context, req *api.CreateRequest) (*api.CreateResponse, error) {
 	return blueprint_svc.Blueprint().Create(ctx, req)
 }
+
+// ReplaceBlueprint 替换蓝图配方和建筑
+func (b *Blueprint) ReplaceBlueprint(ctx context.Context, req *api.ReplaceBlueprintRequest) (*api.ReplaceBlueprintResponse, error) {
+	return blueprint_svc.Blueprint().ReplaceBlueprint(ctx, req)
+}

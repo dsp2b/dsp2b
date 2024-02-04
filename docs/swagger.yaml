@@ -32,17 +32,6 @@ definitions:
       name:
         type: string
     type: object
-  blueprint.CreateProduct:
-    properties:
-      count:
-        type: integer
-      icon_path:
-        type: string
-      item_id:
-        type: integer
-      name:
-        type: string
-    type: object
   blueprint.CreateRequest:
     properties:
       blueprint:
@@ -64,7 +53,7 @@ definitions:
       products:
         description: 蓝图产物
         items:
-          $ref: '#/definitions/blueprint.CreateProduct'
+          $ref: '#/definitions/blueprint.Product'
         type: array
       tags:
         items:
@@ -154,6 +143,45 @@ definitions:
         type: integer
       name:
         type: string
+      upgrades:
+        items:
+          type: integer
+        type: array
+    type: object
+  blueprint.Replace:
+    properties:
+      source:
+        $ref: '#/definitions/blueprint.ReplaceItem'
+      target,omitempty:
+        $ref: '#/definitions/blueprint.ReplaceItem'
+    type: object
+  blueprint.ReplaceBlueprintRequest:
+    properties:
+      building:
+        items:
+          $ref: '#/definitions/blueprint.Replace'
+        type: array
+      recipe:
+        items:
+          $ref: '#/definitions/blueprint.Replace'
+        type: array
+    type: object
+  blueprint.ReplaceBlueprintResponse:
+    type: object
+  blueprint.ReplaceItem:
+    properties:
+      icon_path:
+        type: string
+      id:
+        type: integer
+      item_id:
+        type: integer
+      name:
+        type: string
+      upgrades:
+        items:
+          type: integer
+        type: array
     type: object
   blueprint.Tag:
     properties:
@@ -212,17 +240,26 @@ definitions:
         type: array
     type: object
   collection.UpdateNotifyRequest:
+    properties:
+      blueprint_id:
+        $ref: '#/definitions/primitive.ObjectID'
     type: object
   collection.UpdateNotifyResponse:
     type: object
   httputils.PageRequest:
     properties:
+      order:
+        description: Deprecated 请使用方法GetOrder
+        type: string
       page:
         description: Deprecated 请使用方法GetPage
         type: integer
       size:
         description: Deprecated 请使用方法GetSize
         type: integer
+      sort:
+        description: Deprecated 请使用方法GetSort
+        type: string
     type: object
   httputils.PageResponse:
     properties:
@@ -321,6 +358,36 @@ paths:
           description: Bad Request
           schema:
             $ref: '#/definitions/BadRequest'
+      tags:
+      - blueprint
+  /blueprint/{id}/replace:
+    post:
+      consumes:
+      - application/json
+      description: 替换蓝图配方和建筑
+      parameters:
+      - in: body
+        name: body
+        schema:
+          $ref: '#/definitions/blueprint.ReplaceBlueprintRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            properties:
+              code:
+                type: integer
+              data:
+                $ref: '#/definitions/blueprint.ReplaceBlueprintResponse'
+              msg:
+                type: string
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/BadRequest'
+      summary: 替换蓝图配方和建筑
       tags:
       - blueprint
   /blueprint/parse:
@@ -437,7 +504,7 @@ paths:
       tags:
       - collection
   /collection/{id}/notify:
-    put:
+    post:
       consumes:
       - application/json
       description: 更新通知

@@ -24,6 +24,7 @@ func Router(ctx context.Context, root *mux.Router) error {
 		rpcg.Bind(
 			ctr.Parse,
 			ctr.GetRecipePanel,
+			ctr.ReplaceBlueprint,
 		)
 	}
 	{
