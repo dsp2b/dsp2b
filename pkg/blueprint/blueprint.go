@@ -39,19 +39,19 @@ func (b *Blueprint) Encode() (string, error) {
 		}
 
 		utils.WriteInt8(gzipW, int8(len(b.Areas)))
-		for _, a := range b.Areas {
-			if err := utils.WriteStruct(gzipW, &a); err != nil {
+		for i := range b.Areas {
+			if err := utils.WriteStruct(gzipW, &b.Areas[i]); err != nil {
 				return err
 			}
 		}
 
 		utils.WriteInt32(gzipW, int32(len(b.Buildings)))
-		for _, a := range b.Buildings {
-			if err := utils.WriteStruct(gzipW, &a); err != nil {
+		for i := range b.Buildings {
+			if err := utils.WriteStruct(gzipW, &b.Buildings[i]); err != nil {
 				return err
 			}
-			utils.WriteInt16(gzipW, int16(len(a.Parameters)))
-			for _, p := range a.Parameters {
+			utils.WriteInt16(gzipW, int16(len(b.Buildings[i].Parameters)))
+			for _, p := range b.Buildings[i].Parameters {
 				utils.WriteInt32(gzipW, p)
 			}
 		}
