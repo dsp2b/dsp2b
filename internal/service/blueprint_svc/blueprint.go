@@ -210,6 +210,8 @@ func (b *blueprintSvc) Parse(ctx context.Context, req *api.ParseRequest) (*api.P
 	if err != nil {
 		return nil, err
 	}
+	decode.Buildings = nil
+	decode.Areas = nil
 	return &api.ParseResponse{
 		Blueprint: decode,
 		Buildings: buildings,
