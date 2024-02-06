@@ -130,7 +130,7 @@ func (d *scanBlueprint) diff(path string) error {
 			if name == v.Name() {
 				continue
 			}
-			file[path+"/"+name] = v
+			file[filepath.Join(path, name)] = v
 		}
 	}
 	// 判断是否存在
