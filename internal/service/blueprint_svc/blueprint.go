@@ -439,14 +439,14 @@ func (b *blueprintSvc) ReplaceBlueprint(ctx context.Context, req *api.ReplaceBlu
 		replaceRecipeMap[int16(v.Source.ID)] = int16(v.Target.ID)
 	}
 	for k, v := range blueprint.Buildings {
+		if newId, ok := replaceBuildingMap[v.ItemId]; ok {
+			blueprint.Buildings[k].ItemId = newId
+		}
 		if v.RecipeId == 0 {
 			continue
 		}
 		if newId, ok := replaceRecipeMap[v.RecipeId]; ok {
 			blueprint.Buildings[k].RecipeId = newId
-		}
-		if newId, ok := replaceBuildingMap[v.ItemId]; ok {
-			blueprint.Buildings[k].ItemId = newId
 		}
 	}
 	code, err := blueprint.Encode()

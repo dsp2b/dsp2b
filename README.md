@@ -1,6 +1,6 @@
 # dsp2b
 
-dsq2b golang后端 解析蓝图调用
+dsp2b golang后端 解析蓝图调用
 
 ## 参考
 
