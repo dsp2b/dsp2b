@@ -6,7 +6,6 @@ import (
 	"context"
 	"errors"
 	"path/filepath"
-	"runtime"
 	"sync"
 	"time"
 
@@ -37,7 +36,6 @@ func (c *Collection) Subscribe(ctx context.Context) error {
 func (c *Collection) Update(ctx context.Context, id, blueprint primitive.ObjectID, exist map[primitive.ObjectID]struct{}) error {
 	c.lock.Lock()
 	defer c.lock.Unlock()
-	runtime.GC()
 	logger.Ctx(ctx).Info("collection update", zap.String("id", id.Hex()))
 	// 如果有蓝图id, 则将root蓝图集记录一下
 	if !blueprint.IsZero() {
@@ -89,7 +87,7 @@ func (c *Collection) Update(ctx context.Context, id, blueprint primitive.ObjectI
 	}(); err != nil {
 		return err
 	}
-	if err := oss.DefaultBucket().PutObject(ctx, filename, buf); err != nil {
+	if err := oss.DefaultBucket().PutObject(ctx, filename, buf, int64(buf.Len())); err != nil {
 		return err
 	}
 	// 更新蓝图集下载地址

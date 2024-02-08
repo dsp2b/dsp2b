@@ -4,22 +4,18 @@ import (
 	"context"
 	"log"
 
-	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
-
+	"github.com/codfrm/cago"
+	"github.com/codfrm/cago/configs"
+	"github.com/codfrm/cago/pkg/component"
+	"github.com/codfrm/cago/pkg/oss"
+	"github.com/codfrm/cago/server/mux"
+	"github.com/dsp2b/dsp2b-go/internal/api"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/blueprint_repo"
 	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
+	"github.com/dsp2b/dsp2b-go/internal/service/blueprint_svc"
 	"github.com/dsp2b/dsp2b-go/internal/task/consumer"
 	"github.com/dsp2b/dsp2b-go/migrations"
-
-	"github.com/codfrm/cago/pkg/oss"
-
-	"github.com/codfrm/cago/pkg/component"
-	"github.com/dsp2b/dsp2b-go/internal/api"
-
-	"github.com/codfrm/cago"
-	"github.com/codfrm/cago/configs"
-	"github.com/codfrm/cago/server/mux"
 )
 
 func main() {

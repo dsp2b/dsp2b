@@ -84,6 +84,7 @@ type Product struct {
 	Name     string  `json:"name"`
 	IconPath string  `json:"icon_path"`
 	Count    float64 `json:"count"`
+	CanBuild bool    `json:"can_build"`
 }
 
 // GetRecipePanelRequest 获取配方面板

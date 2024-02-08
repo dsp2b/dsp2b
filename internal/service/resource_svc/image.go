@@ -12,9 +12,7 @@ import (
 	"io"
 	"net/http"
 	"path"
-	"runtime"
 	"strings"
-	"sync"
 
 	"github.com/codfrm/cago/pkg/logger"
 	"github.com/codfrm/cago/pkg/oss"
@@ -30,7 +28,6 @@ type ImageSvc interface {
 }
 
 type imageSvc struct {
-	lock sync.Mutex
 }
 
 var defaultImage = &imageSvc{}
@@ -80,11 +77,6 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 		return nil, err
 	}
 	defer r.Close()
-	i.lock.Lock()
-	defer func() {
-		runtime.GC()
-		i.lock.Unlock()
-	}()
 	img, s, err := image.Decode(r)
 	// 生成缩略图
 	if err != nil {
@@ -131,7 +123,7 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 		return nil, err
 	}
 	// 上传oss
-	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, bytes.NewReader(buf.Bytes())); err != nil {
+	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, buf, int64(buf.Len())); err != nil {
 		return nil, err
 	}
 	return &api.ImageThumbnailResponse{

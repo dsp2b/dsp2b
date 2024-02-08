@@ -351,6 +351,7 @@ func (b *blueprintSvc) recipeSpeed(ctx context.Context, recipe assets.Proto[asse
 					Name:     item.Name,
 					IconPath: item.Proto.IconPath,
 					Count:    speed,
+					CanBuild: item.Proto.CanBuild,
 				}
 			}
 		}
@@ -371,6 +372,7 @@ func (b *blueprintSvc) recipeSpeed(ctx context.Context, recipe assets.Proto[asse
 					Name:     item.Name,
 					IconPath: item.Proto.IconPath,
 					Count:    speed,
+					CanBuild: item.Proto.CanBuild,
 				}
 			}
 		}

@@ -45,3 +45,6 @@ goconvey:
 
 install:
 	go install ./cmd/dspb
+
+pprof:
+	go tool pprof -inuse_space -cum -svg http://localhost:8081/debug/pprof/heap > heap_inuse.svg
