@@ -63,7 +63,7 @@ type DetailResponse struct {
 // ParseRequest 蓝图解析
 type ParseRequest struct {
 	mux.Meta  `path:"/blueprint/parse" method:"POST"`
-	Blueprint string `form:"blueprint" binding:"required"`
+	Blueprint string `form:"blueprint" json:"blueprint" binding:"required"`
 }
 
 type Building struct {

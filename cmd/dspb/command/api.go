@@ -7,7 +7,6 @@ import (
 	"errors"
 	"io"
 	"net/http"
-	"net/url"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -167,10 +166,13 @@ func (a *ApiClient) PostBlueprint(ctx context.Context, req *api.CreateRequest) (
 }
 
 func (a *ApiClient) ParseBlueprint(ctx context.Context, req *api.ParseRequest) (*api.ParseResponse, error) {
+	jsonData, err := json.Marshal(req)
+	if err != nil {
+		return nil, err
+	}
 	resp, err := a.POST(ctx,
 		"/create/blueprint?action=parse&_data=routes%2F%24lng.create.blueprint.%24%28id%29",
-		"application/x-www-form-urlencoded", bytes.NewReader([]byte(
-			"blueprint="+url.QueryEscape(req.Blueprint))))
+		"application/json", bytes.NewReader(jsonData))
 	if err != nil {
 		return nil, err
 	}

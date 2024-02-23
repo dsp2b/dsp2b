@@ -123,7 +123,7 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 		return nil, err
 	}
 	// 上传oss
-	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, buf, int64(buf.Len())); err != nil {
+	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, bytes.NewReader(buf.Bytes()), int64(buf.Len())); err != nil {
 		return nil, err
 	}
 	return &api.ImageThumbnailResponse{
