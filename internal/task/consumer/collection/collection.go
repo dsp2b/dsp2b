@@ -39,7 +39,8 @@ func (c *Collection) Update(ctx context.Context, id, blueprint primitive.ObjectI
 	logger.Ctx(ctx).Info("collection update", zap.String("id", id.Hex()))
 	// 如果有蓝图id, 则将root蓝图集记录一下
 	if !blueprint.IsZero() {
-		m, err := blueprint_collection_repo.BlueprintCollection().FindByCollectionBlueprint(ctx, id, blueprint)
+		m, err := blueprint_collection_repo.BlueprintCollection().
+			FindByCollectionBlueprint(ctx, id, blueprint)
 		if err != nil {
 			return err
 		}

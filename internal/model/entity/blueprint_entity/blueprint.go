@@ -41,7 +41,7 @@ type Blueprint struct {
 	GameVersion string             `bson:"game_version"`
 	Buildings   string             `bson:"buildings"`
 	Icons       string             `bson:"icons"`
-	CopyCount   int8               `bson:"copy_count"`
+	CopyCount   int64              `bson:"copy_count"`
 	Original    int8               `bson:"original"`
 	Status      int8               `bson:"status"`
 	Createtime  time.Time          `bson:"createtime"`
