@@ -11,6 +11,8 @@ image:
   tag: ""
 
 appConfig:
+  name: dsp2b
+  version: 1.0.0
   env: prod
   debug: false
 
