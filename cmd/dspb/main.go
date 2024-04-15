@@ -19,7 +19,7 @@ func main() {
 
 	rootCmd := &cobra.Command{
 		Use:     "dspb",
-		Short:   "dspb controls the dspb service.",
+		Short:   "dsp2b的蓝图管理工具.",
 		Version: configs.Version,
 	}
 	command.AddCommand(rootCmd)
