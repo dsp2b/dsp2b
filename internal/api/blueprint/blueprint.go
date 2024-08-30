@@ -133,3 +133,12 @@ type ReplaceBlueprintRequest struct {
 type ReplaceBlueprintResponse struct {
 	Blueprint string `json:"blueprint"`
 }
+
+// PostCollectionRequest 创建蓝图集
+type PostCollectionRequest struct {
+	Title  string `json:"title"`
+	Parent string `json:"parent"`
+	Public int    `json:"public"`
+}
+
+type PostCollectionResponse string

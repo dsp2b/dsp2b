@@ -3,6 +3,7 @@ package command
 import (
 	"context"
 	"os"
+	"path"
 	"path/filepath"
 	"time"
 
@@ -40,8 +41,32 @@ func push(cmd *cobra.Command, args []string) error {
 			if dir == "." {
 				collection = repo
 			} else {
-				logger.Ctx(ctx).Error("蓝图集不存在, 请手动创建蓝图集, 再执行dsp pullCmd", zap.String("dir", dir))
-				break
+				// 创建蓝图集
+				logger.Ctx(ctx).Info("蓝图集不存在, 自动创建蓝图集", zap.String("dir", dir))
+				parentDir, ok := repoMap[filepath.Dir(dir)]
+				if !ok {
+					logger.Ctx(ctx).Error("父蓝图集不存在", zap.String("dir", dir))
+					break
+				}
+				req := &api.PostCollectionRequest{
+					Title:  path.Base(dir),
+					Parent: parentDir.ID.Hex(),
+					Public: 1,
+				}
+				resp, err := apiClient.PostCollection(ctx, req)
+				if err != nil {
+					logger.Ctx(ctx).Error("创建蓝图集失败", zap.Error(err), zap.String("dir", dir))
+					break
+				}
+				oid, err := primitive.ObjectIDFromHex(resp)
+				if err != nil {
+					logger.Ctx(ctx).Error("创建蓝图集失败", zap.String("resp", resp), zap.Error(err), zap.String("dir", dir))
+					break
+				}
+				repoMap[dir] = &Repository{
+					ID:    oid,
+					Title: req.Title,
+				}
 			}
 		}
 		info, err := v.Info()

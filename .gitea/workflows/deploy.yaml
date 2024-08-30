@@ -96,7 +96,7 @@ jobs:
         DOMAIN: ${{ env.ENV=='prod' && env.DOMAIN || format('{0}.{1}', env.ENV, env.DOMAIN) }}
         RESOURCE_CPU: ${{ env.ENV=='prod' && '500m' || '100m' }}
         RESOURCE_MEMORY: ${{ env.ENV=='prod' && '512Mi' || '128Mi' }}
-        AUTO_SCALING: ${{ env.ENV=='prod' && 'true' || 'false' }}
+        AUTO_SCALING_MIN_REPLICAS: ${{ env.ENV=='prod' && '2' || '1' }}
       run: |
         cd deploy/helm
         helm upgrade --install \
@@ -108,4 +108,5 @@ jobs:
         --set ingress.tls[0].hosts[0]=$DOMAIN \
         --set resources.requests.cpu=$RESOURCE_CPU \
         --set resources.requests.memory=$RESOURCE_MEMORY \
-        --set autoscaling.enabled=$AUTO_SCALING
+        --set autoscaling.enabled=$AUTO_SCALING \
+        --set autoscaling.minReplicas=$AUTO_SCALING_MIN_REPLICAS

@@ -196,3 +196,34 @@ func (a *ApiClient) ParseBlueprint(ctx context.Context, req *api.ParseRequest) (
 	}
 	return result, nil
 }
+
+func (a *ApiClient) PostCollection(ctx context.Context, req *api.PostCollectionRequest) (string, error) {
+	jsonData, err := json.Marshal(req)
+	if err != nil {
+		return "", err
+	}
+	resp, err := a.POST(ctx,
+		"/create/collection?_data=routes%2F%24lng.create.collection.%24%28id%29",
+		"application/json", bytes.NewReader(jsonData))
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return "", err
+	}
+	if resp.StatusCode != http.StatusOK {
+		logger.Ctx(ctx).Info("请求失败", zap.String("body", string(data)))
+		return "", errors.New("请求失败")
+	}
+	reqResp := &httputils.JSONResponse{
+		Code: 0,
+		Msg:  "",
+		Data: "",
+	}
+	if err := json.Unmarshal(data, reqResp); err != nil {
+		return "", err
+	}
+	return reqResp.Data.(string), nil
+}

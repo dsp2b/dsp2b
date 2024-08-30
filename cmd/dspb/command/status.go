@@ -106,7 +106,7 @@ func (d *scanBlueprint) scan(path string, callback func(path string, entity os.D
 			}
 			if err := callback(path, v); err != nil {
 				logger.Default().Error("文件处理失败", zap.String("file", v.Name()), zap.Error(err))
-				return err
+				continue
 			}
 		}
 	}
