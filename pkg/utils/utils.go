@@ -2,16 +2,35 @@ package utils
 
 import (
 	"encoding/binary"
+	"errors"
 	"io"
 	"reflect"
 	"strings"
 )
 
-func ReadStruct(r io.Reader, data any) error {
+type StructOptions struct {
+	IgnoreField func(string) bool
+}
+
+type StructOption func(*StructOptions)
+
+func ReadStruct(r io.Reader, data any, opts ...StructOption) error {
+	options := &StructOptions{
+		IgnoreField: func(string) bool {
+			return false
+		},
+	}
+	for _, opt := range opts {
+		opt(options)
+	}
 	ref := reflect.ValueOf(data).Elem()
 	for i := 0; i < ref.NumField(); i++ {
 		field := ref.Field(i)
-		tag := ref.Type().Field(i).Tag.Get("binary")
+		fieldType := ref.Type().Field(i)
+		if options.IgnoreField(fieldType.Name) {
+			continue
+		}
+		tag := fieldType.Tag.Get("binary")
 		if tag == "-" {
 			continue
 		}
@@ -32,6 +51,8 @@ func ReadStruct(r io.Reader, data any) error {
 				field.Set(reflect.ValueOf(ReadInt32Array(r)))
 			case reflect.Float64:
 				field.Set(reflect.ValueOf(ReadFloat64Array(r)))
+			default:
+				return errors.New("unsupported type")
 			}
 		case reflect.Float32:
 			field.SetFloat(float64(ReadInt32(r)))
@@ -41,15 +62,29 @@ func ReadStruct(r io.Reader, data any) error {
 			if err := ReadStruct(r, field.Addr().Interface()); err != nil {
 				return err
 			}
+		default:
+			return errors.New("unsupported type")
 		}
 	}
 	return nil
 }
 
-func WriteStruct(w io.Writer, data any) error {
+func WriteStruct(w io.Writer, data any, opts ...StructOption) error {
+	options := &StructOptions{
+		IgnoreField: func(s string) bool {
+			return false
+		},
+	}
+	for _, opt := range opts {
+		opt(options)
+	}
 	ref := reflect.ValueOf(data).Elem()
 	for i := 0; i < ref.NumField(); i++ {
 		field := ref.Field(i)
+		fieldType := ref.Type().Field(i)
+		if options.IgnoreField(fieldType.Name) {
+			continue
+		}
 		tag := ref.Type().Field(i).Tag.Get("binary")
 		if tag == "-" {
 			continue

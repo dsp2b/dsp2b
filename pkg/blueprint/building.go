@@ -12,6 +12,7 @@ type Area struct {
 }
 
 type Building struct {
+	Version        int32 // 版本 =-100时，增加了Tilt字段
 	Index          int32
 	AreaIndex      int8
 	LocalOffsetX   float32
@@ -22,6 +23,7 @@ type Building struct {
 	LocalOffsetZ2  float32
 	Yaw            float32
 	Yaw2           float32
+	Tilt           float32 `binary:"version=-100"`
 	ItemId         int16
 	ModelIndex     int16
 	OutputObj      int32

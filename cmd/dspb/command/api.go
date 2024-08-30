@@ -55,16 +55,17 @@ func NewApiClient() (*ApiClient, error) {
 		return nil, err
 	}
 	return &ApiClient{
-		cookie: string(cookie),
+		cookie: strings.TrimSpace(string(cookie)),
 	}, nil
 }
 
 func (a *ApiClient) request(ctx context.Context, method string, url string, body io.Reader) (*http.Request, error) {
-	req, err := http.NewRequest(method, BaseURL+url, body)
+	req, err := http.NewRequestWithContext(ctx, method, BaseURL+url, body)
 	if err != nil {
 		return nil, err
 	}
 	req.Header.Set("Cookie", a.cookie)
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0")
 	return req, nil
 }
 

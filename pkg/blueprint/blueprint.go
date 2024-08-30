@@ -47,7 +47,16 @@ func (b *Blueprint) Encode() (string, error) {
 
 		utils.WriteInt32(gzipW, int32(len(b.Buildings)))
 		for i := range b.Buildings {
-			if err := utils.WriteStruct(gzipW, &b.Buildings[i]); err != nil {
+			// 判断版本号
+			options := make([]utils.StructOption, 0)
+			if b.Buildings[i].Version > -100 {
+				options = append(options, func(options *utils.StructOptions) {
+					options.IgnoreField = func(s string) bool {
+						return s == "Version" || s == "Tilt"
+					}
+				})
+			}
+			if err := utils.WriteStruct(gzipW, &b.Buildings[i], options...); err != nil {
 				return err
 			}
 			utils.WriteInt16(gzipW, int16(len(b.Buildings[i].Parameters)))
@@ -120,7 +129,26 @@ func (b *Blueprint) Decode(data string) error {
 	ll := utils.ReadInt32(r)
 	b.Buildings = make([]Building, ll)
 	for i := 0; i < int(ll); i++ {
-		if err := utils.ReadStruct(r, &b.Buildings[i]); err != nil {
+		// 读取第一个判断版本号
+		version := utils.ReadInt32(r)
+		options := make([]utils.StructOption, 0)
+		if version > -100 {
+			options = append(options, func(options *utils.StructOptions) {
+				options.IgnoreField = func(s string) bool {
+					return s == "Version" ||
+						s == "Tilt" || s == "Index"
+				}
+			})
+			b.Buildings[i].Index = version
+		} else {
+			options = append(options, func(options *utils.StructOptions) {
+				options.IgnoreField = func(s string) bool {
+					return s == "Version"
+				}
+			})
+			b.Buildings[i].Version = version
+		}
+		if err := utils.ReadStruct(r, &b.Buildings[i], options...); err != nil {
 			return err
 		}
 		l := utils.ReadInt16(r)
