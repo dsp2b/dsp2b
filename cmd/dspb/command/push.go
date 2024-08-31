@@ -42,14 +42,20 @@ func push(cmd *cobra.Command, args []string) error {
 				collection = repo
 			} else {
 				// 创建蓝图集
-				logger.Ctx(ctx).Info("蓝图集不存在, 自动创建蓝图集", zap.String("dir", dir))
-				parentDir, ok := repoMap[filepath.Dir(dir)]
+				collectTitle := path.Base(dir)
+				parentKey := filepath.Dir(dir)
+				logger.Ctx(ctx).Info("蓝图集不存在, 自动创建蓝图集",
+					zap.String("dir", dir),
+					zap.String("collectTitle", collectTitle),
+					zap.String("parentKey", parentKey),
+				)
+				parentDir, ok := repoMap[parentKey]
 				if !ok {
 					logger.Ctx(ctx).Error("父蓝图集不存在", zap.String("dir", dir))
 					break
 				}
 				req := &api.PostCollectionRequest{
-					Title:  path.Base(dir),
+					Title:  collectTitle,
 					Parent: parentDir.ID.Hex(),
 					Public: 1,
 				}
@@ -63,10 +69,16 @@ func push(cmd *cobra.Command, args []string) error {
 					logger.Ctx(ctx).Error("创建蓝图集失败", zap.String("resp", resp), zap.Error(err), zap.String("dir", dir))
 					break
 				}
-				repoMap[dir] = &Repository{
-					ID:    oid,
-					Title: req.Title,
+				collection = &Repository{
+					ID:          oid,
+					Title:       req.Title,
+					Description: "",
+					Version:     "",
+					Blueprint:   make([]*Blueprint, 0),
+					Repository:  make([]*Repository, 0),
 				}
+				repoMap[dir] = collection
+				parentDir.Repository = append(parentDir.Repository, collection)
 			}
 		}
 		info, err := v.Info()
