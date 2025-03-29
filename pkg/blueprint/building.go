@@ -1,8 +1,9 @@
 package blueprint
 
 import (
-	"github.com/dsp2b/dsp2b-go/pkg/utils"
 	"io"
+
+	"github.com/dsp2b/dsp2b-go/pkg/utils"
 )
 
 type Area struct {
