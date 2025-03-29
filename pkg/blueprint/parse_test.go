@@ -25,6 +25,13 @@ func TestDecode(t *testing.T) {
 	t.Log(actual)
 	_, err = Decode(actual)
 	assert.NoError(t, err)
+	// 新新版本
+	str = "BLUEPRINT:0,10,0,0,0,0,0,0,638783526515281167,0.10.32.25712,%E6%96%B0%E8%93%9D%E5%9B%BE,\"H4sIAAAAAAAAC2NkYGBghGIQYIJiBrDYfwaGBVBhJgYWID37////IP5FdmUGhrtL/5mD1U2QNN/0d44zA9QcoJr/jHAjmRjeMzMwCKhDNDMia9b4X28P0uzFZ+4EUsqMoRmiiQmmiZmhwR5sywHJbVNZkpxhirBpYkbWBLOp1IbNGeZNdGcmAj24WZSBAQA/3ZBcEwEAAA==\"185193925976367FDC5E84E4F884EDFD"
+	b, err = Decode(str)
+	assert.NoError(t, err)
+	actual, err = b.Encode()
+	assert.NoError(t, err)
+	t.Log(actual)
 }
 
 func TestRename(t *testing.T) {
@@ -34,4 +41,14 @@ func TestRename(t *testing.T) {
 		t.Fatal(err)
 	}
 	t.Log(replace)
+}
+
+func TestDecodeNewVersion(t *testing.T) {
+	// 新新版本
+	str := "BLUEPRINT:0,10,0,0,0,0,0,0,638783526515281167,0.10.32.25712,%E6%96%B0%E8%93%9D%E5%9B%BE,\"H4sIAAAAAAAAC2NkYGBghGIQYIJiBrDYfwaGBVBhJgYWID37////IP5FdmUGhrtL/5mD1U2QNN/0d44zA9QcoJr/jHAjmRjeMzMwCKhDNDMia9b4X28P0uzFZ+4EUsqMoRmiiQmmiZmhwR5sywHJbVNZkpxhirBpYkbWBLOp1IbNGeZNdGcmAj24WZSBAQA/3ZBcEwEAAA==\"185193925976367FDC5E84E4F884EDFD"
+	b, err := Decode(str)
+	assert.NoError(t, err)
+	actual, err := b.Encode()
+	assert.NoError(t, err)
+	t.Log(actual)
 }
