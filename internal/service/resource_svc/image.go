@@ -15,9 +15,8 @@ import (
 	"strings"
 
 	"github.com/codfrm/cago/pkg/logger"
-	"github.com/codfrm/cago/pkg/oss"
-	oss2 "github.com/codfrm/cago/pkg/oss/oss"
 	api "github.com/dsp2b/dsp2b-go/internal/api/resource"
+	"github.com/dsp2b/dsp2b-go/internal/storage"
 	"github.com/nfnt/resize"
 	"go.uber.org/zap"
 )
@@ -38,31 +37,25 @@ func Image() ImageSvc {
 
 // ImageThumbnail 缩略图
 func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRequest) (*api.ImageThumbnailResponse, error) {
-	// 读取oss图片
+	// 读取存储中的图片
 	if strings.HasPrefix(req.Path, "images/blueprint") {
 		return nil, errors.New("path error")
 	}
 	thumbnailName := "images" + req.Path
 	thumbnailName = path.Dir(thumbnailName) + "/thumbnail/" + path.Base(thumbnailName) + ".jpg"
 	// 判断是否有缩略图
-	f, err := oss.DefaultBucket().GetObject(ctx, thumbnailName)
+	f, err := storage.Default().GetObject(ctx, thumbnailName)
 	if err != nil {
-		return nil, err
-	}
-	defer f.Close()
-	info, err := f.Stat()
-	if err != nil {
-		var e oss2.RespError
-		if errors.As(err, &e) {
-			if e.StatusCode() != http.StatusNotFound {
+		// 缩略图不存在时继续走生成流程
+		if !errors.Is(err, storage.ErrNotFound) {
+			var e storage.RespError
+			if !errors.As(err, &e) || e.StatusCode() != http.StatusNotFound {
 				return nil, err
 			}
-		} else {
-			return nil, err
 		}
 	} else {
-		// 文件存在重定向
-		if info.Size > 0 {
+		defer f.Close()
+		if info, statErr := f.Stat(); statErr == nil && info.Size > 0 {
 			data, err := io.ReadAll(f)
 			if err != nil {
 				return nil, err
@@ -72,7 +65,7 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 			}, nil
 		}
 	}
-	r, err := oss.DefaultBucket().GetObject(ctx, "images"+req.Path)
+	r, err := storage.Default().GetObject(ctx, "images"+req.Path)
 	if err != nil {
 		return nil, err
 	}
@@ -122,8 +115,8 @@ func (i *imageSvc) ImageThumbnail(ctx context.Context, req *api.ImageThumbnailRe
 	}); err != nil {
 		return nil, err
 	}
-	// 上传oss
-	if err := oss.DefaultBucket().PutObject(ctx, thumbnailName, bytes.NewReader(buf.Bytes()), int64(buf.Len())); err != nil {
+	// 写入存储，作为缩略图缓存
+	if err := storage.Default().PutObject(ctx, thumbnailName, bytes.NewReader(buf.Bytes()), int64(buf.Len())); err != nil {
 		return nil, err
 	}
 	return &api.ImageThumbnailResponse{

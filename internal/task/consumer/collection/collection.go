@@ -13,10 +13,10 @@ import (
 	"github.com/dsp2b/dsp2b-go/internal/utils"
 
 	"github.com/codfrm/cago/pkg/logger"
-	"github.com/codfrm/cago/pkg/oss"
 	api "github.com/dsp2b/dsp2b-go/internal/api/collection"
 	"github.com/dsp2b/dsp2b-go/internal/repository/collection_repo"
 	"github.com/dsp2b/dsp2b-go/internal/service/collection_svc"
+	"github.com/dsp2b/dsp2b-go/internal/storage"
 	"github.com/dsp2b/dsp2b-go/internal/task/producer"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.uber.org/zap"
@@ -88,7 +88,7 @@ func (c *Collection) Update(ctx context.Context, id, blueprint primitive.ObjectI
 	}(); err != nil {
 		return err
 	}
-	if err := oss.DefaultBucket().PutObject(ctx, filename, buf, int64(buf.Len())); err != nil {
+	if err := storage.Default().PutObject(ctx, filename, bytes.NewReader(buf.Bytes()), int64(buf.Len())); err != nil {
 		return err
 	}
 	// 更新蓝图集下载地址

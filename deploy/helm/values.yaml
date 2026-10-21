@@ -20,6 +20,13 @@ etcdConfig:
   username: root
   password: root
 
+# 本地文件存储（替代原 MinIO 对象存储）
+# 需要提前创建同名 PVC，目录布局为 <root>/<bucket>/<key>
+persistence:
+  enabled: true
+  existingClaim: oss-data
+  mountPath: /data
+
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
