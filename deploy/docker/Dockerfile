@@ -7,13 +7,11 @@ ARG APP_NAME=cago
 ENV TZ=Asia/Shanghai \
     APP_NAME=$APP_NAME
 
-# 国内镜像
-RUN sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list.d/debian.sources
-
 # 安装证书
-RUN apt update && \
-    apt install -y ca-certificates && \
-    update-ca-certificates
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates && \
+    update-ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
