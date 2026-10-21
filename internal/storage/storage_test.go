@@ -10,13 +10,15 @@ import (
 	"testing"
 )
 
+// newTestStore 构造一个指向临时目录的存储实例，不依赖固定的 /data 路径
 func newTestStore(t *testing.T) *Store {
 	t.Helper()
-	dir := t.TempDir()
-	if err := initStore(dir, "dsp2b", "https://oss.example.com"); err != nil {
-		t.Fatalf("initStore: %v", err)
+	root := t.TempDir()
+	bucket := "dsp2b"
+	if err := os.MkdirAll(filepath.Join(root, bucket), 0o755); err != nil {
+		t.Fatalf("create bucket dir: %v", err)
 	}
-	return Default()
+	return &Store{root: root, bucket: bucket}
 }
 
 func TestPutAndGetObject(t *testing.T) {
@@ -114,17 +116,5 @@ func TestPutObjectRejectsEmptyKey(t *testing.T) {
 	ctx := context.Background()
 	if err := s.PutObject(ctx, "", bytes.NewReader([]byte("x")), 1); err == nil {
 		t.Fatal("expected error for empty key")
-	}
-}
-
-func TestFileURL(t *testing.T) {
-	s := newTestStore(t)
-	got, err := s.FileURL(context.Background(), "/images/blueprint/a.png")
-	if err != nil {
-		t.Fatalf("FileURL: %v", err)
-	}
-	want := "https://oss.example.com/dsp2b/images/blueprint/a.png"
-	if got != want {
-		t.Fatalf("FileURL = %q, want %q", got, want)
 	}
 }

@@ -1,7 +1,8 @@
-// Package storage 提供本地文件存储，替代原先的 MinIO 对象存储。
+// Package storage 提供本地文件存储。
 //
-// 目录布局与对象存储的 key 完全一致，即 <root>/<bucket>/<key>，
-// 因此数据库中已保存的 key 无需迁移，对外 URL 形状也保持不变。
+// 存储只有本地磁盘一种实现，目录布局为 <root>/<bucket>/<key>，
+// 与对外 URL /<bucket>/<key> 一一对应。路径与桶名固定，无需运行时配置，
+// 数据库中已保存的 key 也不需要迁移。
 package storage
 
 import (
@@ -9,7 +10,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -18,16 +18,11 @@ import (
 	"github.com/codfrm/cago/configs"
 )
 
-// Config 本地存储配置
-// 复用了原 oss 配置节点：root 与 bucket 是新增项，其余字段仅为兼容旧配置而存在
-type Config struct {
-	// Root 存储根目录，key 会拼在其后
-	Root string `yaml:"root"`
-	// Bucket 与对象存储同名的桶目录，保持 URL 兼容
-	Bucket string `yaml:"bucket"`
-	// URL 对外访问前缀，用于生成文件直链
-	URL string `yaml:"url"`
-}
+// 存储位置固定，随容器的 NFS 卷挂载到 /data
+const (
+	defaultRoot   = "/data"
+	defaultBucket = "dsp2b"
+)
 
 // ErrNotFound 对象不存在
 var ErrNotFound = errors.New("object not found")
@@ -54,7 +49,6 @@ var defaultStore *Store
 type Store struct {
 	root   string
 	bucket string
-	url    string
 }
 
 // Default 获取默认存储实例
@@ -62,36 +56,14 @@ func Default() *Store {
 	return defaultStore
 }
 
-// Init 初始化默认存储，配置缺失时使用环境变量与默认值
+// Init 初始化默认存储，并确保桶目录存在
+// 签名保持与 cago 组件一致，存储位置固定，忽略传入的上下文与配置
 func Init(ctx context.Context, config *configs.Config) error {
-	cfg := &Config{}
-	if config != nil {
-		// 配置节点缺失时不能阻断启动，回退到环境变量与默认值
-		if err := config.Scan(ctx, "oss", cfg); err != nil {
-			log.Printf("scan oss config: %v, fallback to env/default", err)
-		}
-	}
-	root := firstNonEmpty(cfg.Root, os.Getenv("OSS_ROOT"), "/data")
-	bucket := firstNonEmpty(cfg.Bucket, os.Getenv("OSS_BUCKET"), os.Getenv("MINIO_BUCKET"), "dsp2b")
-	url := firstNonEmpty(cfg.URL, os.Getenv("OSS_URL"), os.Getenv("MINIO_URL"))
-	return initStore(root, bucket, url)
-}
-
-func firstNonEmpty(values ...string) string {
-	for _, v := range values {
-		if v != "" {
-			return v
-		}
-	}
-	return ""
-}
-
-func initStore(root, bucket, url string) error {
-	dir := filepath.Join(root, bucket)
+	dir := filepath.Join(defaultRoot, defaultBucket)
 	if err := os.MkdirAll(dir, 0o755); err != nil {
 		return fmt.Errorf("create storage dir %s: %w", dir, err)
 	}
-	defaultStore = &Store{root: root, bucket: bucket, url: strings.TrimSuffix(url, "/")}
+	defaultStore = &Store{root: defaultRoot, bucket: defaultBucket}
 	return nil
 }
 
@@ -196,9 +168,4 @@ func (s *Store) Exists(ctx context.Context, key string) (bool, error) {
 		return false, err
 	}
 	return !st.IsDir(), nil
-}
-
-// FileURL 返回对象的对外访问地址
-func (s *Store) FileURL(ctx context.Context, key string) (string, error) {
-	return s.url + "/" + s.bucket + "/" + strings.TrimPrefix(key, "/"), nil
 }
