@@ -119,6 +119,18 @@ func TestRenameSpecialChars(t *testing.T) {
 	assert.Equal(t, 0, b2.Patch)
 }
 
+func TestUnescapeLegacyPlus(t *testing.T) {
+	// 站点旧版 Rename 用 QueryEscape(空格->'+') 改过名的存量蓝图: 裸 '+' 应还原为空格
+	assert.Equal(t, "新蓝图 002", unescape("%E6%96%B0%E8%93%9D%E5%9B%BE+002"))
+	assert.Equal(t, "量子芯片      《产量2.2K》", unescape("%E9%87%8F%E5%AD%90%E8%8A%AF%E7%89%87++++++%E3%80%8A%E4%BA%A7%E9%87%8F2.2K%E3%80%8B"))
+	// 游戏格式(EscapeDataString): 空格=%20, 字面加号=%2B, 不存在裸 '+'
+	assert.Equal(t, "新蓝图 002", unescape("%E6%96%B0%E8%93%9D%E5%9B%BE%20002"))
+	assert.Equal(t, "a+b", unescape("a%2Bb"))
+	// 非法转义序列原样保留
+	assert.Equal(t, "100%进度", unescape("100%25%E8%BF%9B%E5%BA%A6"))
+	assert.Equal(t, "50%x", unescape("50%x"))
+}
+
 func TestDecodeNewVersion(t *testing.T) {
 	// 新新版本
 	str := "BLUEPRINT:0,10,0,0,0,0,0,0,638783526515281167,0.10.32.25712,%E6%96%B0%E8%93%9D%E5%9B%BE,\"H4sIAAAAAAAAC2NkYGBghGIQYIJiBrDYfwaGBVBhJgYWID37////IP5FdmUGhrtL/5mD1U2QNN/0d44zA9QcoJr/jHAjmRjeMzMwCKhDNDMia9b4X28P0uzFZ+4EUsqMoRmiiQmmiZmhwR5sywHJbVNZkpxhirBpYkbWBLOp1IbNGeZNdGcmAj24WZSBAQA/3ZBcEwEAAA==\"185193925976367FDC5E84E4F884EDFD"
@@ -127,4 +139,27 @@ func TestDecodeNewVersion(t *testing.T) {
 	actual, err := b.Encode()
 	assert.NoError(t, err)
 	t.Log(actual)
+}
+
+// oldFormatStr 0.9.27 蓝图(生产库真实数据): 建筑使用最老的二进制布局(首int32为index),
+// 修复前 Building.Parse 的最老分支会多读一个int32导致整个流错位panic
+const oldFormatStr = "BLUEPRINT:0,10,2205,0,0,0,0,0,638296979456570000,0.9.27.15466,%E5%9C%B0%E4%B8%8B%E5%A4%AA%E9%98%B3%E8%83%BD%E6%9D%BF5%E5%B1%82,\"H4sIAAAAAAAAC2NkQAWMUAxh/2dgOAFlMjKwoSll+PS//SA29lwOc4b/QMCKxWw48EmLO4iNjUszEzJHwXjyAWxsXJqZkTkHzugcRGZXqnKagTAuzSzInIC0bwewsXFpRuMrHMTGzmZRBWsGAQakcAIAkplusp0BAAA=\"4AB0AF1D17BF718E532A2A6ACBF0A9AF"
+
+func TestDecodeOldestBuildingLayout(t *testing.T) {
+	b, err := Decode(oldFormatStr)
+	assert.NoError(t, err)
+	assert.Equal(t, "地下太阳能板5层", b.ShortDesc)
+	assert.Equal(t, "0.9.27.15466", b.GameVersion)
+	// 5层地下太阳能板 + 1个地基
+	assert.Len(t, b.Buildings, 6)
+	for i, v := range b.Buildings {
+		assert.EqualValues(t, i, v.Index)
+		if i < 5 {
+			assert.EqualValues(t, 2205, v.ItemId)
+		} else {
+			assert.EqualValues(t, 1131, v.ItemId)
+		}
+	}
+	_, err = b.Encode()
+	assert.NoError(t, err)
 }

@@ -25,8 +25,17 @@ func escape(s string) string {
 }
 
 // unescape 等价于游戏的 Uri.UnescapeDataString: 解码 %XX, '+' 保持原样。
+// 例外: 站点旧版 Rename 使用 QueryEscape(空格->'+') 产生过含裸 '+' 的存量蓝图,
+// 而游戏的 EscapeDataString 永远不会产生裸 '+'(字面加号编码为 %2B), 因此裸 '+'
+// 只会是历史改名产物, 此时按空格解码(QueryUnescape)以还原作者本意。
 // 非法的转义序列原样返回(.NET 行为, Go 的 PathUnescape 会报错)。
 func unescape(s string) string {
+	if strings.Contains(s, "+") {
+		if u, err := url.QueryUnescape(s); err == nil {
+			return u
+		}
+		return s
+	}
 	if u, err := url.PathUnescape(s); err == nil {
 		return u
 	}

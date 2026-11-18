@@ -189,7 +189,8 @@ func (b *Building) Parse(r io.Reader) error {
 			b.Parameters[n] = utils.ReadInt32(r)
 		}
 	} else {
-		b.Index = utils.ReadInt32(r)
+		// 最老布局: 首个int32就是index(不是版本号), 与游戏 index = num 一致
+		b.Index = version
 		b.AreaIndex = utils.ReadInt8(r)
 		b.LocalOffsetX = float32(utils.ReadInt32(r))
 		b.LocalOffsetY = float32(utils.ReadInt32(r))
