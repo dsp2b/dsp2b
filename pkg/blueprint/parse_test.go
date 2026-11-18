@@ -1,7 +1,9 @@
 package blueprint
 
 import (
+	"strings"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -43,6 +45,92 @@ func TestRename(t *testing.T) {
 	t.Log(replace)
 }
 
+// newFormatStr 0.10.34+/0.10.35 新格式蓝图(BLUEPRINT:1), 来源 dsp2b-frontend issue#9
+const newFormatStr = "BLUEPRINT:1,10,0,0,0,0,0,0,639305347823681518,0.10.35.29151,%E6%96%B0%E8%93%9D%E5%9B%BE,,,,\"H4sIAAAAAAAACmNiYGDgAGI2BggQBGJeKJuR4T8DwwKoMC+DCJCe9f//fxCfj/MEIwMXQ4Pj1I9uFoxzJHeABP9DAQMcMMJZII2MMI2iDAyOq9TnmzNOkDR/tFrShJBGJphGYQYHkmxkhmlUZ2hwgNlIjEYWmEaQpvrd78wZLS5vt+mq30pIIyty4KwC2gpyao5DH0E/ssE0igEDJxqk8cQa8/sqiQQ1ssM0igADB2bjzxyFLYQ0csA0qgI1gW0EBs7+Ig5TQho5kQMHrBEYOHOqWggGDhdy4BgD/UlsPHIzIKUcEAYFjtGtnZsJaeRhQEo5EBs9d9hH6REMVV6YRmWg/+RBGoGBM2GrDUE/8sE0+tj2m4M1AgNnklIGQY38yIFjCXQuKHBm7zIgGI8CDPAEwOAoDdJIZCIXRA4cmI3EaBRiQMpWMBubtdsJ+lEYpvHu0jpzfZBGYOCoB3fj1QhmAQAPT1MpqAQAAA==\"183B251DCC0C750B44572E375B36121F"
+
+func TestDecodeNewFormat(t *testing.T) {
+	b, err := Decode(newFormatStr)
+	assert.NoError(t, err)
+	assert.Equal(t, 1, b.Patch)
+	assert.Equal(t, 10, b.Layout)
+	assert.Equal(t, "0.10.35.29151", b.GameVersion)
+	assert.Equal(t, "新蓝图", b.ShortDesc)
+	assert.Equal(t, "", b.Desc)
+	assert.Equal(t, "", b.Author)
+	assert.True(t, b.Time.Equal(time.Unix(1794937982, 0)), b.Time.String())
+	assert.Equal(t, "183B251DCC0C750B44572E375B36121F", b.Hash)
+	// 二进制: BuildingHeader.Version=2, 17x13 拖框, 1 区域, 20 建筑(制造台Mk.IV)
+	assert.Equal(t, int32(2), b.BuildingHeader.Version)
+	assert.Equal(t, int32(17), b.BuildingHeader.DragBoxSizeX)
+	assert.Equal(t, int32(13), b.BuildingHeader.DragBoxSizeY)
+	assert.Len(t, b.Areas, 1)
+	assert.Len(t, b.Buildings, 20)
+	for _, v := range b.Buildings {
+		assert.EqualValues(t, 2318, v.ItemId)
+	}
+	// 0.10.34+ 二进制尾部: Patch(1)+reformFlag(0)
+	assert.Equal(t, []byte{1, 0, 0, 0, 0}, b.Tail)
+}
+
+func TestEncodeNewFormatRoundTrip(t *testing.T) {
+	b, err := Decode(newFormatStr)
+	assert.NoError(t, err)
+	code, err := b.Encode()
+	assert.NoError(t, err)
+	assert.True(t, strings.HasPrefix(code, "BLUEPRINT:1,"), code[:32])
+	b2, err := Decode(code)
+	assert.NoError(t, err)
+	assert.Equal(t, b.ShortDesc, b2.ShortDesc)
+	assert.Equal(t, b.GameVersion, b2.GameVersion)
+	// 重新编码后建筑数据被降级为-101版本, hash必然变化; Decode成功即hash校验通过
+	assert.Len(t, b2.Buildings, 20)
+	assert.Equal(t, b.Tail, b2.Tail)
+}
+
+func TestRenameNewFormat(t *testing.T) {
+	replaced, err := Rename(newFormatStr, "我的蓝图+换行版")
+	assert.NoError(t, err)
+	assert.True(t, strings.HasPrefix(replaced, "BLUEPRINT:1,"), replaced[:32])
+	b, err := Decode(replaced)
+	assert.NoError(t, err)
+	assert.Equal(t, "我的蓝图+换行版", b.ShortDesc)
+	// 内容与哈希未被破坏
+	assert.Equal(t, len(b.Buildings), 20)
+}
+
+func TestRenameSpecialChars(t *testing.T) {
+	// 名称含逗号/空格/斜杠/加号/中文/波浪号: 逗号与加号不转义会破坏头部字段切分
+	// (游戏使用 Uri.EscapeDataString, 空格=%20 而非 +)
+	name := "钛块,60/min ~v2 +级 铁/铜 x=y&z"
+	replaced, err := Rename(newFormatStr, name)
+	assert.NoError(t, err)
+	b, err := Decode(replaced)
+	assert.NoError(t, err)
+	assert.Equal(t, name, b.ShortDesc)
+	// 新旧格式改名均不能出现未转义的逗号注入: 字段数不变
+	assert.Len(t, strings.Split(replaced[:strings.IndexByte(replaced, '"')], ","), 15)
+
+	old, err := Rename("BLUEPRINT:0,10,1106,0,0,0,0,0,638423980300910000,0.9.26.13026,%E9%92%9B%E5%9D%97-60.000%2Fmin,%E9%92%9B%E5%9D%97-60.000%20%2Fmin\"H4sIAAAAAAAAA4WRMQ7CMAxFnaY0pRyDibmMCBJxA07DyEE4EAMMzCw9ABs7Ia7T2CVFWHL7E+X95MsKxqVik/YAlygVLPjUaRc+NtdU73oLPhbtuOSqGOpB4D/Weo/9MCuYxx1viDmUqhcFLtr2lSDS0gQADbAqbE8GT00GOt5qRQSh/0coGUoRBDyOoCcizHBxu54TRDqPoH9EqOhIJyCp6QV3s5QRhqGCYWDILDXDeAvCSsA1A9bmmmGTwUV4PsAxqGG0TmR23/nRpJl4QcNAGpnUCc6zF2ECAJugPqLB+pD2AgAA\"25AB8B80EEF56D21AFDF13D2C7E89756",
+		name)
+	assert.NoError(t, err)
+	b2, err := Decode(old)
+	assert.NoError(t, err)
+	assert.Equal(t, name, b2.ShortDesc)
+	assert.Equal(t, 0, b2.Patch)
+}
+
+func TestUnescapeLegacyPlus(t *testing.T) {
+	// 站点旧版 Rename 用 QueryEscape(空格->'+') 改过名的存量蓝图: 裸 '+' 应还原为空格
+	assert.Equal(t, "新蓝图 002", unescape("%E6%96%B0%E8%93%9D%E5%9B%BE+002"))
+	assert.Equal(t, "量子芯片      《产量2.2K》", unescape("%E9%87%8F%E5%AD%90%E8%8A%AF%E7%89%87++++++%E3%80%8A%E4%BA%A7%E9%87%8F2.2K%E3%80%8B"))
+	// 游戏格式(EscapeDataString): 空格=%20, 字面加号=%2B, 不存在裸 '+'
+	assert.Equal(t, "新蓝图 002", unescape("%E6%96%B0%E8%93%9D%E5%9B%BE%20002"))
+	assert.Equal(t, "a+b", unescape("a%2Bb"))
+	// 非法转义序列原样保留
+	assert.Equal(t, "100%进度", unescape("100%25%E8%BF%9B%E5%BA%A6"))
+	assert.Equal(t, "50%x", unescape("50%x"))
+}
+
 func TestDecodeNewVersion(t *testing.T) {
 	// 新新版本
 	str := "BLUEPRINT:0,10,0,0,0,0,0,0,638783526515281167,0.10.32.25712,%E6%96%B0%E8%93%9D%E5%9B%BE,\"H4sIAAAAAAAAC2NkYGBghGIQYIJiBrDYfwaGBVBhJgYWID37////IP5FdmUGhrtL/5mD1U2QNN/0d44zA9QcoJr/jHAjmRjeMzMwCKhDNDMia9b4X28P0uzFZ+4EUsqMoRmiiQmmiZmhwR5sywHJbVNZkpxhirBpYkbWBLOp1IbNGeZNdGcmAj24WZSBAQA/3ZBcEwEAAA==\"185193925976367FDC5E84E4F884EDFD"
@@ -51,4 +139,27 @@ func TestDecodeNewVersion(t *testing.T) {
 	actual, err := b.Encode()
 	assert.NoError(t, err)
 	t.Log(actual)
+}
+
+// oldFormatStr 0.9.27 蓝图(生产库真实数据): 建筑使用最老的二进制布局(首int32为index),
+// 修复前 Building.Parse 的最老分支会多读一个int32导致整个流错位panic
+const oldFormatStr = "BLUEPRINT:0,10,2205,0,0,0,0,0,638296979456570000,0.9.27.15466,%E5%9C%B0%E4%B8%8B%E5%A4%AA%E9%98%B3%E8%83%BD%E6%9D%BF5%E5%B1%82,\"H4sIAAAAAAAAC2NkQAWMUAxh/2dgOAFlMjKwoSll+PS//SA29lwOc4b/QMCKxWw48EmLO4iNjUszEzJHwXjyAWxsXJqZkTkHzugcRGZXqnKagTAuzSzInIC0bwewsXFpRuMrHMTGzmZRBWsGAQakcAIAkplusp0BAAA=\"4AB0AF1D17BF718E532A2A6ACBF0A9AF"
+
+func TestDecodeOldestBuildingLayout(t *testing.T) {
+	b, err := Decode(oldFormatStr)
+	assert.NoError(t, err)
+	assert.Equal(t, "地下太阳能板5层", b.ShortDesc)
+	assert.Equal(t, "0.9.27.15466", b.GameVersion)
+	// 5层地下太阳能板 + 1个地基
+	assert.Len(t, b.Buildings, 6)
+	for i, v := range b.Buildings {
+		assert.EqualValues(t, i, v.Index)
+		if i < 5 {
+			assert.EqualValues(t, 2205, v.ItemId)
+		} else {
+			assert.EqualValues(t, 1131, v.ItemId)
+		}
+	}
+	_, err = b.Encode()
+	assert.NoError(t, err)
 }
